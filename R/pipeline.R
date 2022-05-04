@@ -47,6 +47,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   summa.fit <- limma::decideTests(fit.cont)
 
 
+  # provide this as argument to main function lfc = 1
   de.ppi <- function(fit.cont, coef=1, lfc = 1, adjP =0.05){
     wtdt <- topTable(fit.cont, n = Inf, coef = coef)
     updt = with(wtdt, logFC > lfc & adj.P.Val < adjP)
@@ -360,7 +361,16 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   dt <- t(d)
 
   t<-read.csv("dt", header = T, row.names = 1, check.names = F)
-  All.cor<-corr.test(t[1:54],t[1:54], method="pearson",adjust="holm", ci=FALSE) # kendall , # pearson, # spearman
+
+
+  # change 1:54 based on actual value for host / pathogen
+  # for host pathogen correlation, put both into single file and change the index accordingly to find intra species correlation
+
+  #function argument with values instead of 1:54
+
+  All.cor<-corr.test(t[1:54], t[1:54], method="pearson", adjust="holm", ci=FALSE) # kendall , # pearson, # spearman
+
+
   r.df <- as.data.frame(All.cor$r)
   R.corr <- r.df %>%
     mutate(gene1 = row.names(r.df)) %>%
