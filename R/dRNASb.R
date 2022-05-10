@@ -428,7 +428,7 @@ R.corr <- r.df %>%
   mutate(comb = paste(gene1, "-", gene2))
 
 
-# below line isnt running
+#below line not running
 corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust", type = "upper")
 
 
