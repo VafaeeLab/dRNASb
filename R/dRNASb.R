@@ -5,6 +5,7 @@
 library(limma)
 library(DESeq2)
 library(dplyr)
+library(tidyr)
 library(igraph)
 library(data.table)
 library(Mfuzz)
@@ -12,12 +13,16 @@ library(edgeR)
 library(stringr)
 library(stringi)
 library(ClueR)
+library(VennDiagram)
+library(igraph)
+library(corrplot)
+library(psych)
 
 # Load data and statistics analysis---------------------------------------------------------------
 
-dat <- read.csv("Data/Alldat.csv",row.names = 1) 
-pheno <- read.csv("Data/pheno.csv", row.names = 1) 
-fun<-read.csv("Data/GO_Function.csv") 
+dat <- read.csv("Data/Alldat.csv",row.names = 1)
+pheno <- read.csv("Data/pheno.csv", row.names = 1)
+fun<-read.csv("Data/GO_Function.csv")
 ppi<-read.csv("Data/PPI.csv")
 ann<-read.csv("Data/Annotation.csv")
 
@@ -65,7 +70,7 @@ for (n in 1:5){
   DE[[n]] <- de.ppi(fit.cont, coef = n)
 }
 
-D<-DE[[3]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+D<-DE[[1]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
 Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
 D<-cbind(Gene.name,D)
 colnames(D)[3]<-"Gene.name"
@@ -83,9 +88,9 @@ d <- cbind(rowMeans(dat[,c(1:3)], na.rm = T),
 colnames(d) <- c("Mean.0h","Mean.20h","Mean.4h","Mean.8h","Mean.16h","Mean.24h")
 
 Gene.name<-as.data.frame(row.names(d))    # add row to data frame in r
-D<-cbind(Gene.name,d)
-colnames(D)[1]<-"Gene.name"
-write.csv(D,file = "pathogen.mean.csv",row.names = FALSE)
+d <- cbind(Gene.name,d)
+colnames(d)[1]<-"Gene.name"
+write.csv(d,file = "pathogen.mean.csv",row.names = FALSE)
 
 # Clustering using "Mfuzz" ------------------------------------------------
 
@@ -165,31 +170,69 @@ write.csv(out, file = "./Enrich.csv", quote = F, row.names = F)
 # Venn diagram ------------------------------------------------------------------
 
 
+D<-DE[[1]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
+D<-cbind(Gene.name,D)
+colnames(D)[3]<-"Gene.name"
 d2h<-D%>% filter(logFC<(-1)) # downregulation
 u2h<-D%>% filter(logFC>(1)) # upregulation
 Q2<-d2h
 
 
-A=data.frame(intersect(d2h$Gene.name,d4h$Gene.name))
+D<-DE[[2]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
+D<-cbind(Gene.name,D)
+colnames(D)[3]<-"Gene.name"
+d4h<-D%>% filter(logFC<(-1)) # downregulation
+u4h<-D%>% filter(logFC>(1)) # upregulation
+Q4<-d4h
+
+D<-DE[[3]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
+D<-cbind(Gene.name,D)
+colnames(D)[3]<-"Gene.name"
+d8h<-D%>% filter(logFC<(-1)) # downregulation
+u8h<-D%>% filter(logFC>(1)) # upregulation
+Q8<-d8h
+
+D<-DE[[4]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
+D<-cbind(Gene.name,D)
+colnames(D)[3]<-"Gene.name"
+d16h<-D%>% filter(logFC<(-1)) # downregulation
+u16h<-D%>% filter(logFC>(1)) # upregulation
+Q16<-d16h
+
+D<-DE[[5]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
+Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
+D<-cbind(Gene.name,D)
+colnames(D)[3]<-"Gene.name"
+d24h<-D%>% filter(logFC<(-1)) # downregulation
+u24h<-D%>% filter(logFC>(1)) # upregulation
+Q24<-d24h
+
+
+
+A=data.frame(intersect(d2h$Gene.name, d4h$Gene.name))
 B=data.frame(intersect(d2h$Gene.name,d8h$Gene.name))
 C=data.frame(intersect(d2h$Gene.name,d16h$Gene.name))
 D=data.frame(intersect(d2h$Gene.name,d24h$Gene.name))
 E=data.frame(intersect(d4h$Gene.name,d8h$Gene.name))
 FF=data.frame(intersect(d4h$Gene.name,d16h$Gene.name))
-k=data.frame(intersect(d4h$Gene.name,d24h$Gene.name))
+K=data.frame(intersect(d4h$Gene.name,d24h$Gene.name))
 G=data.frame(intersect(d8h$Gene.name,d16h$Gene.name))
 M=data.frame(intersect(d8h$Gene.name,d24h$Gene.name))
 H=data.frame(intersect(d16h$Gene.name,d24h$Gene.name))
-colnames(a)<-"Attributes"
-colnames(b)<-"Attributes"
-colnames(c)<-"Attributes"
-colnames(d)<-"Attributes"
-colnames(e)<-"Attributes"
-colnames(f)<-"Attributes"
-colnames(k)<-"Attributes"
-colnames(g)<-"Attributes"
-colnames(m)<-"Attributes"
-colnames(h)<-"Attributes"
+colnames(A)<-"Attributes"
+colnames(B)<-"Attributes"
+colnames(C)<-"Attributes"
+colnames(D)<-"Attributes"
+colnames(E)<-"Attributes"
+colnames(FF)<-"Attributes"
+colnames(K)<-"Attributes"
+colnames(G)<-"Attributes"
+colnames(M)<-"Attributes"
+colnames(H)<-"Attributes"
 
 A1=data.frame(intersect(A$Attributes,E$Attributes))
 B1=data.frame(intersect(A$Attributes,FF$Attributes))
@@ -226,12 +269,15 @@ colnames(E2)<-"Attributes"
 colnames(FF2)<-"Attributes"
 
 grid.newpage()
+
+
+#below line not running
 venn.plot <- draw.quintuple.venn(
   area1 = Q2,
   area2 =Q4,
   area3 = Q8,
   area4 = Q16,
-  area5 = Q22,
+  area5 = Q24,
   n12 = A,
   n13 = B,
   n14 = C,
@@ -272,14 +318,16 @@ tiff(filename = "Quintuple_Venn_diagram.tiff", compression = "lzw");
 grid.draw(venn.plot);
 dev.off()
 
-                 
+
 # Network analysis using igraph --------------------------------
 
 net<-graph.data.frame(unique(ppi[,c(2,3)]),directed = FALSE)
 V(net)$label<-V(net)$name
-V(net)$igraph::degre<-degree(net)
+
+# V(net)$igraph::degre<-degree(net)
+
 deg<-igraph::degree(net,v=V(net), mode = c("total"),
-                    loops = TRUE,normalized = FALSE)      
+                    loops = TRUE,normalized = FALSE)
 # Hub gene significance ---------------------------------------------------
 
 Hub<-as.data.frame(deg[which(deg>=1)])
@@ -289,8 +337,8 @@ colnames(Hub)[1]<-"Gene.name"
 colnames(Hub)[2]<-"edge.number"
 remove(gene.name)
 hist(Hub$edge.number)
-write.csv(Hub,file = "Hub.correlated.90.posetive.csv",row.names = FALSE)             
-                 
+write.csv(Hub,file = "Hub.correlated.90.posetive.csv",row.names = FALSE)
+
 # Network betweenness --------------------------------------------------
 
 b<-igraph::betweenness(net, v = V(net), directed = TRUE, weights = NULL,
@@ -339,20 +387,20 @@ for(i in unique(V(net)$community)){
 l <- layout_nicely(g_grouped)
 
 plot(cl,net, layout = layout_with_fr,
-     vertex.size =10, 
+     vertex.size =10,
      edge.width = 1,
      vertex.label.dist=0.001,
      vertex.color ='gold',
      vertex.frame.color="#555555",
-     edge.label=net$v, 
-     vertex.size=1, 
-     edge.color="gray", 
-     vertex.label.font=1, 
-     edge.label.font =1, 
-     edge.label.cex = 1, 
-     edge.arrow.size=0.2, 
+     edge.label=net$v,
+     vertex.size=1,
+     edge.color="gray",
+     vertex.label.font=1,
+     edge.label.font =1,
+     edge.label.cex = 1,
+     edge.arrow.size=0.2,
      edge.curved=0,
-     vertex.label=V(net)$v, 
+     vertex.label=V(net)$v,
      vertex.label.color="black",
      vertex.label.cex=0.5,
      vertex.label.cex = 0.5 )
@@ -362,12 +410,15 @@ plot(cl,net, layout = layout_with_fr,
 d <- read.csv("pathogen.mean.csv", row.names = 1)
 dt <- t(d)
 
-t<-read.csv("dt", header = T, row.names = 1, check.names = F)
+# t<-read.csv("dt", header = T, row.names = 1, check.names = F)
+t <- dt
+
+
 All.cor<-corr.test(t[1:54],t[1:54], method="pearson",adjust="holm", ci=FALSE) # kendall , # pearson, # spearman
 r.df <- as.data.frame(All.cor$r)
 R.corr <- r.df %>%
   mutate(gene1 = row.names(r.df)) %>%
-  pivot_longer(-gene1,
+  tidyr::pivot_longer(-gene1,
                names_to = "gene2", names_ptypes = list(gene2=character()),
                values_to = "corr") %>%
   mutate(gene1 = str_replace(gene1, "\\.\\.", " ("),
@@ -375,10 +426,15 @@ R.corr <- r.df %>%
          gene2 = str_replace(gene2, "\\.\\.", " ("),
          gene2 = str_replace(gene2, "\\.$", ")")) %>%
   mutate(comb = paste(gene1, "-", gene2))
-corrplot(as.matrix(r.df), is.corr = FALSE,method = "circle", order = "hclust", type = "upper")
+
+
+# below line isnt running
+corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust", type = "upper")
+
+
 write.csv(R.corr,file = "R.corr.all.intersect.genes.csv",row.names = FALSE)
 
-posetive<-R.corr%>% filter(corr>0.7)   
+posetive<-R.corr%>% filter(corr>0.7)
 negative<-R.corr %>% filter(corr<(-0.7))
 
 
