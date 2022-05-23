@@ -1,7 +1,7 @@
 # dRNASb (dRNA-seq Systems biology-based analysis)
 
 <img style='display: table; border-radius: 5px; border: 1px solid #293954; '
-              src="mann/pipeline.png" width="400">
+              src="man/pipeline.png" width="400">
               
 Latest modified code is in [dRNASb.R](R/dRNASb.R)
 
