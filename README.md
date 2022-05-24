@@ -7,7 +7,13 @@ Flowchart of the bioinformatic pipeline for the dual RNA-seq analysis of a host 
 <img style='display: table; border-radius: 5px; border: 1px solid #293954; '
               src="man/pipeline.png" width="500">
               
-Latest modified code is in [dRNASb.R](R/dRNASb.R)
+### Input Files
+The pipeline accepts as input the following text files all in .csv format: 
+
+- **Phenotype:** This file comprises two columns: 1) *Sample Name* corresponding to the column headers in the expression (read count) file, and 2) *Group* specifiying the time (or condition) of each sample. 
+- **Read Counts:**
+- **Functional annotations:**
+- **PPIs:**
 
 
 ## For More Information
