@@ -15,13 +15,17 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 biocViews:
 Imports:
-  limma,
-  DESeq2,
-  dplyr,
-  igraph,
-  data.table,
-  Mfuzz,
   edgeR,
+  limma,
+  dplyr,
+  plyr,
+  tidyr,
+  Mfuzz,
   stringr,
-  stringi,
-  ClueR
+  ClueR,
+  VennDiagram,
+  UpSetR,
+  igraph,
+  psych,
+  corrplot
+

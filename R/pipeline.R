@@ -59,6 +59,21 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   }
 
 
+  get_de_results_per_hour <- function(D, hour, result_file_path){
+    Gene.name<-as.data.frame(row.names(D))
+    colnames(Gene.name)<-"Gene.name"
+    D<-cbind(Gene.name,D)
+    colnames(D)[2]<-"logFC.2h"
+    Qp2<-subset(D,D$logFC.2h<(-1)|D$logFC.2h>1)
+    Qp2<-Qp2[,c(1,2)]
+    dpQ2<-D%>% filter(logFC.2h<(-1))
+    dpQ2<-dpQ2[,c(1,2)]
+    upQ2<-D%>% filter(logFC.2h>(1))
+    upQ2<-upQ2[,c(1,2)]
+    write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
+
+  }
+
   ################### 2h
   D<-DE.p[[1]]
   Gene.name<-as.data.frame(row.names(D))
@@ -67,9 +82,9 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(D)[2]<-"logFC.2h"
   Qp2<-subset(D,D$logFC.2h<(-1)|D$logFC.2h>1)
   Qp2<-Qp2[,c(1,2)]
-  dpQ2<-D%>% filter(logFC.2h<(-1))
+  dpQ2<-D%>% dplyr::filter(logFC.2h<(-1))
   dpQ2<-dpQ2[,c(1,2)]
-  upQ2<-D%>% filter(logFC.2h>(1))
+  upQ2<-D%>% dplyr::filter(logFC.2h>(1))
   upQ2<-upQ2[,c(1,2)]
   write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
 
@@ -81,9 +96,9 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(D)[2]<-"logFC.4h"
   Qp4<-subset(D,D$logFC.4h<(-1)|D$logFC.4h>1)
   Qp4<-Qp4[,c(1,2)]
-  dpQ4<-D%>% filter(logFC.4h<(-1))
+  dpQ4<-D%>% dplyr::filter(logFC.4h<(-1))
   dpQ4<-dpQ4[,c(1,2)]
-  upQ4<-D%>% filter(logFC.4h>(1))
+  upQ4<-D%>% dplyr::filter(logFC.4h>(1))
   upQ4<-upQ4[,c(1,2)]
   write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-4h.csv"), row.names = FALSE)
 
@@ -95,9 +110,9 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(D)[2]<-"logFC.8h"
   Qp8<-subset(D,D$logFC.8h<(-1)|D$logFC.8h>1)
   Qp8<-Qp8[,c(1,2)]
-  dpQ8<-D%>% filter(logFC.8h<(-1))
+  dpQ8<-D%>% dplyr::filter(logFC.8h<(-1))
   dpQ8<-dpQ8[,c(1,2)]
-  upQ8<-D%>% filter(logFC.8h>(1))
+  upQ8<-D%>% dplyr::filter(logFC.8h>(1))
   upQ8<-upQ8[,c(1,2)]
   write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-8h.csv"), row.names = FALSE)
 
@@ -109,9 +124,9 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(D)[2]<-"logFC.16h"
   Qp16<-subset(D,D$logFC.16h<(-1)|D$logFC.16h>1)
   Qp16<-Qp16[,c(1,2)]
-  dpQ16<-D%>% filter(logFC.16h<(-1))
+  dpQ16<-D%>% dplyr::filter(logFC.16h<(-1))
   dpQ16<-dpQ16[,c(1,2)]
-  upQ16<-D%>% filter(logFC.16h>(1))
+  upQ16<-D%>% dplyr::filter(logFC.16h>(1))
   upQ16<-upQ16[,c(1,2)]
   write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-16h.csv"), row.names = FALSE)
 
@@ -123,14 +138,14 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(D)[2]<-"logFC.24h"
   Qp24<-subset(D,D$logFC.24h<(-1)|D$logFC.24h>1)
   Qp24<-Qp24[,c(1,2)]
-  dpQ24<-D%>% filter(logFC.24h<(-1))
+  dpQ24<-D%>% dplyr::filter(logFC.24h<(-1))
   dpQ24<-dpQ24[,c(1,2)]
-  upQ24<-D%>% filter(logFC.24h>(1))
+  upQ24<-D%>% dplyr::filter(logFC.24h>(1))
   upQ24<-upQ24[,c(1,2)]
   write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-24h.csv"), row.names = FALSE)
 
 
-  # Average replecates across each time -------------------------------------
+  # Average replicates across each time -------------------------------------
   d.p <- cbind(rowMeans(dat.p[,c(1:3)], na.rm = T),
                rowMeans(dat.p[,c(4:6)], na.rm = T),
                rowMeans(dat.p[,c(7:9)], na.rm = T),
@@ -147,7 +162,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
 
-  # ED Matrix -----------------------------------------------------
+  # DE Matrix -----------------------------------------------------
 
   ### Select gene that shown DE at less in one time point
   Qp2$logFC.2h[Qp2$logFC.2h<0]<-1
@@ -155,13 +170,13 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   Qp8$logFC.8h[Qp8$logFC.8h<0]<-1
   Qp16$logFC.16h[Qp16$logFC.16h<0]<-1
   Qp24$logFC.24h[Qp24$logFC.24h<0]<-1
-  Qp<-rbind.fill(Qp2,Qp4,Qp8,Qp16,Qp24)
+  Qp<-plyr::rbind.fill(Qp2,Qp4,Qp8,Qp16,Qp24)
   Qp[is.na(Qp[1:6])]<-0
-  Qp <- Qp %>% pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
+  Qp <- Qp %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
     dplyr::filter(sign == 1) %>%
-    pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)
+    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)
 
-  ### Get mean value for ED genes
+  ### Get mean value for DE genes
   m.p<-merge(Qp,da.p, by="Gene.name")
   m.p<-m.p[,-c(2:7)]
   ED.pathogen<-m.p
@@ -185,35 +200,43 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   rownames(y.dat)[1]<- "time"
   tmp<- tempfile()
   write.table(y.dat,file=tmp, sep='\t',quote=FALSE, col.names=NA)
-  z.data <- table2eset(tmp)
-  data.z <-standardise(z.data)
+
+
+  #problem : below line requires : library(Biobase)
+  z.data <- Mfuzz::table2eset(tmp)
+
+
+  data.z <-Mfuzz::standardise(z.data)
   class(data.z)
-  m1 <-mestimate(data.z)
-  Dmin(data.z, m=m1, crange=seq(2,22,1), repeats = 3, visu = TRUE)
+  m1 <-Mfuzz::mestimate(data.z)
+
+  #below line requires library(e1071)
+  # Mfuzz::Dmin(data.z, m=m1, crange=seq(2,22,1), repeats = 3, visu = TRUE)
+
   clust=10
-  c<- mfuzz(data.z, c=clust, m=m1)
+  c<- Mfuzz::mfuzz(data.z, c=clust, m=m1)
 
   tiff(filename ="./Results/Mfuzz_Clustering/Pathogen.mfuzz.plot.tiff", compression = "lzw")
-  mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
+  Mfuzz::mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
   dev.off()
 
   pdf(file = "./Results/Mfuzz_Clustering/Pathogen.mfuzz.plot.pdf",width = 10, height = 10)
-  mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
+  Mfuzz::mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
   dev.off()
 
   membership<-c$membership
   membership<-data.frame(membership)
   fd<-data.frame(cor(t(c[[1]])))
-  acore<-acore(data.z,c,min.acore = 0.5)
+  acore<-Mfuzz::acore(data.z,c,min.acore = 0.5)
   acore_list<-do.call(rbind,lapply(seq_along(acore), function(i){data.frame(CLUSTER=i, acore[[i]])}))
   colnames(acore_list)[2]<-"Gene.name"
-  genelist<- acore(data.z,cl=c,min.acore=0.7)
+  genelist<- Mfuzz::acore(data.z,cl=c,min.acore=0.7)
   temp <- do.call("rbind", lapply(genelist, FUN = function(x){
     return(paste0(as.character(x$NAME), collapse = ","))
   }))
   Cluster_list<-as.data.frame(temp)
   colnames(Cluster_list) <-"Gene.name"
-  Cluster_list<-str_split_fixed(Cluster_list$Gene.name,",", n=Inf)
+  Cluster_list<-stringr::str_split_fixed(Cluster_list$Gene.name,",", n=Inf)
   Cluster_list<-t(Cluster_list)
   colnames(Cluster_list)<- c("Cluster1", "Cluster2","Cluster3","Cluster4","Cluster5","Cluster6","Cluster7","Cluster8","Cluster9","Cluster10")  ### ? how we can make it depanded to cluster number???
 
@@ -241,7 +264,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Enrichment using "ClueR" ------------------------------------------------
-  ce <- clustEnrichment(c, annotation=Anno, effectiveSize=c(2,100), pvalueCutoff=0.01)
+  ce <- ClueR::clustEnrichment(c, annotation=Anno, effectiveSize=c(2,100), pvalueCutoff=0.01)
 
   out <- c()
   i <- 1
@@ -267,8 +290,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   #  Variable and  frequency of Function
   cl<-as.data.frame(out[,c(5)])
   colnames(cl)<-"Gene.name"
-  gene.list<-cl %>% separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)
-  freq.list.pathogen.gene<-cl %>% separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)%>% dplyr::summarize(n = n()) %>% arrange(desc(n))
+  gene.list<-cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)
+  freq.list.pathogen.gene<-cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)%>% dplyr::summarize(n = n()) %>% arrange(desc(n))
   write.csv(freq.list.pathogen.gene, file= paste0 ("./Results/","./Mfuzz_Clustering/","Variable.enriched.genes.and.their.frequency.in.pathogen.csv"),quote = F, row.names = FALSE)
 
 
@@ -335,8 +358,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
 
-  grid.newpage()
-  venn.plot <- draw.quintuple.venn(
+  grid::grid.newpage()
+  venn.plot <- VennDiagram::draw.quintuple.venn(
     area1=303,  #dpQ2
     area2=208,  #dpQ4
     area3=206,  #dpQ8
@@ -380,11 +403,11 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   # Writing to file
   tiff(filename ="./Results/Venn_diagram/Pathogn.downregulate.Venn.diagram.tiff", compression = "lzw")
-  grid.draw(venn.plot)
+  grid::grid.draw(venn.plot)
   dev.off()
 
   pdf(file ="./Results/Venn_diagram/Pathogen.downregulate.Venn.diagram.plot.pdf",width = 5, height = 5)
-  grid.draw(venn.plot)
+  grid::grid.draw(venn.plot)
   dev.off()
 
 
@@ -448,8 +471,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   colnames(FF2)<-"Attributes"
 
 
-  grid.newpage()
-  venn.plot <- draw.quintuple.venn(
+  grid::grid.newpage()
+  venn.plot <- VennDiagram::draw.quintuple.venn(
     area1=157,  #upQ2
     area2=180,  #upQ4
     area3=202,  #upQ8
@@ -493,11 +516,11 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   # Writing to file
   tiff(filename ="./Results//Venn_diagram/Pathogen.upregulate.Venn.diagram.tiff", compression = "lzw")
-  grid.draw(venn.plot)
+  grid::grid.draw(venn.plot)
   dev.off()
 
   pdf(file ="./Results//Venn_diagram/Pathogen.upregulate.Venn.diagram.plot.pdf",width = 5, height = 5)
-  grid.draw(venn.plot)
+  grid::grid.draw(venn.plot)
   dev.off()
 
 
@@ -508,11 +531,11 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   dpQ8$logFC.8h [dpQ8$logFC.8h<0]<-1
   dpQ16$logFC.16h [dpQ16$logFC.16h<0]<-1
   dpQ24$logFC.24h [dpQ24$logFC.24h<0]<-1
-  dpQ<-rbind.fill(dpQ2,dpQ4,dpQ8,dpQ16,dpQ24)
+  dpQ<-plyr::rbind.fill(dpQ2,dpQ4,dpQ8,dpQ16,dpQ24)
   dpQ[is.na(dpQ[1:6])]<-0
-  dpQ <- dpQ %>% pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
+  dpQ <- dpQ %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
     dplyr::filter(sign == 1) %>%
-    pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
+    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
 
   write.table(dpQ,file = paste0("./Inputs/","Pathogen.all.downregulated.ED.csv"),  sep=",",col.names= FALSE,row.names = TRUE)
 
@@ -523,11 +546,11 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   upQ8$logFC.8h [upQ8$logFC.8h>0]<-1
   upQ16$logFC.16h [upQ16$logFC.16h>0]<-1
   upQ24$logFC.24h [upQ24$logFC.24h>0]<-1
-  upQ<-rbind.fill(upQ2,upQ4,upQ8,upQ16,upQ24)
+  upQ<-plyr::rbind.fill(upQ2,upQ4,upQ8,upQ16,upQ24)
   upQ[is.na(upQ[1:6])]<-0
-  upQ <- upQ %>% pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
+  upQ <- upQ %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
     dplyr::filter(sign == 1) %>%
-    pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
+    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
 
   write.table(upQ,file = paste0("./Inputs/","Pathogen.all.upregulated.ED.csv"),  sep=",",col.names= FALSE,row.names = TRUE)
 
@@ -536,8 +559,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   ### Downregulated
   y <-t(read.csv("Inputs/Pathogen.all.downregulated.ED.csv")) %>% as.data.frame()
   colnames(y)<-y[1,]
-  y <- y[-1,] %>% mutate_if(is.character, as.numeric)
-  upset(y)
+  y <- y[-1,] %>% dplyr::mutate_if(is.character, as.numeric)
+  UpSetR::upset(y)
 
   # Setting colors
   main_bar_col <- c("blue4")
@@ -550,7 +573,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   mb_ratio1 <- c(0.55,0.45)
 
   tiff(filename ="./Results//Upset_plot/Pathogen.downregulate.upset.plot.tiff", compression = "lzw")
-  upset(y,
+  UpSetR::upset(y,
         mb.ratio = mb_ratio1,
         mainbar.y.label = "Interaction of downregulated genes",
         sets.x.label = "Number of Genes",
@@ -567,7 +590,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   dev.off()
 
   pdf(file ="./Results//Upset_plot/Pathogen.downregulate.upset.plot.pdf",width = 5, height = 5)
-  upset(y,
+  UpSetR::upset(y,
         mb.ratio = mb_ratio1,
         mainbar.y.label = "Interaction of downregulated genes",
         sets.x.label = "Number of Genes",
@@ -587,8 +610,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   y <-t(read.csv("Inputs/Pathogen.all.upregulated.ED.csv")) %>% as.data.frame()
   colnames(y)<-y[1,]
-  y <- y[-1,] %>% mutate_if(is.character, as.numeric)
-  upset(y)
+  y <- y[-1,] %>% dplyr::mutate_if(is.character, as.numeric)
+  UpSetR::upset(y)
 
   # Setting colors
   main_bar_col <- c("violetred4")
@@ -601,7 +624,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   mb_ratio1 <- c(0.55,0.45)
 
   tiff(filename ="./Results//Upset_plot/Pathogen.upregulate.upset.plot.tiff", compression = "lzw")
-  upset(y,
+  UpSetR::upset(y,
         mb.ratio = mb_ratio1,
         mainbar.y.label = "Interaction of upregulated genes",
         sets.x.label = "Number of Genes",
@@ -618,7 +641,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   dev.off()
 
   pdf(file ="./Results//Upset_plot/Pathogen.upregulate.upset.plot.pdf",width = 5, height = 5)
-  upset(y,
+  UpSetR::upset(y,
         mb.ratio = mb_ratio1,
         mainbar.y.label = "Interaction of upregulated genes",
         sets.x.label = "Number of Genes",
@@ -634,9 +657,9 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Network analysis using igraph --------------------------------
-  net<-graph.data.frame(unique(ppi.p[,c(1,4)]),directed = FALSE)
-  V(net)$label<-V(net)$name
-  deg<-igraph::degree(net,v=V(net), mode = c("total"),
+  net<-igraph::graph.data.frame(unique(ppi.p[,c(1,4)]),directed = FALSE)
+  igraph::V(net)$label<-igraph::V(net)$name
+  deg<-igraph::degree(net,v=igraph::V(net), mode = c("total"),
                       loops = TRUE,normalized = FALSE)
 
   # Hub gene  ---------------------------------------------------
@@ -650,7 +673,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Network betweennes --------------------------------------------------
-  b<-igraph::betweenness(net, v = V(net), directed = TRUE, weights = NULL,
+  b<-igraph::betweenness(net, v = igraph::V(net), directed = TRUE, weights = NULL,
                          nobigint = TRUE, normalized = FALSE)
 
   b.p<-as.data.frame(b)
@@ -658,14 +681,14 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   b.p<-cbind(gene.name,b.p)
   colnames(b.p)[1]<-"Gene.name"
   colnames(b.p)[2]<-"Betweennes"
-  Betweennes.pathogen<-b.p%>% filter(Betweennes>100)
+  Betweennes.pathogen<-b.p%>% dplyr::filter(Betweennes>100)
   write.csv(Betweennes.pathogen,file = paste0 ("./Results/","./Network_analysis/","Pathogen.betweennes.csv"),quote = F, row.names = FALSE)
 
   # Network short distance --------------------------------------------------
-  d<-distances(
+  d<-igraph::distances(
     net,
-    v = V(net),
-    to = V(net),
+    v = igraph::V(net),
+    to = igraph::V(net),
     mode = c("all", "out", "in"),
     weights = NULL,
     algorithm = c("automatic", "unweighted", "dijkstra", "bellman-ford", "johnson")
@@ -677,7 +700,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Network Modules ---------------------------------------------------------
-  cl<-cluster_louvain(net, weights = NULL)
+  cl<-igraph::cluster_louvain(net, weights = NULL)
   t<-as.data.frame(cl$membership)
   t1<-as.data.frame(cl$names)
   t2<-cbind(t1,t)
@@ -689,16 +712,16 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   # Plot Modules ------------------------------------------------------------
   g_grouped = net
 
-  for(i in unique(V(net)$community)){
-    groupV = which(V(net)$community == i)
-    g_grouped = add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
+  for(i in unique(igraph::V(net)$community)){
+    groupV = which(igraph::V(net)$community == i)
+    g_grouped = igraph::add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
   }
 
-  l <- layout_nicely(g_grouped)
+  l <- igraph::layout_nicely(g_grouped)
 
   # Writing to file
   pdf(file ="./Results/Network_analysis/Pathogen.modules.in.ppi.network.plot.pdf",width = 5, height = 5)
-  plot(cl,net, layout = layout_with_fr,
+  plot(cl,net, layout = igraph::layout_with_fr,
        vertex.size =10,
        edge.width = 1,
        vertex.label.dist=0.001,
@@ -712,14 +735,14 @@ dRNASb <- function(data_file_path, phenotype_file_path,
        edge.label.cex = 1,
        edge.arrow.size=0.2,
        edge.curved=0,
-       vertex.label=V(net)$v,
+       vertex.label=igraph::V(net)$v,
        vertex.label.color="black",
        vertex.label.cex=0.5,
        vertex.label.cex = 0.5 )
   dev.off()
 
   tiff(filename ="./Results/Network_analysis/Pathogen.modules.in.ppi.network.plot.tiff", compression = "lzw")
-  plot(cl,net, layout = layout_with_fr,
+  plot(cl,net, layout = igraph::layout_with_fr,
        vertex.size =10,
        edge.width = 1,
        vertex.label.dist=0.001,
@@ -733,7 +756,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
        edge.label.cex = 1,
        edge.arrow.size=0.2,
        edge.curved=0,
-       vertex.label=V(net)$v,
+       vertex.label=igraph::V(net)$v,
        vertex.label.color="black",
        vertex.label.cex=0.5,
        vertex.label.cex = 0.5 )
@@ -742,357 +765,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
 
-
-
-
-
-  # below code based on old
-
-
-  dat <- read.csv(data_file_path, row.names = 1)
-  pheno <- read.csv(phenotype_file_path, row.names = 1)
-  fun<-read.csv(go_function_file_path)
-  ppi<-read.csv(ppi_file_path)
-  ann<-read.csv(annotation_file_path)
-
-  # Normalise ---------------------------------------------------------------
-
-  c <- pheno[colnames(dat), "groups"]
-  y <- edgeR::DGEList(counts=dat, group=c, genes=rownames(dat))
-  y <- edgeR::cpm(edgeR::calcNormFactors(y, method="TMM"), log = TRUE)
-
-
-  # Filter ------------------------------------------------------------------
-
-  keep <- edgeR::filterByExpr(y, group = c, min.count = log2(10))
-  y <- y[keep,]
-  normlise.count.dat<-data.frame(y)
-
-
-  # Differential gene expression analysis using "limma" ---------------------
-
-  group = as.factor(c)
-  design <- model.matrix(~ 0 + group)
-  colnames(design) <- levels(group)
-  rownames(design) <- colnames(y)
-  fit <- limma::lmFit(y, design = design)
-  cont.matrix <- limma::makeContrasts(WT.02_h - WT.00_h,
-                               WT.04_h - WT.00_h,
-                               WT.08_h - WT.00_h,
-                               WT.16_h - WT.00_h,
-                               WT.24_h - WT.00_h,levels=design)
-  fit.cont <- limma::eBayes(limma::contrasts.fit(fit, cont.matrix))
-  summa.fit <- limma::decideTests(fit.cont)
-
-
-  # provide this as argument to main function lfc = 1
-  de.ppi <- function(fit.cont, coef=1, lfc = 1, adjP =0.05){
-    wtdt <- topTable(fit.cont, n = Inf, coef = coef)
-    updt = with(wtdt, logFC > lfc & adj.P.Val < adjP)
-    downdt = with(wtdt, logFC < lfc & adj.P.Val < adjP)
-    wtdt$col="Not sig"
-    wtdt$col[updt] = "Up"
-    wtdt$col[downdt] = "Down"
-    return(wtdt)
-  }
-
-  DE <- list()
-  for (n in 1:5){
-    DE[[n]] <- de.ppi(fit.cont, coef = n)
-  }
-
-  D<-DE[[3]] # 1=2h, 2=4h, 3=8h, 4=16h, 5=24h
-  Gene.name<-as.data.frame(row.names(D))    # add row to data frame in r
-  D<-cbind(Gene.name,D)
-  colnames(D)[3]<-"Gene.name"
-  write.csv(D,file = "Differential.gene.expression.for.2h.csv",row.names = FALSE)
-
-
-  # Average replecates across each time -------------------------------------
-
-  d <- cbind(rowMeans(dat[,c(1:3)], na.rm = T),
-             rowMeans(dat[,c(4:6)], na.rm = T),
-             rowMeans(dat[,c(7:9)], na.rm = T),
-             rowMeans(dat[,c(10:12)], na.rm = T),
-             rowMeans(dat[,c(13:15)], na.rm = T),
-             rowMeans(dat[,c(16:18)], na.rm = T))
-  colnames(d) <- c("Mean.0h","Mean.20h","Mean.4h","Mean.8h","Mean.16h","Mean.24h")
-
-  Gene.name<-as.data.frame(row.names(d))    # add row to data frame in r
-  D<-cbind(Gene.name,d)
-  colnames(D)[1]<-"Gene.name"
-  write.csv(D,file = "pathogen.mean.csv",row.names = FALSE)
-
-  # Clustering using "Mfuzz" ------------------------------------------------
-
-  d <- read.csv("pathogen.mean.csv", row.names = 1)
-
-  y.dat<- as.matrix(d)
-  y.dat <- y.dat[which(apply(y.dat, 1, var)>2 & apply(y.dat,1,mean)>2), 1:6]
-  timepoint <- c(0,2,4,8,16,24)
-  y.dat <- rbind(timepoint, y.dat)
-  rownames(y.dat)[1]<- "time"
-  tmp<- tempfile()
-  write.table(y.dat,file=tmp, sep='\t',quote=FALSE, col.names=NA)
-  z.data <- table2eset(tmp)
-  data.z <-standardise(z.data)
-  class(data.z)
-  m1 <-mestimate(data.z)
-  Dmin(data.z, m=m1, crange=seq(2,22,1), repeats = 3, visu = TRUE)
-  clust=8
-  # set.seed(123456)
-  c<- mfuzz(data.z, c=clust, m=m1)
-  mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
-  membership<-c$membership
-  membership<-data.frame(membership)
-  fd<-data.frame(cor(t(c[[1]])))
-  acore<-acore(data.z,c,min.acore = 0.5)
-  acore_list<-do.call(rbind,lapply(seq_along(acore), function(i){data.frame(CLUSTER=i, acore[[i]])}))
-  colnames(acore_list)[2]<-"gene_name"
-  genelist<- acore(data.z,cl=c,min.acore=0.7)
-  temp <- do.call("rbind", lapply(genelist, FUN = function(x){
-    return(paste0(as.character(x$NAME), collapse = ","))
-  }))
-  Cluster_list<-as.data.frame(temp)
-  colnames(Cluster_list) <-"gene_name"
-  Cluster_list<-str_split_fixed(Cluster_list$gene_name,",", n=Inf)
-  Cluster_list<-t(Cluster_list)
-  colnames(Cluster_list)<- c("Cluster1", "Cluster2","Cluster3","Cluster4","Cluster5","Cluster6","Cluster7","Cluster8")
-
-  write.csv(acore_list, file = "acore_list.CSV", quote = F, row.names = F)
-
-  # Make list ---------------------------------------------------------------
-
-  anno<-read.csv("Data/Annotation.csv")
-  GO<-unique(anno$Gene.Ontology.ID)
-  Uniprot.ID <- sapply(1:length(GO), function(i) paste(gsub("[[:space:]]", "", anno[which(anno$Gene.Ontology.ID==GO[i]),]$Uniprot.ID),collapse=" "))
-  Uniprot.ID<-as.data.frame(Uniprot.ID)
-  GO_Pro_ID<-data.frame(GO.ID=unique(anno$Gene.Ontology.ID),
-                        Uniprot.ID=Uniprot.ID)
-
-
-  # Make list of list -------------------------------------------------------
-
-  Anno <- list()
-  groupSize <- 422
-  GO_IDs <- as.vector(GO_Pro_ID[,1])
-
-  for (i in GO_IDs) {
-    myindex <- which(GO_Pro_ID == i)
-    Anno[i] <- strsplit(as.character(GO_Pro_ID[myindex, 2]), " ")
-  }
-
-
-  # Enrichment using "ClueR" ------------------------------------------------
-
-  ce <- clustEnrichment(c, annotation=Anno, effectiveSize=c(2,100), pvalueCutoff=0.01)
-
-  out <- c()
-  i <- 1
-  for (clus in ce$enrich.list) {
-    clus<- cbind(rep(paste0("Cluster_",i), nrow(clus)), clus)
-    out <- rbind(out,clus)
-    i = i+1
-  }
-
-  write.csv(out, file = "./Enrich.csv", quote = F, row.names = F)
-
-
-  # Venn diagram ------------------------------------------------------------------
-
-
-  d2h<-D%>% filter(logFC<(-1)) # downregulation
-  u2h<-D%>% filter(logFC>(1)) # upregulation
-  Q2<-d2h
-
-
-  A=data.frame(intersect(d2h$Gene.name,d4h$Gene.name))
-  B=data.frame(intersect(d2h$Gene.name,d8h$Gene.name))
-  C=data.frame(intersect(d2h$Gene.name,d16h$Gene.name))
-  D=data.frame(intersect(d2h$Gene.name,d24h$Gene.name))
-  E=data.frame(intersect(d4h$Gene.name,d8h$Gene.name))
-  FF=data.frame(intersect(d4h$Gene.name,d16h$Gene.name))
-  k=data.frame(intersect(d4h$Gene.name,d24h$Gene.name))
-  G=data.frame(intersect(d8h$Gene.name,d16h$Gene.name))
-  M=data.frame(intersect(d8h$Gene.name,d24h$Gene.name))
-  H=data.frame(intersect(d16h$Gene.name,d24h$Gene.name))
-  colnames(a)<-"Attributes"
-  colnames(b)<-"Attributes"
-  colnames(c)<-"Attributes"
-  colnames(d)<-"Attributes"
-  colnames(e)<-"Attributes"
-  colnames(f)<-"Attributes"
-  colnames(k)<-"Attributes"
-  colnames(g)<-"Attributes"
-  colnames(m)<-"Attributes"
-  colnames(h)<-"Attributes"
-
-  A1=data.frame(intersect(A$Attributes,E$Attributes))
-  B1=data.frame(intersect(A$Attributes,FF$Attributes))
-  C1=data.frame(intersect(A$Attributes,K$Attributes))
-  D1=data.frame(intersect(B$Attributes,G$Attributes))
-  E1=data.frame(intersect(B$Attributes,M$Attributes))
-  FF1=data.frame(intersect(C$Attributes,H$Attributes))
-  K1=data.frame(intersect(E$Attributes,G$Attributes))
-  G1=data.frame(intersect(E$Attributes,M$Attributes))
-  M1=data.frame(intersect(FF$Attributes,H$Attributes))
-  H1=data.frame(intersect(G$Attributes,H$Attributes))
-  colnames(A1)<-"Attributes"
-  colnames(B1)<-"Attributes"
-  colnames(C1)<-"Attributes"
-  colnames(D1)<-"Attributes"
-  colnames(E1)<-"Attributes"
-  colnames(FF1)<-"Attributes"
-  colnames(K1)<-"Attributes"
-  colnames(G1)<-"Attributes"
-  colnames(M1)<-"Attributes"
-  colnames(H1)<-"Attributes"
-
-  A2=data.frame(intersect(A1$Attributes,G$Attributes))
-  B2=data.frame(intersect(A1$Attributes,M$Attributes))
-  C2=data.frame(intersect(B1$Attributes,H$Attributes))
-  D2=data.frame(intersect(D1$Attributes,H$Attributes))
-  E2=data.frame(intersect(K1$Attributes,H$Attributes))
-  FF2=data.frame(intersect(A1$Attributes,H$Attributes))
-  colnames(A2)<-"Attributes"
-  colnames(B2)<-"Attributes"
-  colnames(C2)<-"Attributes"
-  colnames(D2)<-"Attributes"
-  colnames(E2)<-"Attributes"
-  colnames(FF2)<-"Attributes"
-
-  grid.newpage()
-  venn.plot <- draw.quintuple.venn(
-    area1 = Q2,
-    area2 =Q4,
-    area3 = Q8,
-    area4 = Q16,
-    area5 = Q22,
-    n12 = A,
-    n13 = B,
-    n14 = C,
-    n15 = D,
-    n23 = E,
-    n24 = FF,
-    n25 = K,
-    n34 = G,
-    n35 =M,
-    n45 = H,
-    n123 = A1,
-    n124 = B1,
-    n125 = C1,
-    n134 = D1,
-    n135 = E1,
-    n145 = FF1,
-    n234 = K1,
-    n235 = G1,
-    n245 = M1,
-    n345 = H2,
-    n1234 = A2,
-    n1235 = B2,
-    n1245 = C2,
-    n1345 = D2,
-    n2345 = E2,
-    n12345 = FF2,
-    category = c("2h", "4h", "8h", "16h", "24h"),
-    fill = c("#e1bebe", "darkgoldenrod1", "#c70000", "#ff99cc", "#9ecbff"),
-    cat.col = c("#e1bebe", "darkgoldenrod1", "#c70000", "#ff99cc", "#9ecbff"),
-    cat.cex = 2,
-    margin = 0.05,
-    cex = c(1.5, 1.5, 1.5, 1.5, 1.5, 1, 0.8, 1, 0.8, 1, 0.8, 1, 0.8, 1, 0.8,
-            1, 0.55, 1, 0.55, 1, 0.55, 1, 0.55, 1, 0.55, 1, 1, 1, 1, 1, 1.5),
-    ind = TRUE
-  );
-  # Writing to file
-  tiff(filename = "Quintuple_Venn_diagram.tiff", compression = "lzw");
-  grid.draw(venn.plot);
-  dev.off()
-
-
-  # Network analysis using igraph --------------------------------
-
-  net<-graph.data.frame(unique(ppi[,c(2,3)]),directed = FALSE)
-  V(net)$label<-V(net)$name
-  V(net)$igraph::degre<-degree(net)
-  deg<-igraph::degree(net,v=V(net), mode = c("total"),
-                      loops = TRUE,normalized = FALSE)
-  # Hub gene significance ---------------------------------------------------
-
-  Hub<-as.data.frame(deg[which(deg>=1)])
-  gene.name<-as.data.frame(row.names(Hub))    # add row to data frame in r
-  Hub<-cbind(gene.name,Hub)
-  colnames(Hub)[1]<-"Gene.name"
-  colnames(Hub)[2]<-"edge.number"
-  remove(gene.name)
-  hist(Hub$edge.number)
-  write.csv(Hub,file = "Hub.correlated.90.posetive.csv",row.names = FALSE)
-
-  # Network betweenness --------------------------------------------------
-
-  b<-igraph::betweenness(net, v = V(net), directed = TRUE, weights = NULL,
-                         nobigint = TRUE, normalized = FALSE)
-
-  bt<-as.data.frame(b)
-  gene.name<-as.data.frame(row.names(bt))    # add row to data frame in r
-  v<-cbind(gene.name,bt)
-  colnames(v)[1]<-"Gene.name"
-  colnames(v)[2]<-"Betweenness"
-  write.csv(v,file = "Betweenness.correlated.90.posetive.csv",row.names = FALSE)
-
-  # Shortest (directed or undirected) paths between vertices
-  distance_table(net, directed = TRUE)
-  mean_distance(net, directed = TRUE, unconnected = TRUE)
-
-  d<-distances(
-    net,
-    v = V(net),
-    to = V(net),
-    mode = c("all", "out", "in"),
-    weights = NULL,
-    algorithm = c("automatic", "unweighted", "dijkstra", "bellman-ford", "johnson")
-  )
-  write.csv(d,file = "Shortest.paths.correlated.90.posetive.csv",row.names = TRUE)
-
-  # Network Modules ---------------------------------------------------------
-
-  cl<-cluster_louvain(net, weights = NULL)
-  t<-as.data.frame(cl$membership)
-  t1<-as.data.frame(cl$names)
-  t2<-cbind(t1,t)
-  colnames(t2)[1]<-"Gene.name"
-  colnames(t2)[2]<-"membership"
-  write.csv(t2,file = "Modules.in.Negative.R.corr.all.GC026-26695.network.csv",row.names = FALSE)
-
-  # Plot Modules ------------------------------------------------------------
-
-  g_grouped = net
-
-  for(i in unique(V(net)$community)){
-    groupV = which(V(net)$community == i)
-    g_grouped = add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
-  }
-
-  l <- layout_nicely(g_grouped)
-
-  plot(cl,net, layout = layout_with_fr,
-       vertex.size =10,
-       edge.width = 1,
-       vertex.label.dist=0.001,
-       vertex.color ='gold',
-       vertex.frame.color="#555555",
-       edge.label=net$v,
-       vertex.size=1,
-       edge.color="gray",
-       vertex.label.font=1,
-       edge.label.font =1,
-       edge.label.cex = 1,
-       edge.arrow.size=0.2,
-       edge.curved=0,
-       vertex.label=V(net)$v,
-       vertex.label.color="black",
-       vertex.label.cex=0.5,
-       vertex.label.cex = 0.5 )
-
+  #old code for corr analysis below
 
   # cor.analysis ------------------------------------------------------------
   d <- read.csv("pathogen.mean.csv", row.names = 1)

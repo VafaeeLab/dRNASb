@@ -23,7 +23,12 @@ library(UpSetR)
 library(plyr)
 library(ggplot2)
 
+# importFrom(magrittr,"%>%")
 
+library(magrittr)
+
+dir_path <- "/home/abhivij/UNSW/VafaeeLab/HostPathogenInteraction/dRNASb/R"
+setwd(dir_path)
 # Load data and statistics analysis---------------------------------------------------------------
 
 pheno <- read.csv("Inputs/Pheno.csv", row.names = 1)
@@ -1531,7 +1536,7 @@ s.p<-merge(s.p,h.p,by="Gene.name")
 s.p<-merge(s.p,b.p,by="Gene.name")
 s.p<-merge(s.p,e.p,by="Gene.name")
 
-l<-rbind.fill(s,s.p)
+l<-plyr::rbind.fill(s,s.p)
 l<-l[,c(1:7)]
 
 ### Get transpose matrix
@@ -1547,25 +1552,25 @@ write.table(l,file = paste0("./Results/","./Matrix_Transpose/","Transpose.host.p
 
 
 c<-read.csv("Inputs/Select.gene.set.for.correlation.study/All.mean.transpose.for.cor.csv", header = T, row.names = 1, check.names = F)
-All.cor<-corr.test(c[1:293],c[294:422], method="pearson",adjust="holm", ci=FALSE)
+All.cor<-psych::corr.test(c[1:293],c[294:422], method="pearson",adjust="holm", ci=FALSE)
 
 r.df <- as.data.frame(All.cor$r)
 R.corr <- r.df %>%
-  mutate(gene1 = row.names(r.df)) %>%
-  pivot_longer(-gene1,
+  dplyr::mutate(gene1 = row.names(r.df)) %>%
+  tidyr::pivot_longer(-gene1,
                names_to = "gene2", names_ptypes = list(gene2=character()),
                values_to = "corr") %>%
-  mutate(gene1 = str_replace(gene1, "\\.\\.", " ("),
-         gene1 = str_replace(gene1, "\\.$", ")"),
-         gene2 = str_replace(gene2, "\\.\\.", " ("),
-         gene2 = str_replace(gene2, "\\.$", ")")) %>%
-  mutate(comb = paste(gene1, "-", gene2))
+  dplyr::mutate(gene1 = stringr::str_replace(gene1, "\\.\\.", " ("),
+         gene1 = stringr::str_replace(gene1, "\\.$", ")"),
+         gene2 = stringr::str_replace(gene2, "\\.\\.", " ("),
+         gene2 = stringr::str_replace(gene2, "\\.$", ")")) %>%
+  dplyr::mutate(comb = paste(gene1, "-", gene2))
 
 #######################################################################  Collect negative correlation
-negative<-R.corr %>% filter(corr<(-0.7))
-net<-graph.data.frame(unique(negative[,c(1,2)]),directed = FALSE)
+negative<-R.corr %>% dplyr::filter(corr<(-0.7))
+net<-igraph::graph.data.frame(unique(negative[,c(1,2)]),directed = FALSE)
 
-cl<-cluster_louvain(net, weights = NULL)
+cl<-igraph::cluster_louvain(net, weights = NULL)
 t<-as.data.frame(cl$membership)
 t1<-as.data.frame(cl$names)
 t2<-cbind(t1,t)
@@ -1574,17 +1579,17 @@ colnames(t2)[2]<-"membership"
 
 g_grouped = net
 
-for(i in unique(V(net)$community)){
-  groupV = which(V(net)$community == i)
-  g_grouped = add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
+for(i in unique(igraph::V(net)$community)){
+  groupV = which(igraph::V(net)$community == i)
+  g_grouped = igraph::add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
 }
 
-l <- layout_nicely(g_grouped)
+l <- igraph::layout_nicely(g_grouped)
 
 
 
 tiff(filename ="./Results/Correlation_analysis/Negative.highly.corrplot.plot.tiff", compression = "lzw")
-plot(cl,net, layout = layout_with_fr,
+plot(cl,net, layout = igraph::layout_with_fr,
      vertex.size =10,
      edge.width = 1,
      vertex.label.dist=0.001,
@@ -1598,14 +1603,14 @@ plot(cl,net, layout = layout_with_fr,
      edge.label.cex = 0.5,
      edge.arrow.size=0.2,
      edge.curved=0,
-     vertex.label=V(net)$v,
+     vertex.label=igraph::V(net)$v,
      vertex.label.color="black",
      vertex.label.cex=0.5,
      vertex.label.cex = 0.5 )
 dev.off()
 
 pdf(file ="./Results//Correlation_analysis/Negative.highly.corrplot.plot.tiff.pdf",width = 5, height = 5)
-plot(cl,net, layout = layout_with_fr,
+plot(cl,net, layout = igraph::layout_with_fr,
      vertex.size =10,
      edge.width = 1,
      vertex.label.dist=0.001,
@@ -1619,20 +1624,20 @@ plot(cl,net, layout = layout_with_fr,
      edge.label.cex = 0.5,
      edge.arrow.size=0.2,
      edge.curved=0,
-     vertex.label=V(net)$v,
+     vertex.label=igraph::V(net)$v,
      vertex.label.color="black",
      vertex.label.cex=0.5,
      vertex.label.cex = 0.5 )
 dev.off()
 
 #########################################################################################  Collect positive correlation
-posetive<-R.corr%>% filter(corr>0.7, corr<1)
+posetive<-R.corr%>% dplyr::filter(corr>0.7, corr<1)
 
-net<-graph.data.frame(unique(posetive[,c(1,2)]),directed = FALSE)
+net<-igraph::graph.data.frame(unique(posetive[,c(1,2)]),directed = FALSE)
 
 # cor.analysis Network Modules ---------------------------------------------------------
 
-cl<-cluster_louvain(net, weights = NULL)
+cl<-igraph::cluster_louvain(net, weights = NULL)
 t<-as.data.frame(cl$membership)
 t1<-as.data.frame(cl$names)
 t2<-cbind(t1,t)
@@ -1642,15 +1647,15 @@ colnames(t2)[2]<-"membership"
 # cor.analysis Plot Cluster ------------------------------------------------------------
 g_grouped = net
 
-for(i in unique(V(net)$community)){
-  groupV = which(V(net)$community == i)
-  g_grouped = add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
+for(i in unique(igraph::V(net)$community)){
+  groupV = which(igraph::V(net)$community == i)
+  g_grouped = igraph::add_edges(g_grouped, combn(groupV, 2), attr=list(weight = 2))
 }
 
-l <- layout_nicely(g_grouped)
+l <- igraph::layout_nicely(g_grouped)
 
 tiff(filename ="./Results/Correlation_analysis/Posetive.highly.corrplot.plot.tiff", compression = "lzw")
-plot(cl,net, layout = layout_with_fr,
+plot(cl,net, layout = igraph::layout_with_fr,
      vertex.size =10,
      edge.width = 1,
      vertex.label.dist=0.001,
@@ -1664,14 +1669,14 @@ plot(cl,net, layout = layout_with_fr,
      edge.label.cex = 0.5,
      edge.arrow.size=0.2,
      edge.curved=0,
-     vertex.label=V(net)$v,
+     vertex.label=igraph::V(net)$v,
      vertex.label.color="black",
      vertex.label.cex=0.5,
      vertex.label.cex = 0.5 )
 dev.off()
 
 pdf(file ="./Results//Correlation_analysis/Posetive.highly.corrplot.plot.tiff.pdf",width = 5, height = 5)
-plot(cl,net, layout = layout_with_fr,
+plot(cl,net, layout = igraph::layout_with_fr,
      vertex.size =10,
      edge.width = 1,
      vertex.label.dist=0.001,
@@ -1685,7 +1690,7 @@ plot(cl,net, layout = layout_with_fr,
      edge.label.cex = 0.5,
      edge.arrow.size=0.2,
      edge.curved=0,
-     vertex.label=V(net)$v,
+     vertex.label=igraph::V(net)$v,
      vertex.label.color="black",
      vertex.label.cex=0.5,
      vertex.label.cex = 0.5 )
@@ -1698,31 +1703,34 @@ dev.off()
 #between host and pathogen
 
 c<-read.csv("Inputs/Select.gene.set.for.correlation.study/Transpose.both gene set.csv", header = T, row.names = 1, check.names = F)
-All.cor<-corr.test(c[1:54],c[1:54], method="pearson",adjust="holm", ci=FALSE)
+All.cor<-psych::corr.test(c[1:54],c[1:54], method="pearson",adjust="holm", ci=FALSE)
 
 r.df <- as.data.frame(All.cor$r)
 R.corr <- r.df %>%
-  mutate(gene1 = row.names(r.df)) %>%
-  pivot_longer(-gene1,
+  dplyr::mutate(gene1 = row.names(r.df)) %>%
+  tidyr::pivot_longer(-gene1,
                names_to = "gene2", names_ptypes = list(gene2=character()),
                values_to = "corr") %>%
-  mutate(gene1 = str_replace(gene1, "\\.\\.", " ("),
-         gene1 = str_replace(gene1, "\\.$", ")"),
-         gene2 = str_replace(gene2, "\\.\\.", " ("),
-         gene2 = str_replace(gene2, "\\.$", ")")) %>%
-  mutate(comb = paste(gene1, "-", gene2))
+  dplyr::mutate(gene1 = stringr::str_replace(gene1, "\\.\\.", " ("),
+         gene1 = stringr::str_replace(gene1, "\\.$", ")"),
+         gene2 = stringr::str_replace(gene2, "\\.\\.", " ("),
+         gene2 = stringr::str_replace(gene2, "\\.$", ")")) %>%
+  dplyr::mutate(comb = paste(gene1, "-", gene2))
 
 
 ### Writing to file
 tiff(filename ="./Results/Correlation_analysis/Corrplot.plot.tiff", compression = "lzw")
-corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust")
+corrplot::corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust")
 dev.off()
 
 pdf(file ="./Results//Correlation_analysis/Corrplot.plot.pdf",width = 5, height = 5);
-corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust")
+corrplot::corrplot(as.matrix(r.df), is.corr = FALSE, method = "circle", order = "hclust")
 dev.off()
 
 write.csv(R.corr,file = paste0 ("./Results/","/Correlation_analysis/","R.corr.host.pathogen.csv"),quote = F, row.names = FALSE)
+
+#until here added 'package::' for correlation analysis.
+#rest seems same with different correlation cutoff values
 
 
 ############################################################################# Negative correlated 70
