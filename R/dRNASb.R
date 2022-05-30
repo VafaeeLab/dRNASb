@@ -27,7 +27,7 @@ library(ggplot2)
 
 library(magrittr)
 
-dir_path <- "/home/abhivij/UNSW/VafaeeLab/HostPathogenInteraction/dRNASb/R"
+dir_path <- "/home/abhivij/UNSW/VafaeeLab/HostPathogenInteraction/dRNASb"
 setwd(dir_path)
 # Load data and statistics analysis---------------------------------------------------------------
 

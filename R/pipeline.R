@@ -11,10 +11,10 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   # Load data and statistics analysis---------------------------------------------------------------
 
-  pheno <- read.csv("Inputs/Pheno.csv", row.names = 1)
-  dat.p<- read.csv("Inputs/Pathogen.data.csv",row.names = 1)
-  fun.p<-read.csv("Inputs/Pathogen.annotation.function.csv")
-  ppi.p<-read.csv("Inputs/Pathogen.ppi.csv")
+  pheno <- read.csv("Data/Pheno.csv", row.names = 1)
+  dat.p<- read.csv("Data/Pathogen.data.csv",row.names = 1)
+  fun.p<-read.csv("Data/Pathogen.annotation.function.csv")
+  ppi.p<-read.csv("Data/Pathogen.ppi.csv")
 
 
 

@@ -1,0 +1,1479 @@
+Gene.ontology.ID,Function,Gene.name,Uniprot.ID
+GO:0000015,  phosphopyruvate hydratase complex  [isa: 1902494  0032991  0005575 ],eno,E1WAJ6
+GO:0000049,  tRNA binding  [isa: 0003723  0003676  0097159  0005488  0003674 ],ileS,E1W7S0
+GO:0000049,  tRNA binding  [isa: 0003723  0003676  0097159  0005488  0003674 ],thiI,E1W8T5
+GO:0000103,  sulfate assimilation  [isa: 0006790  0044237  0009987  0008150 ],cysN,E1WAH8
+GO:0000103,  sulfate assimilation  [isa: 0006790  0044237  0009987  0008150 ],cysI,E1WAJ1
+GO:0000104,  succinate dehydrogenase activity  [isa: 0016491  0003824  0003674 ],sdhC,E1W9M5
+GO:0000155,  phosphorelay sensor kinase activity  [isa: 0004673  0004672  0016301  0016740  0003824  0003674 ],barA,E1WAK4
+GO:0000156,  phosphorelay response regulator activity  [isa: 0060089  0003674 ],prpR,E1W8M8
+GO:0000160,  phosphorelay signal transduction system  [isa: 0035556  0007165  0009987  0008150 ],kdpE,E1W9J6
+GO:0000160,  phosphorelay signal transduction system  [isa: 0035556  0007165  0009987  0008150 ],prpR,E1W8M8
+GO:0000160,  phosphorelay signal transduction system  [isa: 0035556  0007165  0009987  0008150 ],barA,E1WAK4
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],pcnB,E1W856
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],prpR,E1W8M8
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],glnK,E1W8X2
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],coaE,E1W812
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],rhlE,E1W9V7
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],serS,E1W6Z5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],proB,E1W8I5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],pyrH,E1W890
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],accA,E1W8A4
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],lon,E1W8W0
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],ftsK,E1W6Z2
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],galK,E1W9R2
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],aroL,E1W8P9
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],artP,E1W6W1
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],murF,E1W7Z6
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],hpt,E1W842
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],thiI,E1W8T5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],adk,E1W8Z6
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],cmk,E1W711
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],ileS,E1W7S0
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],cydD,E1W6Y9
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],panC,E1W853
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],murC,E1W801
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],recD,E1WAN6
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],citG,E1W9C0
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],mukB,E1W725
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],fucK,E1WAM2
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],thrA,E1W7M5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],dnaK,E1W7N5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],barA,E1WAK4
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],sucD,E1W9N2
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],cysN,E1WAH8
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],aas,E1WAQ3
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],murD,E1W7Z8
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],helD,E1W7A7
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],murE,E1W7Z5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],fepC,E1W991
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],uvrB,E1W9T6
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],ribF,E1W7R9
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],thrB,E1W7M6
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],polB,E1W7X0
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],purK,E1W940
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],sitB,E1WAA7
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],wrbA,E1W7F0
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],htpG,E1W8Z5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],cydC,E1W6Y8
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],bioD,E1W9T5
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],clpA,E1W6X8
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],sucC,E1W9N1
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],secA,E1W808
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],moaA,E1W9T9
+GO:0000166,  nucleotide binding  [isa: 0036094  0005488  0003674 ],bioD,E1W9T5
+GO:0000256,  allantoin catabolic process  [isa: 1901565  1901564  0006807  0008152  0008150 ],allC,E1W934
+GO:0000256,  allantoin catabolic process  [isa: 1901565  1901564  0006807  0008152  0008150 ],allB,E1W930
+GO:0000256,  allantoin catabolic process  [isa: 1901565  1901564  0006807  0008152  0008150 ],allA,E1W923
+GO:0000270,  peptidoglycan metabolic process  [isa: 0030203  0006022  1901564  0006807  0008152  0008150 ],rlpA,E1W9D9
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],gpt,E1W8I1
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],pgm,E1W9J2
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],eno,E1WAJ6
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],murE,E1W7Z5
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],entD,E1W985
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],galK,E1W9R2
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],sucC,E1W9N1
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],aroL,E1W8P9
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],dxs,E1W8T2
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],bioD,E1W9T5
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],bioD,E1W9T5
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],poxB,E1W6W8
+GO:0000287,  magnesium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],prpB,E1W8M9
+GO:0000917,  division septum assembly  [isa: 0090529  0022607  0016043  0009987  0008150 ],sulA,E1W7A3
+GO:0000917,  division septum assembly  [isa: 0090529  0022607  0016043  0009987  0008150 ],ftsI,E1W7Z4
+GO:0002161,  aminoacyl-tRNA editing activity  [isa: 0052689  0016787  0003824  0003674 ],ileS,E1W7S0
+GO:0003333,  amino acid transmembrane transport  [isa: 0006865  0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],artP,E1W6W1
+GO:0003333,  amino acid transmembrane transport  [isa: 0006865  0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],putP,E1W7F5
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],polB,E1W7X0
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],dnaQ,E1W8D0
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],dnaE,E1W8A3
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],rhlE,E1W9V7
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],rpsA,E1W712
+GO:0003676,  nucleic acid binding  [isa: 0097159  0005488  0003674 ],cspE,E1W9D0
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],pdhR,E1W823
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],helD,E1W7A7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],lrp,E1W6Z1
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],allR,E1W924
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],sirC,E1WAB2
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],cbpA,E1W7E3
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],recD,E1WAN6
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],nhaR,E1W7R4
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],ftsK,E1W6Z2
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],seqA,E1W9J1
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],hilD,E1WAC0
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],leuO,E1W7Y7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],cspE,E1W9D0
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],polB,E1W7X0
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],mukB,E1W725
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],sfsA,E1W859
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],priB,E1WAS7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],csgD,E1W7H1
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],uvrB,E1W9T6
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],rnk,E1W9B7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],stpA,E1WA48
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],holA,E1W9E7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],fur,E1W9I7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],dps,E1W9W7
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],prpR,E1W8M8
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],kdpE,E1W9J6
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],dnaQ,E1W8D0
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],acrR,E1W8Y6
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],mraZ,E1W7Z1
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],araC,E1W7X6
+GO:0003677,  DNA binding  [isa: 0003676  0097159  0005488  0003674 ],hupB,E1W8W1
+GO:0003678,  DNA helicase activity  [isa: 0003824  0003674 ],recD,E1WAN6
+GO:0003678,  DNA helicase activity  [isa: 0003824  0003674 ],helD,E1W7A7
+GO:0003681,  bent DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],cbpA,E1W7E3
+GO:0003697,  single-stranded DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],priB,E1WAS7
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],mraZ,E1W7Z1
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],sirC,E1WAB2
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],lrp,E1W6Z1
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],nhaR,E1W7R4
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],leuO,E1W7Y7
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],pdhR,E1W823
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],fur,E1W9I7
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],nagC,E1W9H6
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],araC,E1W7X6
+GO:0003700,  DNA-binding transcription factor activity  [isa: 0140110  0003674 ],hilD,E1WAC0
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],pcnB,E1W856
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],rluA,E1W7W8
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],truD,E1WAH2
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],ybcJ,E1W948
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],proB,E1W8I5
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],rluC,E1W7L5
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],thiI,E1W8T5
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],infA,E1W6Y5
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],nusB,E1W8S8
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],rplI,E1WAS9
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],rpsF,E1WAS6
+GO:0003723,  RNA binding  [isa: 0003676  0097159  0005488  0003674 ],rpsA,E1W712
+GO:0003724,  RNA helicase activity  [isa: 0003824  0003674 ],rhlE,E1W9V7
+GO:0003735,  structural constituent of ribosome  [isa: 0005198  0003674 ],rplI,E1WAS9
+GO:0003735,  structural constituent of ribosome  [isa: 0005198  0003674 ],rpsF,E1WAS6
+GO:0003735,  structural constituent of ribosome  [isa: 0005198  0003674 ],rpsA,E1W712
+GO:0003743,  translation initiation factor activity  [isa: 0003723  0003676  0097159  0005488  0003674 ],infA,E1W6Y5
+GO:0003755,  peptidyl-prolyl cis-trans isomerase activity  [isa: 0016859  0016853  0003824  0003674 ],ppiB,E1W943
+GO:0003755,  peptidyl-prolyl cis-trans isomerase activity  [isa: 0016859  0016853  0003824  0003674 ],surA,E1W7W5
+GO:0003755,  peptidyl-prolyl cis-trans isomerase activity  [isa: 0016859  0016853  0003824  0003674 ],tig,E1W8V7
+GO:0003824,  catalytic activity  [isa: 0003674 ],ribD,E1W8S6
+GO:0003824,  catalytic activity  [isa: 0003674 ],prpB,E1W8M9
+GO:0003824,  catalytic activity  [isa: 0003674 ],caiD,E1W7U4
+GO:0003824,  catalytic activity  [isa: 0003674 ],gabT,E1WA41
+GO:0003824,  catalytic activity  [isa: 0003674 ],moaA,E1W9T9
+GO:0003824,  catalytic activity  [isa: 0003674 ],poxB,E1W6W8
+GO:0003824,  catalytic activity  [isa: 0003674 ],malZ,E1W8R2
+GO:0003824,  catalytic activity  [isa: 0003674 ],speE,E1W838
+GO:0003824,  catalytic activity  [isa: 0003674 ],sucD,E1W9N2
+GO:0003824,  catalytic activity  [isa: 0003674 ],dxs,E1W8T2
+GO:0003824,  catalytic activity  [isa: 0003674 ],sucC,E1W9N1
+GO:0003824,  catalytic activity  [isa: 0003674 ],aas,E1WAQ3
+GO:0003824,  catalytic activity  [isa: 0003674 ],serC,E1W708
+GO:0003824,  catalytic activity  [isa: 0003674 ],leuA,E1W7Y5
+GO:0003824,  catalytic activity  [isa: 0003674 ],dnaE,E1W8A3
+GO:0003824,  catalytic activity  [isa: 0003674 ],bioB,E1W9T2
+GO:0003824,  catalytic activity  [isa: 0003674 ],bioA,E1W9T1
+GO:0003824,  catalytic activity  [isa: 0003674 ],aroG,E1W9P8
+GO:0003824,  catalytic activity  [isa: 0003674 ],luxS,E1WA67
+GO:0003824,  catalytic activity  [isa: 0003674 ],pyrH,E1W890
+GO:0003824,  catalytic activity  [isa: 0003674 ],plsX,E1W7M1
+GO:0003824,  catalytic activity  [isa: 0003674 ],hemB,E1W8N3
+GO:0003824,  catalytic activity  [isa: 0003674 ],miaB,E1W9H1
+GO:0003824,  catalytic activity  [isa: 0003674 ],panC,E1W853
+GO:0003824,  catalytic activity  [isa: 0003674 ],caiC,E1W7U5
+GO:0003824,  catalytic activity  [isa: 0003674 ],glnD,E1W886
+GO:0003824,  catalytic activity  [isa: 0003674 ],nagB,E1W9H8
+GO:0003849,  3-deoxy-7-phosphoheptulonate synthase activity  [isa: 0016740  0003824  0003674 ],aroG,E1W9P8
+GO:0003852,  2-isopropylmalate synthase activity  [isa: 0016740  0003824  0003674 ],leuA,E1W7Y5
+GO:0003887,  DNA-directed DNA polymerase activity  [isa: 0034061  0016779  0016740  0003824  0003674 ],dnaE,E1W8A3
+GO:0003887,  DNA-directed DNA polymerase activity  [isa: 0034061  0016779  0016740  0003824  0003674 ],polB,E1W7X0
+GO:0003887,  DNA-directed DNA polymerase activity  [isa: 0034061  0016779  0016740  0003824  0003674 ],dnaQ,E1W8D0
+GO:0003887,  DNA-directed DNA polymerase activity  [isa: 0034061  0016779  0016740  0003824  0003674 ],holA,E1W9E7
+GO:0003955,  NAD [isa: 0016491  0003824  0003674 ],wrbA,E1W7F0
+GO:0003989,  acetyl-CoA carboxylase activity  [isa: 0016421  0016874  0003824  0003674 ],accA,E1W8A4
+GO:0003995,  acyl-CoA dehydrogenase activity  [isa: 0016491  0003824  0003674 ],caiA,E1W7U7
+GO:0004014,  adenosylmethionine decarboxylase activity  [isa: 0016831  0016830  0016829  0003824  0003674 ],speD,E1W837
+GO:0004042,  acetyl-CoA:L-glutamate N-acetyltransferase activity  [isa: 0008080  0016407  0016740  0003824  0003674 ],argA,E1WAN5
+GO:0004129,  cytochrome-c oxidase activity  [isa: 0009055  0016491  0003824  0003674 ],cyoB,E1W8V2
+GO:0004129,  cytochrome-c oxidase activity  [isa: 0009055  0016491  0003824  0003674 ],cyoA,E1W8V3
+GO:0004146,  dihydrofolate reductase activity  [isa: 0016491  0003824  0003674 ],folA,E1W7W0
+GO:0004317,  3-hydroxypalmitoyl-[acyl-carrier-protein] dehydratase activity  [isa: 0004312  0016740  0003824  0003674 ],fabA,E1W799
+GO:0004325,  ferrochelatase activity  [isa: 0016829  0003824  0003674 ],hemH,E1W8Z7
+GO:0004342,  glucosamine-6-phosphate deaminase activity  [isa: 0019239  0016787  0003824  0003674 ],nagB,E1W9H8
+GO:0004412,  homoserine dehydrogenase activity  [isa: 0016491  0003824  0003674 ],thrA,E1W7M5
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],recD,E1WAN6
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],sbcC,E1W8Q6
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],dnaQ,E1W8D0
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],uvrB,E1W9T6
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],xseB,E1W8T4
+GO:0004518,  nuclease activity  [isa: 0016787  0003824  0003674 ],sbcD,E1W8Q7
+GO:0004591,  oxoglutarate dehydrogenase  [isa: 0016491  0003824  0003674 ],sucA,E1W9M9
+GO:0004601,  peroxidase activity  [isa: 0016491  0003824  0003674 ],ahpC,E1W9A9
+GO:0004673,  protein histidine kinase activity  [isa: 0004672  0016301  0016740  0003824  0003674 ],barA,E1WAK4
+GO:0004735,  pyrroline-5-carboxylate reductase activity  [isa: 0016491  0003824  0003674 ],proC,E1W8P7
+GO:0004766,  spermidine synthase activity  [isa: 0016740  0003824  0003674 ],speE,E1W838
+GO:0004783,  sulfite reductase  [isa: 0016491  0003824  0003674 ],cysI,E1WAJ1
+GO:0004791,  thioredoxin-disulfide reductase activity  [isa: 0016491  0003824  0003674 ],trxB,E1W6Z0
+GO:0004812,  aminoacyl-tRNA ligase activity  [isa: 0016874  0003824  0003674 ],ileS,E1W7S0
+GO:0004812,  aminoacyl-tRNA ligase activity  [isa: 0016874  0003824  0003674 ],serS,E1W6Z5
+GO:0004970,  ionotropic glutamate receptor activity  [isa: 0022824  0005230  0015276  0005216  0015075  0022857  0005215  0003674 ],glnH,E1W9W6
+GO:0005198,  structural molecule activity  [isa: 0003674 ],ompA,E1W7A2
+GO:0005198,  structural molecule activity  [isa: 0003674 ],flgK,E1W7L2
+GO:0005215,  transporter activity  [isa: 0003674 ],kefC,E1W7V9
+GO:0005215,  transporter activity  [isa: 0003674 ],fhuB,E1W866
+GO:0005215,  transporter activity  [isa: 0003674 ],proW,E1WA60
+GO:0005215,  transporter activity  [isa: 0003674 ],fhuD,E1W865
+GO:0005215,  transporter activity  [isa: 0003674 ],brnQ,E1W8R0
+GO:0005215,  transporter activity  [isa: 0003674 ],fepC,E1W991
+GO:0005215,  transporter activity  [isa: 0003674 ],ampG,E1W8V4
+GO:0005215,  transporter activity  [isa: 0003674 ],fepB,E1W995
+GO:0005215,  transporter activity  [isa: 0003674 ],gabP,E1WA42
+GO:0005215,  transporter activity  [isa: 0003674 ],cycA,E1WAT3
+GO:0005215,  transporter activity  [isa: 0003674 ],putP,E1W7F5
+GO:0005215,  transporter activity  [isa: 0003674 ],citT,E1W9B9
+GO:0005215,  transporter activity  [isa: 0003674 ],csgG,E1W7G8
+GO:0005215,  transporter activity  [isa: 0003674 ],acrA,E1W8Y5
+GO:0005215,  transporter activity  [isa: 0003674 ],focA,E1W705
+GO:0005215,  transporter activity  [isa: 0003674 ],fepD,E1W993
+GO:0005215,  transporter activity  [isa: 0003674 ],pheP,E1W969
+GO:0005215,  transporter activity  [isa: 0003674 ],sitB,E1WAA7
+GO:0005215,  transporter activity  [isa: 0003674 ],araJ,E1W8Q5
+GO:0005215,  transporter activity  [isa: 0003674 ],sitA,E1WAA6
+GO:0005215,  transporter activity  [isa: 0003674 ],caiT,E1W7U8
+GO:0005215,  transporter activity  [isa: 0003674 ],clcA,E1W875
+GO:0005215,  transporter activity  [isa: 0003674 ],fepG,E1W992
+GO:0005215,  transporter activity  [isa: 0003674 ],cydD,E1W6Y9
+GO:0005215,  transporter activity  [isa: 0003674 ],cydC,E1W6Y8
+GO:0005215,  transporter activity  [isa: 0003674 ],aroP,E1W822
+GO:0005215,  transporter activity  [isa: 0003674 ],nagE,E1W9H9
+GO:0005215,  transporter activity  [isa: 0003674 ],artQ,E1W6V9
+GO:0005215,  transporter activity  [isa: 0003674 ],dcuC,E1W9C8
+GO:0005247,  voltage-gated chloride channel activity  [isa: 0005254  0005253  0005216  0015075  0022857  0005215  0003674 ],clcA,E1W875
+GO:0005298,  proline:sodium symporter activity  [isa: 0005283  0005343  0005342  0022857  0005215  0003674 ],putP,E1W7F5
+GO:0005506,  iron ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],fhuA,E1W863
+GO:0005506,  iron ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],fes,E1W987
+GO:0005506,  iron ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],luxS,E1WA67
+GO:0005506,  iron ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],bioB,E1W9T2
+GO:0005507,  copper ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],cyoA,E1W8V3
+GO:0005509,  calcium ion binding  [isa: 0046872  0043169  0043167  0005488  0003674 ],mukF,E1W723
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],cmk,E1W711
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],coaE,E1W812
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],lon,E1W8W0
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],helD,E1W7A7
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],nrdE,E1WA57
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],murC,E1W801
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],secA,E1W808
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],ftsK,E1W6Z2
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],dnaK,E1W7N5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],bioD,E1W9T5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],panC,E1W853
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],murD,E1W7Z8
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],aas,E1WAQ3
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],cydC,E1W6Y8
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],fepC,E1W991
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],murF,E1W7Z6
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],thiI,E1W8T5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],purK,E1W940
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],aroL,E1W8P9
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],thrB,E1W7M6
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],artP,E1W6W1
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],recD,E1WAN6
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],proB,E1W8I5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],sitB,E1WAA7
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],htpG,E1W8Z5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],ileS,E1W7S0
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],adk,E1W8Z6
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],clpA,E1W6X8
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],bioD,E1W9T5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],pyrH,E1W890
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],uvrB,E1W9T6
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],galK,E1W9R2
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],prpR,E1W8M8
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],sucC,E1W9N1
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],accA,E1W8A4
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],cydD,E1W6Y9
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],cysN,E1WAH8
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],citG,E1W9C0
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],rhlE,E1W9V7
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],serS,E1W6Z5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],mukB,E1W725
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],fucK,E1WAM2
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],barA,E1WAK4
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],ribF,E1W7R9
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],pcnB,E1W856
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],murE,E1W7Z5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],thrA,E1W7M5
+GO:0005524,  ATP binding  [isa: 0008144  0005488  0003674 ],phoH,E1W7F6
+GO:0005525,  GTP binding  [isa: 0032561  0019001  0017076  0000166  0036094  0005488  0003674 ],cysN,E1WAH8
+GO:0005525,  GTP binding  [isa: 0032561  0019001  0017076  0000166  0036094  0005488  0003674 ],moaA,E1W9T9
+GO:0005534,  galactose binding  [isa: 0048029  0030246  0005488  0003674 ],galK,E1W9R2
+GO:0005576,  extracellular region  [isa: 0110165  0005575 ],flgK,E1W7L2
+GO:0005576,  extracellular region  [isa: 0110165  0005575 ],eno,E1WAJ6
+GO:0005623,  cell  [isa: 0005575 ],ahpF,E1W9B0
+GO:0005623,  cell  [isa: 0005575 ],ahpC,E1W9A9
+GO:0005623,  cell  [isa: 0005575 ],cydC,E1W6Y8
+GO:0005623,  cell  [isa: 0005575 ],dps,E1W9W7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],miaB,E1W9H1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],tig,E1W8V7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],cspE,E1W9D0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],coaE,E1W812
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],mukB,E1W725
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],dnaE,E1W8A3
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],xseB,E1W8T4
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],aroL,E1W8P9
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],kdsB,E1W719
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],prpC,E1W8N0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],proB,E1W8I5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],ahpC,E1W9A9
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],panC,E1W853
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],seqA,E1W9J1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],hemH,E1W8Z7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],uvrB,E1W9T6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],fur,E1W9I7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],murF,E1W7Z6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],murD,E1W7Z8
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],trxB,E1W6Z0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],speE,E1W838
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],pyrH,E1W890
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],eno,E1WAJ6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],infA,E1W6Y5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],htpG,E1W8Z5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],frr,E1W891
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],bioD,E1W9T5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],cbpA,E1W7E3
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],prpR,E1W8M8
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],nadA,E1W9P4
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],araC,E1W7X6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],aat,E1W6Y7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],serS,E1W6Z5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],murE,E1W7Z5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],mraZ,E1W7Z1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],plsX,E1W7M1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],thiI,E1W8T5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],bioA,E1W9T1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],fabA,E1W799
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],rmf,E1W798
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],caiA,E1W7U7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],thrB,E1W7M6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],cmk,E1W711
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],murC,E1W801
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],apt,E1W8Z1
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],accA,E1W8A4
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],fes,E1W987
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],mukE,E1W724
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],serC,E1W708
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],lpxA,E1W8A0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],bioD,E1W9T5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],secA,E1W808
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],mukF,E1W723
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],argA,E1WAN5
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],lipB,E1W9D6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],ampD,E1W818
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],aes,E1W8Z8
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],rhlE,E1W9V7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],ulaG,E1WAR7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],dps,E1W9W7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],proC,E1W8P7
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],hpt,E1W842
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],adk,E1W8Z6
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],ileS,E1W7S0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],dapB,E1W7T8
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],lon,E1W8W0
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],galK,E1W9R2
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],malZ,E1W8R2
+GO:0005737,  cytoplasm  [isa: 0110165  0005575 ],araA,E1W7X4
+GO:0005840,  ribosome  [isa: 0043232  0043228  0043226  0110165  0005575 ],rpsF,E1WAS6
+GO:0005840,  ribosome  [isa: 0043232  0043228  0043226  0110165  0005575 ],rplI,E1WAS9
+GO:0005840,  ribosome  [isa: 0043232  0043228  0043226  0110165  0005575 ],rpsA,E1W712
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],proW,E1WA60
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],kefC,E1W7V9
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],fepG,E1W992
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],mraY,E1W7Z7
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],gpt,E1W8I1
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],mdoH,E1W7I0
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],gltK,E1W9G4
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],artQ,E1W6V9
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsK,E1W6Z2
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],aas,E1WAQ3
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],aroP,E1W822
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsA,E1W804
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],secA,E1W808
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],sdhA,E1W9M7
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],yajC,E1W8R7
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],kdpA,E1W9K0
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],putP,E1W7F5
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ybjG,E1WA01
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],cyoA,E1W8V3
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],lgt,E1WAP5
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],fepD,E1W993
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],glnP,E1W9W5
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsQ,E1W803
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsL,E1W7Z3
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],tatE,E1W9D3
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],cyoE,E1W8U9
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],gltJ,E1W9G5
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsB,E1WAH5
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],lnt,E1W9G7
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],ftsI,E1W7Z4
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],nagE,E1W9H9
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],brnQ,E1W8R0
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],clcA,E1W875
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],caiT,E1W7U8
+GO:0005886,  plasma membrane  [isa: 0016020  0110165  0005575 ],cydA,E1W9N3
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],ftsI,E1W7Z4
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],clcA,E1W875
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],ftsQ,E1W803
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],ftsL,E1W7Z3
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],kdpA,E1W9K0
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],ftsB,E1WAH5
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],tatE,E1W9D3
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],lgt,E1WAP5
+GO:0005887,  integral component of plasma membrane  [isa: 0016021  0031224  0110165  0005575 ],kefC,E1W7V9
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],araA,E1W7X4
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],nagA,E1W9H7
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],pgm,E1W9J2
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],nagB,E1W9H8
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],galT,E1W9R3
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],fucK,E1WAM2
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],galK,E1W9R2
+GO:0005975,  carbohydrate metabolic process  [isa: 0044238  0008152  0008150 ],malZ,E1W8R2
+GO:0005996,  monosaccharide metabolic process  [isa: 0005975  0044238  0008152  0008150 ],araA,E1W7X4
+GO:0006044,  N-acetylglucosamine metabolic process  [isa: 1901071  0006040  1901135  0071704  0008152  0008150 ],nagB,E1W9H8
+GO:0006044,  N-acetylglucosamine metabolic process  [isa: 1901071  0006040  1901135  0071704  0008152  0008150 ],nagA,E1W9H7
+GO:0006096,  glycolytic process  [isa: 0016052  1901575  0009056  0008152  0008150 ],eno,E1WAJ6
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],sucC,E1W9N1
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],sdhC,E1W9M5
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],sucD,E1W9N2
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],sdhA,E1W9M7
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],sucA,E1W9M9
+GO:0006099,  tricarboxylic acid cycle  [isa: 0044238  0008152  0008150 ],prpC,E1W8N0
+GO:0006139,  nucleobase-containing compound metabolic process  [isa: 0044238  0008152  0008150 ],cmk,E1W711
+GO:0006139,  nucleobase-containing compound metabolic process  [isa: 0044238  0008152  0008150 ],adk,E1W8Z6
+GO:0006144,  purine nucleobase metabolic process  [isa: 0009112  1901564  0006807  0008152  0008150 ],allA,E1W923
+GO:0006144,  purine nucleobase metabolic process  [isa: 0009112  1901564  0006807  0008152  0008150 ],allB,E1W930
+GO:0006145,  purine nucleobase catabolic process  [isa: 0006144  0009112  1901564  0006807  0008152  0008150 ],allA,E1W923
+GO:0006164,  purine nucleotide biosynthetic process  [isa: 0072522  1901566  1901564  0006807  0008152  0008150 ],purK,E1W940
+GO:0006166,  purine ribonucleoside salvage  [isa: 0046129  0046128  0009119  0009116  1901564  0006807  0008152  0008150 ],hpt,E1W842
+GO:0006166,  purine ribonucleoside salvage  [isa: 0046129  0046128  0009119  0009116  1901564  0006807  0008152  0008150 ],gpt,E1W8I1
+GO:0006166,  purine ribonucleoside salvage  [isa: 0046129  0046128  0009119  0009116  1901564  0006807  0008152  0008150 ],apt,E1W8Z1
+GO:0006168,  adenine salvage  [isa: 0043096  0043101  0034654  0019438  0006725  0044237  0009987  0008150 ],apt,E1W8Z1
+GO:0006189,  'de novo' IMP biosynthetic process  [isa: 0006188  0009168  0009127  0009124  1901293  0034654  0019438  0006725  0044237  0009987  0008150 ],purK,E1W940
+GO:0006220,  pyrimidine nucleotide metabolic process  [isa: 0009117  0006753  0055086  0006139  0044238  0008152  0008150 ],cmk,E1W711
+GO:0006221,  pyrimidine nucleotide biosynthetic process  [isa: 0072528  1901566  1901564  0006807  0008152  0008150 ],pyrH,E1W890
+GO:0006221,  pyrimidine nucleotide biosynthetic process  [isa: 0072528  1901566  1901564  0006807  0008152  0008150 ],pyrC,E1W7J2
+GO:0006308,  DNA catabolic process  [isa: 0044265  0009057  1901575  0009056  0008152  0008150 ],xseB,E1W8T4
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],rpsF,E1WAS6
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],frr,E1W891
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],infA,E1W6Y5
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],rpsA,E1W712
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],ileS,E1W7S0
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],rplI,E1WAS9
+GO:0006412,  translation  [isa: 0043043  0006518  1901564  0006807  0008152  0008150 ],serS,E1W6Z5
+GO:0006413,  translational initiation  [isa: 0044237  0009987  0008150 ],infA,E1W6Y5
+GO:0006415,  translational termination  [isa: 0043624  0032984  0022411  0016043  0009987  0008150 ],frr,E1W891
+GO:0006417,  regulation of translation  [isa: 2000112  0010556  0009889  0019222  0050789  0065007  0008150 ],rmf,E1W798
+GO:0006418,  tRNA aminoacylation for protein translation  [isa: 0043039  0043038  0006520  0019752  0043436  0006082  0044237  0009987  0008150 ],serS,E1W6Z5
+GO:0006418,  tRNA aminoacylation for protein translation  [isa: 0043039  0043038  0006520  0019752  0043436  0006082  0044237  0009987  0008150 ],ileS,E1W7S0
+GO:0006428,  isoleucyl-tRNA aminoacylation  [isa: 0006418  0043039  0043038  0006520  0019752  0043436  0006082  0044237  0009987  0008150 ],ileS,E1W7S0
+GO:0006434,  seryl-tRNA aminoacylation  [isa: 0006418  0043039  0043038  0006520  0019752  0043436  0006082  0044237  0009987  0008150 ],serS,E1W6Z5
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],dnaK,E1W7N5
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],surA,E1W7W5
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],ppiB,E1W943
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],cbpA,E1W7E3
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],htpG,E1W8Z5
+GO:0006457,  protein folding  [isa: 0009987  0008150 ],tig,E1W8V7
+GO:0006520,  cellular amino acid metabolic process  [isa: 1901564  0006807  0008152  0008150 ],thrA,E1W7M5
+GO:0006520,  cellular amino acid metabolic process  [isa: 1901564  0006807  0008152  0008150 ],thrC,E1W7M7
+GO:0006526,  arginine biosynthetic process  [isa: 0009084  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],argA,E1WAN5
+GO:0006545,  glycine biosynthetic process  [isa: 0009070  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],folA,E1W7W0
+GO:0006557,  S-adenosylmethioninamine biosynthetic process  [isa: 0046129  0046128  0009119  0009116  1901564  0006807  0008152  0008150 ],speD,E1W837
+GO:0006561,  proline biosynthetic process  [isa: 0009084  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],proB,E1W8I5
+GO:0006561,  proline biosynthetic process  [isa: 0009084  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],proC,E1W8P7
+GO:0006564,  L-serine biosynthetic process  [isa: 0009070  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],serC,E1W708
+GO:0006566,  threonine metabolic process  [isa: 0009066  1901605  0006520  0019752  0043436  0006082  0044237  0009987  0008150 ],thrB,E1W7M6
+GO:0006596,  polyamine biosynthetic process  [isa: 0042401  0009309  0009308  1901564  0006807  0008152  0008150 ],speE,E1W838
+GO:0006596,  polyamine biosynthetic process  [isa: 0042401  0009309  0009308  1901564  0006807  0008152  0008150 ],speD,E1W837
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],fabA,E1W799
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],accA,E1W8A4
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],plsX,E1W7M1
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],lpxB,E1W8A1
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],tesA,E1W914
+GO:0006629,  lipid metabolic process  [isa: 0044238  0008152  0008150 ],lpxA,E1W8A0
+GO:0006631,  fatty acid metabolic process  [isa: 0032787  0019752  0043436  0006082  0044237  0009987  0008150 ],aas,E1WAQ3
+GO:0006631,  fatty acid metabolic process  [isa: 0032787  0019752  0043436  0006082  0044237  0009987  0008150 ],accA,E1W8A4
+GO:0006631,  fatty acid metabolic process  [isa: 0032787  0019752  0043436  0006082  0044237  0009987  0008150 ],fabA,E1W799
+GO:0006633,  fatty acid biosynthetic process  [isa: 0072330  0046394  0016053  0006082  0044237  0009987  0008150 ],accA,E1W8A4
+GO:0006633,  fatty acid biosynthetic process  [isa: 0072330  0046394  0016053  0006082  0044237  0009987  0008150 ],plsX,E1W7M1
+GO:0006633,  fatty acid biosynthetic process  [isa: 0072330  0046394  0016053  0006082  0044237  0009987  0008150 ],fabA,E1W799
+GO:0006637,  acyl-CoA metabolic process  [isa: 0009150  0006163  0009117  0006753  0055086  0006139  0044238  0008152  0008150 ],tesB,E1W8X4
+GO:0006644,  phospholipid metabolic process  [isa: 0019637  0071704  0008152  0008150 ],plsX,E1W7M1
+GO:0006730,  one-carbon metabolic process  [isa: 0044281  0008152  0008150 ],folA,E1W7W0
+GO:0006747,  FAD biosynthetic process  [isa: 0072388  0042727  1901566  1901564  0006807  0008152  0008150 ],ribF,E1W7R9
+GO:0006777,  Mo-molybdopterin cofactor biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],mog,E1W7N1
+GO:0006777,  Mo-molybdopterin cofactor biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],moaA,E1W9T9
+GO:0006779,  porphyrin-containing compound biosynthetic process  [isa: 0033014  1901566  1901564  0006807  0008152  0008150 ],hemH,E1W8Z7
+GO:0006779,  porphyrin-containing compound biosynthetic process  [isa: 0033014  1901566  1901564  0006807  0008152  0008150 ],hemB,E1W8N3
+GO:0006783,  heme biosynthetic process  [isa: 0006779  0033014  1901566  1901564  0006807  0008152  0008150 ],cyoE,E1W8U9
+GO:0006783,  heme biosynthetic process  [isa: 0006779  0033014  1901566  1901564  0006807  0008152  0008150 ],hemH,E1W8Z7
+GO:0006790,  sulfur compound metabolic process  [isa: 0044237  0009987  0008150 ],cysN,E1WAH8
+GO:0006807,  nitrogen compound metabolic process  [isa: 0008152  0008150 ],glnD,E1W886
+GO:0006807,  nitrogen compound metabolic process  [isa: 0008152  0008150 ],lnt,E1W9G7
+GO:0006808,  regulation of nitrogen utilization  [isa: 0050789  0065007  0008150 ],glnD,E1W886
+GO:0006808,  regulation of nitrogen utilization  [isa: 0050789  0065007  0008150 ],glnK,E1W8X2
+GO:0006811,  ion transport  [isa: 0006810  0051234  0051179  0008150 ],clcA,E1W875
+GO:0006811,  ion transport  [isa: 0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:0006811,  ion transport  [isa: 0006810  0051234  0051179  0008150 ],kdpA,E1W9K0
+GO:0006811,  ion transport  [isa: 0006810  0051234  0051179  0008150 ],phoE,E1W8I4
+GO:0006811,  ion transport  [isa: 0006810  0051234  0051179  0008150 ],putP,E1W7F5
+GO:0006812,  cation transport  [isa: 0006811  0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:0006813,  potassium ion transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:0006813,  potassium ion transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],kdpA,E1W9K0
+GO:0006814,  sodium ion transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],citT,E1W9B9
+GO:0006814,  sodium ion transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],putP,E1W7F5
+GO:0006821,  chloride transport  [isa: 0015698  0006820  0006811  0006810  0051234  0051179  0008150 ],clcA,E1W875
+GO:0006826,  iron ion transport  [isa: 0000041  0030001  0006812  0006811  0006810  0051234  0051179  0008150 ],fes,E1W987
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],aroP,E1W822
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],gabP,E1WA42
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],cycA,E1WAT3
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],gltJ,E1W9G5
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],pheP,E1W969
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],brnQ,E1W8R0
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],gltK,E1W9G4
+GO:0006865,  amino acid transport  [isa: 0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],putP,E1W7F5
+GO:0006879,  cellular iron ion homeostasis  [isa: 0046916  0006875  0030003  0006873  0055082  0019725  0009987  0008150 ],dps,E1W9W7
+GO:0006979,  response to oxidative stress  [isa: 0006950  0050896  0008150 ],ahpC,E1W9A9
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsB,E1WAH5
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],sulA,E1W7A3
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],mraY,E1W7Z7
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],murD,E1W7Z8
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],murC,E1W801
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],tig,E1W8V7
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],mukF,E1W723
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsA,E1W804
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],murE,E1W7Z5
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsQ,E1W803
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],mukE,E1W724
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsI,E1W7Z4
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],mukB,E1W725
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsK,E1W6Z2
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],murF,E1W7Z6
+GO:0007049,  cell cycle  [isa: 0009987  0008150 ],ftsL,E1W7Z3
+GO:0007059,  chromosome segregation  [isa: 0009987  0008150 ],ftsK,E1W6Z2
+GO:0007059,  chromosome segregation  [isa: 0009987  0008150 ],mukF,E1W723
+GO:0007059,  chromosome segregation  [isa: 0009987  0008150 ],mukE,E1W724
+GO:0007059,  chromosome segregation  [isa: 0009987  0008150 ],mukB,E1W725
+GO:0007155,  cell adhesion  [isa: 0022610  0008150 ],stfF,E1W871
+GO:0007155,  cell adhesion  [isa: 0022610  0008150 ],stfA,E1W867
+GO:0007155,  cell adhesion  [isa: 0022610  0008150 ],sitA,E1WAA6
+GO:0007165,  signal transduction  [isa: 0009987  0008150 ],barA,E1WAK4
+GO:0008047,  enzyme activator activity  [isa: 0030234  0098772  0003674 ],hycI,E1WA90
+GO:0008080,  N-acetyltransferase activity  [isa: 0016407  0016740  0003824  0003674 ],argA,E1WAN5
+GO:0008080,  N-acetyltransferase activity  [isa: 0016407  0016740  0003824  0003674 ],rimJ,E1W7J6
+GO:0008113,  peptide-methionine  [isa: 0016491  0003824  0003674 ],msrA,E1WAU3
+GO:0008134,  transcription factor binding  [isa: 0005515  0005488  0003674 ],prpR,E1W8M8
+GO:0008152,  metabolic process  [isa: 0008150 ],pyrH,E1W890
+GO:0008152,  metabolic process  [isa: 0008150 ],aas,E1WAQ3
+GO:0008152,  metabolic process  [isa: 0008150 ],glnD,E1W886
+GO:0008152,  metabolic process  [isa: 0008150 ],nagB,E1W9H8
+GO:0008156,  negative regulation of DNA replication  [isa: 2000113  0010558  0009890  0009889  0019222  0050789  0065007  0008150 ],seqA,E1W9J1
+GO:0008168,  methyltransferase activity  [isa: 0016740  0003824  0003674 ],bioC,E1W9T4
+GO:0008177,  succinate dehydrogenase  [isa: 0000104  0016491  0003824  0003674 ],sdhA,E1W9M7
+GO:0008199,  ferric iron binding  [isa: 0005506  0046914  0046872  0043169  0043167  0005488  0003674 ],dps,E1W9W7
+GO:0008233,  peptidase activity  [isa: 0016787  0003824  0003674 ],clpA,E1W6X8
+GO:0008233,  peptidase activity  [isa: 0016787  0003824  0003674 ],ftsI,E1W7Z4
+GO:0008233,  peptidase activity  [isa: 0016787  0003824  0003674 ],hycI,E1WA90
+GO:0008233,  peptidase activity  [isa: 0016787  0003824  0003674 ],lon,E1W8W0
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],pyrC,E1W7J2
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],ribD,E1W8S6
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],galT,E1W9R3
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],allB,E1W930
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],pepN,E1W789
+GO:0008270,  zinc ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],ileS,E1W7S0
+GO:0008295,  spermidine biosynthetic process  [isa: 0008216  0097164  0006807  0008152  0008150 ],speD,E1W837
+GO:0008295,  spermidine biosynthetic process  [isa: 0008216  0097164  0006807  0008152  0008150 ],speE,E1W838
+GO:0008320,  protein transmembrane transporter activity  [isa: 0022884  0022857  0005215  0003674 ],tatE,E1W9D3
+GO:0008324,  cation transmembrane transporter activity  [isa: 0015075  0022857  0005215  0003674 ],kefC,E1W7V9
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],murE,E1W7Z5
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],murD,E1W7Z8
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],murC,E1W801
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],ftsI,E1W7Z4
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],mraY,E1W7Z7
+GO:0008360,  regulation of cell shape  [isa: 0065008  0065007  0008150 ],murF,E1W7Z6
+GO:0008448,  N-acetylglucosamine-6-phosphate deacetylase activity  [isa: 0016787  0003824  0003674 ],nagA,E1W9H7
+GO:0008483,  transaminase activity  [isa: 0016740  0003824  0003674 ],serC,E1W708
+GO:0008483,  transaminase activity  [isa: 0016740  0003824  0003674 ],bioA,E1W9T1
+GO:0008483,  transaminase activity  [isa: 0016740  0003824  0003674 ],gabT,E1WA41
+GO:0008519,  ammonium transmembrane transporter activity  [isa: 0008324  0015075  0022857  0005215  0003674 ],amtB,E1W8X3
+GO:0008615,  pyridoxine biosynthetic process  [isa: 0042819  0072525  1901566  1901564  0006807  0008152  0008150 ],serC,E1W708
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],aroL,E1W8P9
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],dapB,E1W7T8
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],thrB,E1W7M6
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],cysI,E1WAJ1
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],argA,E1WAN5
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],thrA,E1W7M5
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],proB,E1W8I5
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],aroG,E1W9P8
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],serC,E1W708
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],leuA,E1W7Y5
+GO:0008652,  cellular amino acid biosynthetic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],proC,E1W8P7
+GO:0008654,  phospholipid biosynthetic process  [isa: 0006644  0006796  0006793  0044237  0009987  0008150 ],plsX,E1W7M1
+GO:0008654,  phospholipid biosynthetic process  [isa: 0006644  0006796  0006793  0044237  0009987  0008150 ],aas,E1WAQ3
+GO:0008658,  penicillin binding  [isa: 0008144  0005488  0003674 ],ftsI,E1W7Z4
+GO:0008661,  1-deoxy-D-xylulose-5-phosphate synthase activity  [isa: 0016740  0003824  0003674 ],dxs,E1W8T2
+GO:0008679,  2-hydroxy-3-oxopropionate reductase activity  [isa: 0016491  0003824  0003674 ],garR,E1W927
+GO:0008703,  5-amino-6- [isa: 0016491  0003824  0003674 ],ribD,E1W8S6
+GO:0008745,  N-acetylmuramoyl-L-alanine amidase activity  [isa: 0016787  0003824  0003674 ],ampD,E1W818
+GO:0008773,  [protein-PII] uridylyltransferase activity  [isa: 0003824  0003674 ],glnD,E1W886
+GO:0008779,  acyl-[acyl-carrier-protein]-phospholipid O-acyltransferase activity  [isa: 0008374  0016740  0003824  0003674 ],aas,E1WAQ3
+GO:0008780,  acyl-[acyl-carrier-protein]-UDP-N-acetylglucosamine O-acyltransferase activity  [isa: 0008374  0016740  0003824  0003674 ],lpxA,E1W8A0
+GO:0008785,  alkyl hydroperoxide reductase activity  [isa: 0016491  0003824  0003674 ],ahpF,E1W9B0
+GO:0008827,  cytochrome o ubiquinol oxidase activity  [isa: 0015002  0016491  0003824  0003674 ],cyoA,E1W8V3
+GO:0008835,  diaminohydroxyphosphoribosylaminopyrimidine deaminase activity  [isa: 0016787  0003824  0003674 ],ribD,E1W8S6
+GO:0008839,  4-hydroxy-tetrahydrodipicolinate reductase  [isa: 0016491  0003824  0003674 ],dapB,E1W7T8
+GO:0008849,  enterochelin esterase activity  [isa: 0016787  0003824  0003674 ],fes,E1W987
+GO:0008854,  exodeoxyribonuclease V activity  [isa: 0004529  0004536  0004518  0016787  0003824  0003674 ],recD,E1WAN6
+GO:0008855,  exodeoxyribonuclease VII activity  [isa: 0004529  0004536  0004518  0016787  0003824  0003674 ],xseB,E1W8T4
+GO:0008914,  leucyltransferase activity  [isa: 0016740  0003824  0003674 ],aat,E1W6Y7
+GO:0008915,  lipid-A-disaccharide synthase activity  [isa: 0008194  0016740  0003824  0003674 ],lpxB,E1W8A1
+GO:0008932,  lytic endotransglycosylase activity  [isa: 0008933  0016740  0003824  0003674 ],rlpA,E1W9D9
+GO:0008955,  peptidoglycan glycosyltransferase activity  [isa: 0016740  0003824  0003674 ],ftsI,E1W7Z4
+GO:0008961,  phosphatidylglycerol-prolipoprotein diacylglyceryl transferase activity  [isa: 0016740  0003824  0003674 ],lgt,E1WAP5
+GO:0008982,  protein-N [isa: 0016740  0003824  0003674 ],nagE,E1W9H9
+GO:0008987,  quinolinate synthetase A activity  [isa: 0016740  0003824  0003674 ],nadA,E1W9P4
+GO:0009013,  succinate-semialdehyde dehydrogenase [NAD [isa: 0016491  0003824  0003674 ],gabD,E1WA40
+GO:0009055,  electron transfer activity  [isa: 0016491  0003824  0003674 ],dmsA,E1W6Z6
+GO:0009055,  electron transfer activity  [isa: 0016491  0003824  0003674 ],sdhC,E1W9M5
+GO:0009055,  electron transfer activity  [isa: 0016491  0003824  0003674 ],cydA,E1W9N3
+GO:0009055,  electron transfer activity  [isa: 0016491  0003824  0003674 ],ahpF,E1W9B0
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],aroG,E1W9P8
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],murE,E1W7Z5
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],murF,E1W7Z6
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],entC,E1W996
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],murD,E1W7Z8
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],murC,E1W801
+GO:0009058,  biosynthetic process  [isa: 0008152  0008150 ],panC,E1W853
+GO:0009060,  aerobic respiration  [isa: 0045333  0015980  0006091  0044237  0009987  0008150 ],cyoB,E1W8V2
+GO:0009067,  aspartate family amino acid biosynthetic process  [isa: 1901607  0008652  1901566  1901564  0006807  0008152  0008150 ],thrA,E1W7M5
+GO:0009073,  aromatic amino acid family biosynthetic process  [isa: 0008652  1901566  1901564  0006807  0008152  0008150 ],aroG,E1W9P8
+GO:0009073,  aromatic amino acid family biosynthetic process  [isa: 0008652  1901566  1901564  0006807  0008152  0008150 ],aroL,E1W8P9
+GO:0009082,  branched-chain amino acid biosynthetic process  [isa: 0008652  1901566  1901564  0006807  0008152  0008150 ],leuA,E1W7Y5
+GO:0009085,  lysine biosynthetic process  [isa: 0009067  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],dapB,E1W7T8
+GO:0009088,  threonine biosynthetic process  [isa: 0009067  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],thrB,E1W7M6
+GO:0009088,  threonine biosynthetic process  [isa: 0009067  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],thrA,E1W7M5
+GO:0009089,  lysine biosynthetic process via diaminopimelate  [isa: 0009085  0009067  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],dapB,E1W7T8
+GO:0009089,  lysine biosynthetic process via diaminopimelate  [isa: 0009085  0009067  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],thrA,E1W7M5
+GO:0009098,  leucine biosynthetic process  [isa: 0009082  0008652  1901566  1901564  0006807  0008152  0008150 ],leuA,E1W7Y5
+GO:0009098,  leucine biosynthetic process  [isa: 0009082  0008652  1901566  1901564  0006807  0008152  0008150 ],leuL,E1W7Y6
+GO:0009102,  biotin biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],bioD,E1W9T5
+GO:0009102,  biotin biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],bioA,E1W9T1
+GO:0009102,  biotin biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],bioC,E1W9T4
+GO:0009102,  biotin biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],bioB,E1W9T2
+GO:0009102,  biotin biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],bioD,E1W9T5
+GO:0009116,  nucleoside metabolic process  [isa: 1901564  0006807  0008152  0008150 ],hpt,E1W842
+GO:0009116,  nucleoside metabolic process  [isa: 1901564  0006807  0008152  0008150 ],gpt,E1W8I1
+GO:0009116,  nucleoside metabolic process  [isa: 1901564  0006807  0008152  0008150 ],apt,E1W8Z1
+GO:0009165,  nucleotide biosynthetic process  [isa: 0009117  0006753  0055086  0006139  0044238  0008152  0008150 ],adk,E1W8Z6
+GO:0009228,  thiamine biosynthetic process  [isa: 0042724  0072528  1901566  1901564  0006807  0008152  0008150 ],thiI,E1W8T5
+GO:0009228,  thiamine biosynthetic process  [isa: 0042724  0072528  1901566  1901564  0006807  0008152  0008150 ],dxs,E1W8T2
+GO:0009229,  thiamine diphosphate biosynthetic process  [isa: 0072528  1901566  1901564  0006807  0008152  0008150 ],thiI,E1W8T5
+GO:0009231,  riboflavin biosynthetic process  [isa: 0042727  1901566  1901564  0006807  0008152  0008150 ],ribD,E1W8S6
+GO:0009231,  riboflavin biosynthetic process  [isa: 0042727  1901566  1901564  0006807  0008152  0008150 ],ribF,E1W7R9
+GO:0009239,  enterobactin biosynthetic process  [isa: 0019540  0019290  0019184  0043043  0006518  1901564  0006807  0008152  0008150 ],entD,E1W985
+GO:0009245,  lipid A biosynthetic process  [isa: 0008654  0006644  0006796  0006793  0044237  0009987  0008150 ],lpxA,E1W8A0
+GO:0009245,  lipid A biosynthetic process  [isa: 0008654  0006644  0006796  0006793  0044237  0009987  0008150 ],lpxB,E1W8A1
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],murD,E1W7Z8
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],murE,E1W7Z5
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],murF,E1W7Z6
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],mraY,E1W7Z7
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],ftsI,E1W7Z4
+GO:0009252,  peptidoglycan biosynthetic process  [isa: 0006024  0006023  0006022  1901564  0006807  0008152  0008150 ],murC,E1W801
+GO:0009253,  peptidoglycan catabolic process  [isa: 0006027  0006026  0006022  1901564  0006807  0008152  0008150 ],ampD,E1W818
+GO:0009279,  cell outer membrane  [isa: 0019867  0016020  0110165  0005575 ],fhuA,E1W863
+GO:0009279,  cell outer membrane  [isa: 0019867  0016020  0110165  0005575 ],bcfC,E1W7P6
+GO:0009279,  cell outer membrane  [isa: 0019867  0016020  0110165  0005575 ],ompA,E1W7A2
+GO:0009279,  cell outer membrane  [isa: 0019867  0016020  0110165  0005575 ],flgH,E1W7K9
+GO:0009279,  cell outer membrane  [isa: 0019867  0016020  0110165  0005575 ],phoE,E1W8I4
+GO:0009288,  bacterial-type flagellum  [isa: 0042995  0110165  0005575 ],flgB,E1W7K3
+GO:0009288,  bacterial-type flagellum  [isa: 0042995  0110165  0005575 ],flgK,E1W7L2
+GO:0009288,  bacterial-type flagellum  [isa: 0042995  0110165  0005575 ],flgH,E1W7K9
+GO:0009289,  pilus  [isa: 0042995  0110165  0005575 ],stfF,E1W871
+GO:0009289,  pilus  [isa: 0042995  0110165  0005575 ],stfA,E1W867
+GO:0009295,  nucleoid  [isa: 0110165  0005575 ],mukF,E1W723
+GO:0009295,  nucleoid  [isa: 0110165  0005575 ],mraZ,E1W7Z1
+GO:0009295,  nucleoid  [isa: 0110165  0005575 ],mukB,E1W725
+GO:0009295,  nucleoid  [isa: 0110165  0005575 ],cbpA,E1W7E3
+GO:0009295,  nucleoid  [isa: 0110165  0005575 ],mukE,E1W724
+GO:0009297,  pilus assembly  [isa: 0030031  0022607  0016043  0009987  0008150 ],bcfC,E1W7P6
+GO:0009317,  acetyl-CoA carboxylase complex  [isa: 1902494  0032991  0005575 ],accA,E1W8A4
+GO:0009318,  exodeoxyribonuclease VII complex  [isa: 1902494  0032991  0005575 ],xseB,E1W8T4
+GO:0009337,  sulfite reductase complex  [isa: 0032991  0005575 ],cysI,E1WAJ1
+GO:0009338,  exodeoxyribonuclease V complex  [isa: 1902494  0032991  0005575 ],recD,E1WAN6
+GO:0009360,  DNA polymerase III complex  [isa: 0042575  1990234  1902494  0032991  0005575 ],holA,E1W9E7
+GO:0009366,  enterobactin synthetase complex  [isa: 0032991  0005575 ],entD,E1W985
+GO:0009372,  quorum sensing  [isa: 0007267  0007154  0009987  0008150 ],luxS,E1WA67
+GO:0009380,  excinuclease repair complex  [isa: 1905347  1905348  1902494  0032991  0005575 ],uvrB,E1W9T6
+GO:0009381,  excinuclease ABC activity  [isa: 0004520  0004536  0004518  0016787  0003824  0003674 ],uvrB,E1W9T6
+GO:0009389,  dimethyl sulfoxide reductase activity  [isa: 0016491  0003824  0003674 ],dmsA,E1W6Z6
+GO:0009396,  folic acid-containing compound biosynthetic process  [isa: 0042398  1901566  1901564  0006807  0008152  0008150 ],folK,E1W855
+GO:0009398,  FMN biosynthetic process  [isa: 0042727  1901566  1901564  0006807  0008152  0008150 ],ribF,E1W7R9
+GO:0009405,  pathogenesis  [isa: 0044419  0051704  0008150 ],orgB,E1WAB4
+GO:0009405,  pathogenesis  [isa: 0044419  0051704  0008150 ],hha,E1W8Y2
+GO:0009423,  chorismate biosynthetic process  [isa: 0043650  0046394  0016053  0006082  0044237  0009987  0008150 ],aroG,E1W9P8
+GO:0009423,  chorismate biosynthetic process  [isa: 0043650  0046394  0016053  0006082  0044237  0009987  0008150 ],aroL,E1W8P9
+GO:0009424,  bacterial-type flagellum hook  [isa: 0110165  0005575 ],flgK,E1W7L2
+GO:0009425,  bacterial-type flagellum basal body  [isa: 0110165  0005575 ],flgB,E1W7K3
+GO:0009425,  bacterial-type flagellum basal body  [isa: 0110165  0005575 ],flgH,E1W7K9
+GO:0009432,  SOS response  [isa: 0031668  0007154  0009987  0008150 ],uvrB,E1W9T6
+GO:0009432,  SOS response  [isa: 0031668  0007154  0009987  0008150 ],sulA,E1W7A3
+GO:0009435,  NAD biosynthetic process  [isa: 0019359  0019363  0072525  1901566  1901564  0006807  0008152  0008150 ],nadA,E1W9P4
+GO:0009437,  carnitine metabolic process  [isa: 0097164  0006807  0008152  0008150 ],caiC,E1W7U5
+GO:0009437,  carnitine metabolic process  [isa: 0097164  0006807  0008152  0008150 ],caiA,E1W7U7
+GO:0009437,  carnitine metabolic process  [isa: 0097164  0006807  0008152  0008150 ],caiD,E1W7U4
+GO:0009437,  carnitine metabolic process  [isa: 0097164  0006807  0008152  0008150 ],caiT,E1W7U8
+GO:0009437,  carnitine metabolic process  [isa: 0097164  0006807  0008152  0008150 ],caiE,E1W7U3
+GO:0009442,  allantoin assimilation pathway  [isa: 0000256  1901565  1901564  0006807  0008152  0008150 ],allC,E1W934
+GO:0009448,  gamma-aminobutyric acid metabolic process  [isa: 0006520  1901564  0006807  0008152  0008150 ],gabT,E1WA41
+GO:0009450,  gamma-aminobutyric acid catabolic process  [isa: 0009063  1901565  1901564  0006807  0008152  0008150 ],gabD,E1WA40
+GO:0009898,  cytoplasmic side of plasma membrane  [isa: 0098562  0098552  0110165  0005575 ],ftsA,E1W804
+GO:0009982,  pseudouridine synthase activity  [isa: 0016866  0016853  0003824  0003674 ],rluA,E1W7W8
+GO:0009982,  pseudouridine synthase activity  [isa: 0016866  0016853  0003824  0003674 ],truD,E1WAH2
+GO:0009982,  pseudouridine synthase activity  [isa: 0016866  0016853  0003824  0003674 ],rluC,E1W7L5
+GO:0009986,  cell surface  [isa: 0110165  0005575 ],eno,E1WAJ6
+GO:0010181,  FMN binding  [isa: 0032553  0000166  0036094  0005488  0003674 ],wrbA,E1W7F0
+GO:0010340,  carboxyl-O-methyltransferase activity  [isa: 0008171  0008168  0016740  0003824  0003674 ],bioC,E1W9T4
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],rnk,E1W9B7
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],stpA,E1WA48
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],prpR,E1W8M8
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],araC,E1W7X6
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],seqA,E1W9J1
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],kdpE,E1W9J6
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],nhaR,E1W7R4
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],pdhR,E1W823
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],lrp,E1W6Z1
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],hilD,E1WAC0
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],csgD,E1W7H1
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],mraZ,E1W7Z1
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],nusB,E1W8S8
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],cspE,E1W9D0
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],allR,E1W924
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],nagC,E1W9H6
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],sirC,E1WAB2
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],fur,E1W9I7
+GO:0010468,  regulation of gene expression  [isa: 0060255  0019222  0050789  0065007  0008150 ],leuO,E1W7Y7
+GO:0010629,  negative regulation of gene expression  [isa: 0010605  0009892  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:0015035,  protein disulfide oxidoreductase activity  [isa: 0015036  0016491  0003824  0003674 ],ahpF,E1W9B0
+GO:0015079,  potassium ion transmembrane transporter activity  [isa: 0015077  0022890  0015318  0022857  0005215  0003674 ],kefC,E1W7V9
+GO:0015079,  potassium ion transmembrane transporter activity  [isa: 0015077  0022890  0015318  0022857  0005215  0003674 ],kdpA,E1W9K0
+GO:0015108,  chloride transmembrane transporter activity  [isa: 0015103  0008509  0015075  0022857  0005215  0003674 ],clcA,E1W875
+GO:0015185,  gamma-aminobutyric acid transmembrane transporter activity  [isa: 0005326  0022857  0005215  0003674 ],gabP,E1WA42
+GO:0015276,  ligand-gated ion channel activity  [isa: 0005216  0015075  0022857  0005215  0003674 ],glnH,E1W9W6
+GO:0015288,  porin activity  [isa: 0022829  0015267  0022803  0022857  0005215  0003674 ],phoE,E1W8I4
+GO:0015288,  porin activity  [isa: 0022829  0015267  0022803  0022857  0005215  0003674 ],ompA,E1W7A2
+GO:0015293,  symporter activity  [isa: 0015291  0022804  0022857  0005215  0003674 ],putP,E1W7F5
+GO:0015297,  antiporter activity  [isa: 0015291  0022804  0022857  0005215  0003674 ],kefC,E1W7V9
+GO:0015297,  antiporter activity  [isa: 0015291  0022804  0022857  0005215  0003674 ],caiT,E1W7U8
+GO:0015297,  antiporter activity  [isa: 0015291  0022804  0022857  0005215  0003674 ],clcA,E1W875
+GO:0015299,  solute:proton antiporter activity  [isa: 0015298  0008324  0015075  0022857  0005215  0003674 ],kefC,E1W7V9
+GO:0015344,  siderophore uptake transmembrane transporter activity  [isa: 0015343  0022857  0005215  0003674 ],fhuA,E1W863
+GO:0015424,  ATPase-coupled amino acid transmembrane transporter activity  [isa: 0033284  0033283  0005342  0022857  0005215  0003674 ],artP,E1W6W1
+GO:0015473,  fimbrial usher porin activity  [isa: 0015288  0022829  0015267  0022803  0022857  0005215  0003674 ],bcfC,E1W7P6
+GO:0015499,  formate transmembrane transporter activity  [isa: 0008028  0046943  0005342  0022857  0005215  0003674 ],focA,E1W705
+GO:0015503,  glutathione-regulated potassium exporter activity  [isa: 0022853  0015075  0022857  0005215  0003674 ],kefC,E1W7V9
+GO:0015572,  N-acetylglucosamine transmembrane transporter activity  [isa: 1901505  0022857  0005215  0003674 ],nagE,E1W9H9
+GO:0015643,  toxic substance binding  [isa: 0005488  0003674 ],kefC,E1W7V9
+GO:0015658,  branched-chain amino acid transmembrane transporter activity  [isa: 0015171  0046943  0005342  0022857  0005215  0003674 ],brnQ,E1W8R0
+GO:0015689,  molybdate ion transport  [isa: 0015698  0006820  0006811  0006810  0051234  0051179  0008150 ],modA,E1W9R9
+GO:0015696,  ammonium transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],amtB,E1W8X3
+GO:0015724,  formate transport  [isa: 0015718  0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],focA,E1W705
+GO:0015803,  branched-chain amino acid transport  [isa: 0006865  0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],brnQ,E1W8R0
+GO:0015812,  gamma-aminobutyric acid transport  [isa: 0006865  0046942  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],gabP,E1WA42
+GO:0015824,  proline transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],putP,E1W7F5
+GO:0015891,  siderophore transport  [isa: 1901678  0006826  0000041  0030001  0006812  0006811  0006810  0051234  0051179  0008150 ],fhuA,E1W863
+GO:0015937,  coenzyme A biosynthetic process  [isa: 0034033  0072522  1901566  1901564  0006807  0008152  0008150 ],coaE,E1W812
+GO:0015940,  pantothenate biosynthetic process  [isa: 0042398  1901566  1901564  0006807  0008152  0008150 ],panC,E1W853
+GO:0016020,  membrane  [isa: 0110165  0005575 ],barA,E1WAK4
+GO:0016020,  membrane  [isa: 0110165  0005575 ],bcfC,E1W7P6
+GO:0016020,  membrane  [isa: 0110165  0005575 ],sdhC,E1W9M5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],clcA,E1W875
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsL,E1W7Z3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],caiT,E1W7U8
+GO:0016020,  membrane  [isa: 0110165  0005575 ],gpt,E1W8I1
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsA,E1W804
+GO:0016020,  membrane  [isa: 0110165  0005575 ],hofC,E1W814
+GO:0016020,  membrane  [isa: 0110165  0005575 ],pheP,E1W969
+GO:0016020,  membrane  [isa: 0110165  0005575 ],glnH,E1W9W6
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cyoB,E1W8V2
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cydC,E1W6Y8
+GO:0016020,  membrane  [isa: 0110165  0005575 ],gltJ,E1W9G5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],mdoH,E1W7I0
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsQ,E1W803
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsI,E1W7Z4
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cydA,E1W9N3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],fepG,E1W992
+GO:0016020,  membrane  [isa: 0110165  0005575 ],tatE,E1W9D3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cyoE,E1W8U9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ampE,E1W819
+GO:0016020,  membrane  [isa: 0110165  0005575 ],gltK,E1W9G4
+GO:0016020,  membrane  [isa: 0110165  0005575 ],araJ,E1W8Q5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],focA,E1W705
+GO:0016020,  membrane  [isa: 0110165  0005575 ],fepE,E1W990
+GO:0016020,  membrane  [isa: 0110165  0005575 ],aroP,E1W822
+GO:0016020,  membrane  [isa: 0110165  0005575 ],glnP,E1W9W5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cyoA,E1W8V3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],acrA,E1W8Y5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],flgH,E1W7K9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],phoE,E1W8I4
+GO:0016020,  membrane  [isa: 0110165  0005575 ],lgt,E1WAP5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],citT,E1W9B9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],yajC,E1W8R7
+GO:0016020,  membrane  [isa: 0110165  0005575 ],artQ,E1W6V9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cycA,E1WAT3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],kefC,E1W7V9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],brnQ,E1W8R0
+GO:0016020,  membrane  [isa: 0110165  0005575 ],nagE,E1W9H9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],amtB,E1W8X3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],fhuA,E1W863
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cydD,E1W6Y9
+GO:0016020,  membrane  [isa: 0110165  0005575 ],cdsA,E1W894
+GO:0016020,  membrane  [isa: 0110165  0005575 ],aas,E1WAQ3
+GO:0016020,  membrane  [isa: 0110165  0005575 ],kdpA,E1W9K0
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsK,E1W6Z2
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ybjG,E1WA01
+GO:0016020,  membrane  [isa: 0110165  0005575 ],mraY,E1W7Z7
+GO:0016020,  membrane  [isa: 0110165  0005575 ],putP,E1W7F5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ompA,E1W7A2
+GO:0016020,  membrane  [isa: 0110165  0005575 ],lnt,E1W9G7
+GO:0016020,  membrane  [isa: 0110165  0005575 ],sdhA,E1W9M7
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ftsB,E1WAH5
+GO:0016020,  membrane  [isa: 0110165  0005575 ],proW,E1WA60
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ampG,E1W8V4
+GO:0016020,  membrane  [isa: 0110165  0005575 ],gabP,E1WA42
+GO:0016020,  membrane  [isa: 0110165  0005575 ],fepD,E1W993
+GO:0016020,  membrane  [isa: 0110165  0005575 ],ppdD,E1W816
+GO:0016020,  membrane  [isa: 0110165  0005575 ],secA,E1W808
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],mraY,E1W7Z7
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ppdD,E1W816
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],proW,E1WA60
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],aroP,E1W822
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],citT,E1W9B9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],focA,E1W705
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],barA,E1WAK4
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],kefC,E1W7V9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],tatE,E1W9D3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cydC,E1W6Y8
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],mdoH,E1W7I0
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ftsI,E1W7Z4
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cyoB,E1W8V2
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],caiT,E1W7U8
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ybjG,E1WA01
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cyoE,E1W8U9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ampG,E1W8V4
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],gabP,E1WA42
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],brnQ,E1W8R0
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],sdhC,E1W9M5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],pheP,E1W969
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cycA,E1WAT3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],amtB,E1W8X3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],lnt,E1W9G7
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],gltK,E1W9G4
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],putP,E1W7F5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cydA,E1W9N3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],fepG,E1W992
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],phoE,E1W8I4
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],yajC,E1W8R7
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],gltJ,E1W9G5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],glnP,E1W9W5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],araJ,E1W8Q5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],aas,E1WAQ3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],artQ,E1W6V9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],clcA,E1W875
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cdsA,E1W894
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cydD,E1W6Y9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],lgt,E1WAP5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ampE,E1W819
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],fepD,E1W993
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],hofC,E1W814
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],bcfC,E1W7P6
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],cyoA,E1W8V3
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],fepE,E1W990
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],kdpA,E1W9K0
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ftsB,E1WAH5
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ompA,E1W7A2
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ftsQ,E1W803
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ftsK,E1W6Z2
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],nagE,E1W9H9
+GO:0016021,  integral component of membrane  [isa: 0031224  0110165  0005575 ],ftsL,E1W7Z3
+GO:0016024,  CDP-diacylglycerol biosynthetic process  [isa: 0006221  0072528  1901566  1901564  0006807  0008152  0008150 ],cdsA,E1W894
+GO:0016209,  antioxidant activity  [isa: 0003674 ],ahpC,E1W9A9
+GO:0016260,  selenocysteine biosynthetic process  [isa: 0009070  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],serS,E1W6Z5
+GO:0016298,  lipase activity  [isa: 0016787  0003824  0003674 ],tesA,E1W914
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],proB,E1W8I5
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],fucK,E1WAM2
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],adk,E1W8Z6
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],rnk,E1W9B7
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],pyrH,E1W890
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],thrA,E1W7M5
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],nagE,E1W9H9
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],folK,E1W855
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],aroL,E1W8P9
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],galK,E1W9R2
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],thrB,E1W7M6
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],cmk,E1W711
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],ribF,E1W7R9
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],glxK,E1W932
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],barA,E1WAK4
+GO:0016301,  kinase activity  [isa: 0016740  0003824  0003674 ],coaE,E1W812
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],proB,E1W8I5
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],rnk,E1W9B7
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],coaE,E1W812
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],pyrH,E1W890
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],glxK,E1W932
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],cmk,E1W711
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],nagE,E1W9H9
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],ribF,E1W7R9
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],thrA,E1W7M5
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],thrB,E1W7M6
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],barA,E1WAK4
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],adk,E1W8Z6
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],aroL,E1W8P9
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],galK,E1W9R2
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],citG,E1W9C0
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],fucK,E1WAM2
+GO:0016310,  phosphorylation  [isa: 0006796  0006793  0044237  0009987  0008150 ],folK,E1W855
+GO:0016405,  CoA-ligase activity  [isa: 0016874  0003824  0003674 ],caiC,E1W7U5
+GO:0016407,  acetyltransferase activity  [isa: 0016740  0003824  0003674 ],maa,E1W8Y1
+GO:0016410,  N-acyltransferase activity  [isa: 0016740  0003824  0003674 ],lnt,E1W9G7
+GO:0016415,  octanoyltransferase activity  [isa: 0016740  0003824  0003674 ],lipB,E1W9D6
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],dmsA,E1W6Z6
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],caiA,E1W7U7
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],trxB,E1W6Z0
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],sdhC,E1W9M5
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],dapB,E1W7T8
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],cyoA,E1W8V3
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],ahpF,E1W9B0
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],garR,E1W927
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],cyoB,E1W8V2
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],cysI,E1WAJ1
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],solA,E1W7I9
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],ribD,E1W8S6
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],sucA,E1W9M9
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],proC,E1W8P7
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],gabD,E1WA40
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],allD,E1W935
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],folA,E1W7W0
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],msrA,E1WAU3
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],dps,E1W9W7
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],thrA,E1W7M5
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],sdhA,E1W9M7
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],ahpC,E1W9A9
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],wrbA,E1W7F0
+GO:0016491,  oxidoreductase activity  [isa: 0003824  0003674 ],nrdE,E1WA57
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],aat,E1W6Y7
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],entD,E1W985
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],plsX,E1W7M1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],maa,E1W8Y1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],lgt,E1WAP5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],gabT,E1WA41
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],bioB,E1W9T2
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],cdsA,E1W894
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],aas,E1WAQ3
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],proB,E1W8I5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],ispA,E1W8T3
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],thrB,E1W7M6
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],argA,E1WAN5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],miaB,E1W9H1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],dnaQ,E1W8D0
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],dxs,E1W8T2
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],glxK,E1W932
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],nagE,E1W9H9
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],aroL,E1W8P9
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],speE,E1W838
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],barA,E1WAK4
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],lpxA,E1W8A0
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],serC,E1W708
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],ribF,E1W7R9
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],cmk,E1W711
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],dnaE,E1W8A3
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],cyoE,E1W8U9
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],apt,E1W8Z1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],coaE,E1W812
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],prpC,E1W8N0
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],glnD,E1W886
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],fucK,E1WAM2
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],ybiB,E1W9V9
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],lnt,E1W9G7
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],nadA,E1W9P4
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],pyrH,E1W890
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],mraY,E1W7Z7
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],adk,E1W8Z6
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],aroG,E1W9P8
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],kdsB,E1W719
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],galK,E1W9R2
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],caiE,E1W7U3
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],thiI,E1W8T5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],galT,E1W9R3
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],hpt,E1W842
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],lpxB,E1W8A1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],thrA,E1W7M5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],polB,E1W7X0
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],accA,E1W8A4
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],bioC,E1W9T4
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],pcnB,E1W856
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],mdoH,E1W7I0
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],rimJ,E1W7J6
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],lipB,E1W9D6
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],bioA,E1W9T1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],gpt,E1W8I1
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],cysN,E1WAH8
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],leuA,E1W7Y5
+GO:0016740,  transferase activity  [isa: 0003824  0003674 ],citG,E1W9C0
+GO:0016743,  carboxyl- or carbamoyltransferase activity  [isa: 0016740  0003824  0003674 ],accA,E1W8A4
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],galT,E1W9R3
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],dnaE,E1W8A3
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],ribF,E1W7R9
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],glnD,E1W886
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],polB,E1W7X0
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],kdsB,E1W719
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],cdsA,E1W894
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],dnaQ,E1W8D0
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],cysN,E1WAH8
+GO:0016779,  nucleotidyltransferase activity  [isa: 0016740  0003824  0003674 ],pcnB,E1W856
+GO:0016783,  sulfurtransferase activity  [isa: 0016740  0003824  0003674 ],thiI,E1W8T5
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],pepD,E1W8I0
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],mutT,E1W809
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],allC,E1W934
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],gloB,E1W8C7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],ribD,E1W8S6
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],pyrC,E1W7J2
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],rppH,E1WAP7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],yqaB,E1WA70
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],recD,E1WAN6
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],rhlE,E1W9V7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],uvrB,E1W9T6
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],xseB,E1W8T4
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],nagA,E1W9H7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],ulaG,E1WAR7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],sbcD,E1W8Q7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],helD,E1W7A7
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],aes,E1W8Z8
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],glnD,E1W886
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],lon,E1W8W0
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],allB,E1W930
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],nagB,E1W9H8
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],allA,E1W923
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],malZ,E1W8R2
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],ampD,E1W818
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],sbcC,E1W8Q6
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],ftsI,E1W7Z4
+GO:0016787,  hydrolase activity  [isa: 0003824  0003674 ],dnaQ,E1W8D0
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],fabA,E1W799
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],luxS,E1WA67
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],eno,E1WAJ6
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],speD,E1W837
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],hemH,E1W8Z7
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],rlpA,E1W9D9
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],hemB,E1W8N3
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],allA,E1W923
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],caiD,E1W7U4
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],moaA,E1W9T9
+GO:0016829,  lyase activity  [isa: 0003824  0003674 ],prpB,E1W8M9
+GO:0016830,  carbon-carbon lyase activity  [isa: 0016829  0003824  0003674 ],moaA,E1W9T9
+GO:0016831,  carboxy-lyase activity  [isa: 0016830  0016829  0003824  0003674 ],speD,E1W837
+GO:0016836,  hydro-lyase activity  [isa: 0016835  0016829  0003824  0003674 ],caiD,E1W7U4
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],truD,E1WAH2
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],araA,E1W7X4
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],rluC,E1W7L5
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],rluA,E1W7W8
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],tig,E1W8V7
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],surA,E1W7W5
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],pgm,E1W9J2
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],fabA,E1W799
+GO:0016853,  isomerase activity  [isa: 0003824  0003674 ],ppiB,E1W943
+GO:0016860,  intramolecular oxidoreductase activity  [isa: 0016853  0003824  0003674 ],araA,E1W7X4
+GO:0016866,  intramolecular transferase activity  [isa: 0016853  0003824  0003674 ],pgm,E1W9J2
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],bioD,E1W9T5
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],sucD,E1W9N2
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],accA,E1W8A4
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],bioD,E1W9T5
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],caiC,E1W7U5
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],lipB,E1W9D6
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],murD,E1W7Z8
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],murE,E1W7Z5
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],sucC,E1W9N1
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],aas,E1WAQ3
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],panC,E1W853
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],ileS,E1W7S0
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],serS,E1W6Z5
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],murC,E1W801
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],purK,E1W940
+GO:0016874,  ligase activity  [isa: 0003824  0003674 ],murF,E1W7Z6
+GO:0016878,  acid-thiol ligase activity  [isa: 0016874  0003824  0003674 ],caiC,E1W7U5
+GO:0016881,  acid-amino acid ligase activity  [isa: 0016874  0003824  0003674 ],murE,E1W7Z5
+GO:0018106,  peptidyl-histidine phosphorylation  [isa: 0006468  0016310  0006796  0006793  0044237  0009987  0008150 ],barA,E1WAK4
+GO:0019008,  molybdopterin synthase complex  [isa: 0032991  0005575 ],moaA,E1W9T9
+GO:0019243,  methylglyoxal catabolic process to D-lactate via S-lactoyl-glutathione  [isa: 0061727  0051596  0009438  0006081  0044237  0009987  0008150 ],gloB,E1W8C7
+GO:0019262,  N-acetylneuraminate catabolic process  [isa: 0046348  1901136  1901575  0009056  0008152  0008150 ],nagB,E1W9H8
+GO:0019317,  fucose catabolic process  [isa: 0019320  0046365  0044282  0009056  0008152  0008150 ],fucK,E1WAM2
+GO:0019344,  cysteine biosynthetic process  [isa: 0000097  0008652  1901566  1901564  0006807  0008152  0008150 ],cysI,E1WAJ1
+GO:0019363,  pyridine nucleotide biosynthetic process  [isa: 0072525  1901566  1901564  0006807  0008152  0008150 ],nadA,E1W9P4
+GO:0019538,  protein metabolic process  [isa: 1901564  0006807  0008152  0008150 ],clpA,E1W6X8
+GO:0019543,  propionate catabolic process  [isa: 0019626  0009062  0044242  0016042  1901575  0009056  0008152  0008150 ],prpB,E1W8M9
+GO:0019543,  propionate catabolic process  [isa: 0019626  0009062  0044242  0016042  1901575  0009056  0008152  0008150 ],prpR,E1W8M8
+GO:0019568,  arabinose catabolic process  [isa: 0019323  0046365  0044282  0009056  0008152  0008150 ],araA,E1W7X4
+GO:0019569,  L-arabinose catabolic process to xylulose 5-phosphate  [isa: 0019572  0019568  0019323  0046365  0044282  0009056  0008152  0008150 ],araA,E1W7X4
+GO:0019646,  aerobic electron transport chain  [isa: 0009060  0045333  0015980  0006091  0044237  0009987  0008150 ],cydA,E1W9N3
+GO:0019752,  carboxylic acid metabolic process  [isa: 0043436  0006082  0044237  0009987  0008150 ],leuA,E1W7Y5
+GO:0019805,  quinolinate biosynthetic process  [isa: 0072525  1901566  1901564  0006807  0008152  0008150 ],nadA,E1W9P4
+GO:0019829,  ATPase-coupled cation transmembrane transporter activity  [isa: 0022890  0008324  0015075  0022857  0005215  0003674 ],kdpA,E1W9K0
+GO:0019843,  rRNA binding  [isa: 0003723  0003676  0097159  0005488  0003674 ],rplI,E1WAS9
+GO:0019843,  rRNA binding  [isa: 0003723  0003676  0097159  0005488  0003674 ],rpsF,E1WAS6
+GO:0019843,  rRNA binding  [isa: 0003723  0003676  0097159  0005488  0003674 ],infA,E1W6Y5
+GO:0019854,  L-ascorbic acid catabolic process  [isa: 0046365  0044282  0009056  0008152  0008150 ],ulaG,E1WAR7
+GO:0019856,  pyrimidine nucleobase biosynthetic process  [isa: 0006206  0009112  1901564  0006807  0008152  0008150 ],pyrC,E1W7J2
+GO:0019866,  organelle inner membrane  [isa: 0031090  0016020  0110165  0005575 ],nagE,E1W9H9
+GO:0019877,  diaminopimelate biosynthetic process  [isa: 0008652  1901566  1901564  0006807  0008152  0008150 ],dapB,E1W7T8
+GO:0019899,  enzyme binding  [isa: 0005515  0005488  0003674 ],kefC,E1W7V9
+GO:0020037,  heme binding  [isa: 0048037  0005488  0003674 ],cysI,E1WAJ1
+GO:0020037,  heme binding  [isa: 0048037  0005488  0003674 ],cyoB,E1W8V2
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],gltK,E1W9G4
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],artQ,E1W6V9
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],putP,E1W7F5
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],citT,E1W9B9
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],gltJ,E1W9G5
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],fepD,E1W993
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],caiT,E1W7U8
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],pheP,E1W969
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],focA,E1W705
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],fepG,E1W992
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],acrA,E1W8Y5
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],aroP,E1W822
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],cycA,E1WAT3
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],glnP,E1W9W5
+GO:0022857,  transmembrane transporter activity  [isa: 0005215  0003674 ],gabP,E1WA42
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],cyoA,E1W8V3
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],dmsA,E1W6Z6
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],sdhC,E1W9M5
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],ahpF,E1W9B0
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],sdhA,E1W9M7
+GO:0022900,  electron transport chain  [isa: 0055114  0008152  0008150 ],cyoB,E1W8V2
+GO:0023014,  signal transduction by protein phosphorylation  [isa: 0007165  0009987  0008150 ],barA,E1WAK4
+GO:0030001,  metal ion transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],sitA,E1WAA6
+GO:0030145,  manganese ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],araA,E1W7X4
+GO:0030145,  manganese ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],allC,E1W934
+GO:0030145,  manganese ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],ulaG,E1WAR7
+GO:0030151,  molybdenum ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],dmsA,E1W6Z6
+GO:0030163,  protein catabolic process  [isa: 0019538  1901564  0006807  0008152  0008150 ],aat,E1W6Y7
+GO:0030163,  protein catabolic process  [isa: 0019538  1901564  0006807  0008152  0008150 ],lon,E1W8W0
+GO:0030170,  pyridoxal phosphate binding  [isa: 0070279  0008144  0005488  0003674 ],serC,E1W708
+GO:0030170,  pyridoxal phosphate binding  [isa: 0070279  0008144  0005488  0003674 ],thrC,E1W7M7
+GO:0030170,  pyridoxal phosphate binding  [isa: 0070279  0008144  0005488  0003674 ],bioA,E1W9T1
+GO:0030170,  pyridoxal phosphate binding  [isa: 0070279  0008144  0005488  0003674 ],gabT,E1WA41
+GO:0030234,  enzyme regulator activity  [isa: 0098772  0003674 ],glnK,E1W8X2
+GO:0030261,  chromosome condensation  [isa: 0006323  0071103  0051276  0006996  0016043  0009987  0008150 ],dps,E1W9W7
+GO:0030261,  chromosome condensation  [isa: 0006323  0071103  0051276  0006996  0016043  0009987  0008150 ],hupB,E1W8W1
+GO:0030261,  chromosome condensation  [isa: 0006323  0071103  0051276  0006996  0016043  0009987  0008150 ],mukF,E1W723
+GO:0030261,  chromosome condensation  [isa: 0006323  0071103  0051276  0006996  0016043  0009987  0008150 ],mukB,E1W725
+GO:0030261,  chromosome condensation  [isa: 0006323  0071103  0051276  0006996  0016043  0009987  0008150 ],mukE,E1W724
+GO:0030288,  outer membrane-bounded periplasmic space  [isa: 0042597  0110165  0005575 ],surA,E1W7W5
+GO:0030288,  outer membrane-bounded periplasmic space  [isa: 0042597  0110165  0005575 ],bcfB,E1W7P5
+GO:0030894,  replisome  [isa: 0032993  0032991  0005575 ],priB,E1WAS7
+GO:0030955,  potassium ion binding  [isa: 0031420  0046872  0043169  0043167  0005488  0003674 ],kdpA,E1W9K0
+GO:0030976,  thiamine pyrophosphate binding  [isa: 0019842  0036094  0005488  0003674 ],sucA,E1W9M9
+GO:0030976,  thiamine pyrophosphate binding  [isa: 0019842  0036094  0005488  0003674 ],poxB,E1W6W8
+GO:0030976,  thiamine pyrophosphate binding  [isa: 0019842  0036094  0005488  0003674 ],dxs,E1W8T2
+GO:0031388,  organic acid phosphorylation  [isa: 0006082  0044237  0009987  0008150 ],glxK,E1W932
+GO:0031402,  sodium ion binding  [isa: 0031420  0046872  0043169  0043167  0005488  0003674 ],putP,E1W7F5
+GO:0031419,  cobalamin binding  [isa: 0008144  0005488  0003674 ],btuF,E1W878
+GO:0031564,  transcription antitermination  [isa: 2000112  0010556  0009889  0019222  0050789  0065007  0008150 ],nusB,E1W8S8
+GO:0032153,  cell division site  [isa: 0110165  0005575 ],ftsL,E1W7Z3
+GO:0032153,  cell division site  [isa: 0110165  0005575 ],ftsB,E1WAH5
+GO:0032153,  cell division site  [isa: 0110165  0005575 ],ftsQ,E1W803
+GO:0032153,  cell division site  [isa: 0110165  0005575 ],ftsA,E1W804
+GO:0032259,  methylation  [isa: 0008152  0008150 ],bioC,E1W9T4
+GO:0032264,  IMP salvage  [isa: 0032261  0043101  0034654  0019438  0006725  0044237  0009987  0008150 ],hpt,E1W842
+GO:0032265,  XMP salvage  [isa: 0032261  0043101  0034654  0019438  0006725  0044237  0009987  0008150 ],gpt,E1W8I1
+GO:0032297,  negative regulation of DNA-dependent DNA replication initiation  [isa: 2000104  0008156  2000113  0010558  0009890  0009889  0019222  0050789  0065007  0008150 ],seqA,E1W9J1
+GO:0032508,  DNA duplex unwinding  [isa: 0032392  0071103  0051276  0006996  0016043  0009987  0008150 ],helD,E1W7A7
+GO:0032508,  DNA duplex unwinding  [isa: 0032392  0071103  0051276  0006996  0016043  0009987  0008150 ],recD,E1WAN6
+GO:0032774,  RNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],nusB,E1W8S8
+GO:0032774,  RNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],priB,E1WAS7
+GO:0033014,  tetrapyrrole biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],hemB,E1W8N3
+GO:0033281,  TAT protein transport complex  [isa: 0098797  0098796  0032991  0005575 ],tatE,E1W9D3
+GO:0033468,  CMP-keto-3-deoxy-D-manno-octulosonic acid biosynthetic process  [isa: 0009226  0009225  1901135  0071704  0008152  0008150 ],kdsB,E1W719
+GO:0033499,  galactose catabolic process via UDP-galactose  [isa: 0019388  0019320  0046365  0044282  0009056  0008152  0008150 ],galT,E1W9R3
+GO:0033819,  lipoyl [isa: 0016740  0003824  0003674 ],lipB,E1W9D6
+GO:0034028,  5- [isa: 0016874  0003824  0003674 ],purK,E1W940
+GO:0034220,  ion transmembrane transport  [isa: 0006811  0006810  0051234  0051179  0008150 ],glnH,E1W9W6
+GO:0034220,  ion transmembrane transport  [isa: 0006811  0006810  0051234  0051179  0008150 ],phoE,E1W8I4
+GO:0034775,  glutathione transmembrane transport  [isa: 0034635  0015711  0006820  0006811  0006810  0051234  0051179  0008150 ],cydC,E1W6Y8
+GO:0035235,  ionotropic glutamate receptor signaling pathway  [isa: 0007215  0007166  0007165  0009987  0008150 ],glnH,E1W9W6
+GO:0038023,  signaling receptor activity  [isa: 0060089  0003674 ],fhuA,E1W863
+GO:0042158,  lipoprotein biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],lnt,E1W9G7
+GO:0042158,  lipoprotein biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],lgt,E1WAP5
+GO:0042255,  ribosome assembly  [isa: 0070925  0006996  0016043  0009987  0008150 ],rhlE,E1W9V7
+GO:0042277,  peptide binding  [isa: 0033218  0005488  0003674 ],surA,E1W7W5
+GO:0042355,  L-fucose catabolic process  [isa: 0019317  0019320  0046365  0044282  0009056  0008152  0008150 ],fucK,E1WAM2
+GO:0042597,  periplasmic space  [isa: 0110165  0005575 ],dsbG,E1W9A8
+GO:0042597,  periplasmic space  [isa: 0110165  0005575 ],btuF,E1W878
+GO:0042597,  periplasmic space  [isa: 0110165  0005575 ],surA,E1W7W5
+GO:0042625,  ATPase-coupled ion transmembrane transporter activity  [isa: 0022853  0015075  0022857  0005215  0003674 ],kdpA,E1W9K0
+GO:0042626,  ATPase-coupled transmembrane transporter activity  [isa: 0015399  0022804  0022857  0005215  0003674 ],cydC,E1W6Y8
+GO:0042626,  ATPase-coupled transmembrane transporter activity  [isa: 0015399  0022804  0022857  0005215  0003674 ],cydD,E1W6Y9
+GO:0042803,  protein homodimerization activity  [isa: 0042802  0005515  0005488  0003674 ],allC,E1W934
+GO:0042834,  peptidoglycan binding  [isa: 0005539  0097367  0005488  0003674 ],rlpA,E1W9D9
+GO:0042883,  cysteine transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],cydD,E1W6Y9
+GO:0043022,  ribosome binding  [isa: 0043021  0044877  0005488  0003674 ],infA,E1W6Y5
+GO:0043093,  FtsZ-dependent cytokinesis  [isa: 0000910  0022402  0009987  0008150 ],ftsA,E1W804
+GO:0043093,  FtsZ-dependent cytokinesis  [isa: 0000910  0022402  0009987  0008150 ],ftsQ,E1W803
+GO:0043093,  FtsZ-dependent cytokinesis  [isa: 0000910  0022402  0009987  0008150 ],ftsB,E1WAH5
+GO:0043093,  FtsZ-dependent cytokinesis  [isa: 0000910  0022402  0009987  0008150 ],ftsL,E1W7Z3
+GO:0043093,  FtsZ-dependent cytokinesis  [isa: 0000910  0022402  0009987  0008150 ],ftsI,E1W7Z4
+GO:0043165,  Gram-negative-bacterium-type cell outer membrane assembly  [isa: 0071709  0022607  0016043  0009987  0008150 ],surA,E1W7W5
+GO:0043190,  ATP-binding cassette  [isa: 0098797  0098796  0032991  0005575 ],gltK,E1W9G4
+GO:0043190,  ATP-binding cassette  [isa: 0098797  0098796  0032991  0005575 ],gltJ,E1W9G5
+GO:0043190,  ATP-binding cassette  [isa: 0098797  0098796  0032991  0005575 ],glnP,E1W9W5
+GO:0043190,  ATP-binding cassette  [isa: 0098797  0098796  0032991  0005575 ],artQ,E1W6V9
+GO:0043335,  protein unfolding  [isa: 0009987  0008150 ],clpA,E1W6X8
+GO:0043546,  molybdopterin cofactor binding  [isa: 0050662  0048037  0005488  0003674 ],dmsA,E1W6Z6
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],hilD,E1WAC0
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],lrp,E1W6Z1
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],lon,E1W8W0
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],araC,E1W7X6
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],sirC,E1WAB2
+GO:0043565,  sequence-specific DNA binding  [isa: 0003677  0003676  0097159  0005488  0003674 ],prpR,E1W8M8
+GO:0043711,  pilus organization  [isa: 0030030  0016043  0009987  0008150 ],bcfB,E1W7P5
+GO:0043768,  S-ribosylhomocysteine lyase activity  [isa: 0016846  0016829  0003824  0003674 ],luxS,E1WA67
+GO:0043811,  phosphate:acyl-[acyl carrier protein] acyltransferase activity  [isa: 0016740  0003824  0003674 ],plsX,E1W7M1
+GO:0044205,  'de novo' UMP biosynthetic process  [isa: 0006222  0009174  0009130  0009124  1901293  0034654  0019438  0006725  0044237  0009987  0008150 ],pyrC,E1W7J2
+GO:0044209,  AMP salvage  [isa: 0032261  0043101  0034654  0019438  0006725  0044237  0009987  0008150 ],adk,E1W8Z6
+GO:0044209,  AMP salvage  [isa: 0032261  0043101  0034654  0019438  0006725  0044237  0009987  0008150 ],apt,E1W8Z1
+GO:0044210,  'de novo' CTP biosynthetic process  [isa: 0006241  0009220  0006221  0009165  1901293  0034654  0019438  0006725  0044237  0009987  0008150 ],pyrH,E1W890
+GO:0044667,   [isa: 1901235  0015226  0015651  0008519  0008324  0015075  0022857  0005215  0003674 ],caiT,E1W7U8
+GO:0044718,  siderophore transmembrane transport  [isa: 0034755  0006826  0000041  0030001  0006812  0006811  0006810  0051234  0051179  0008150 ],fhuA,E1W863
+GO:0044780,  bacterial-type flagellum assembly  [isa: 0044781  0006996  0016043  0009987  0008150 ],flgN,E1W7K0
+GO:0044780,  bacterial-type flagellum assembly  [isa: 0044781  0006996  0016043  0009987  0008150 ],flgK,E1W7L2
+GO:0044781,  bacterial-type flagellum organization  [isa: 0006996  0016043  0009987  0008150 ],flgD,E1W7K5
+GO:0045281,  succinate dehydrogenase complex  [isa: 0098803  0098796  0032991  0005575 ],sdhC,E1W9M5
+GO:0045454,  cell redox homeostasis  [isa: 0019725  0009987  0008150 ],cydC,E1W6Y8
+GO:0045454,  cell redox homeostasis  [isa: 0019725  0009987  0008150 ],ahpC,E1W9A9
+GO:0045454,  cell redox homeostasis  [isa: 0019725  0009987  0008150 ],ahpF,E1W9B0
+GO:0046392,  galactarate catabolic process  [isa: 0019579  0016052  1901575  0009056  0008152  0008150 ],garR,E1W927
+GO:0046487,  glyoxylate metabolic process  [isa: 0006081  0044237  0009987  0008150 ],garR,E1W927
+GO:0046654,  tetrahydrofolate biosynthetic process  [isa: 0009396  0042398  1901566  1901564  0006807  0008152  0008150 ],folA,E1W7W0
+GO:0046835,  carbohydrate phosphorylation  [isa: 0044262  0005975  0044238  0008152  0008150 ],galK,E1W9R2
+GO:0046835,  carbohydrate phosphorylation  [isa: 0044262  0005975  0044238  0008152  0008150 ],fucK,E1WAM2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],nadA,E1W9P4
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],pyrC,E1W7J2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],dnaQ,E1W8D0
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],gpt,E1W8I1
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],bioD,E1W9T5
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],luxS,E1WA67
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],sucC,E1W9N1
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],hemB,E1W8N3
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],gloB,E1W8C7
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],cydA,E1W9N3
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],aroL,E1W8P9
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],miaB,E1W9H1
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],bioB,E1W9T2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],dps,E1W9W7
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],galT,E1W9R3
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],fur,E1W9I7
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],secA,E1W808
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],eno,E1WAJ6
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],galK,E1W9R2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],prpB,E1W8M9
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],sitA,E1WAA6
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],nagA,E1W9H7
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],allC,E1W934
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],hemH,E1W8Z7
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],moaA,E1W9T9
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],modA,E1W9R9
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],araA,E1W7X4
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],ileS,E1W7S0
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],hypD,E1WAA2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],bioD,E1W9T5
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],hpt,E1W842
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],ampD,E1W818
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],dmsA,E1W6Z6
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],dxs,E1W8T2
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],sdhC,E1W9M5
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],purK,E1W940
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],allB,E1W930
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],ribD,E1W8S6
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],cysI,E1WAJ1
+GO:0046872,  metal ion binding  [isa: 0043169  0043167  0005488  0003674 ],pgm,E1W9J2
+GO:0046930,  pore complex  [isa: 0098796  0032991  0005575 ],phoE,E1W8I4
+GO:0046940,  nucleoside monophosphate phosphorylation  [isa: 0009123  0006753  0055086  0006139  0044238  0008152  0008150 ],pyrH,E1W890
+GO:0046940,  nucleoside monophosphate phosphorylation  [isa: 0009123  0006753  0055086  0006139  0044238  0008152  0008150 ],adk,E1W8Z6
+GO:0046940,  nucleoside monophosphate phosphorylation  [isa: 0009123  0006753  0055086  0006139  0044238  0008152  0008150 ],cmk,E1W711
+GO:0046983,  protein dimerization activity  [isa: 0005515  0005488  0003674 ],stpA,E1WA48
+GO:0048034,  heme O biosynthetic process  [isa: 0006783  0006779  0033014  1901566  1901564  0006807  0008152  0008150 ],cyoE,E1W8U9
+GO:0048037,  cofactor binding  [isa: 0005488  0003674 ],sucD,E1W9N2
+GO:0050131,  N-methyl-L-amino-acid oxidase activity  [isa: 0016491  0003824  0003674 ],solA,E1W7I9
+GO:0050660,  flavin adenine dinucleotide binding  [isa: 0000166  0036094  0005488  0003674 ],solA,E1W7I9
+GO:0050660,  flavin adenine dinucleotide binding  [isa: 0000166  0036094  0005488  0003674 ],sdhA,E1W9M7
+GO:0050660,  flavin adenine dinucleotide binding  [isa: 0000166  0036094  0005488  0003674 ],wrbA,E1W7F0
+GO:0050660,  flavin adenine dinucleotide binding  [isa: 0000166  0036094  0005488  0003674 ],caiA,E1W7U7
+GO:0050660,  flavin adenine dinucleotide binding  [isa: 0000166  0036094  0005488  0003674 ],ahpF,E1W9B0
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],cysI,E1WAJ1
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],dapB,E1W7T8
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],wrbA,E1W7F0
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],thrA,E1W7M5
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],folA,E1W7W0
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],garR,E1W927
+GO:0050661,  NADP binding  [isa: 0000166  0036094  0005488  0003674 ],ribD,E1W8S6
+GO:0050790,  regulation of catalytic activity  [isa: 0065009  0065007  0008150 ],glnK,E1W8X2
+GO:0050821,  protein stabilization  [isa: 0031647  0065008  0065007  0008150 ],surA,E1W7W5
+GO:0050897,  cobalt ion binding  [isa: 0046914  0046872  0043169  0043167  0005488  0003674 ],allB,E1W930
+GO:0051082,  unfolded protein binding  [isa: 0005515  0005488  0003674 ],htpG,E1W8Z5
+GO:0051082,  unfolded protein binding  [isa: 0005515  0005488  0003674 ],cbpA,E1W7E3
+GO:0051082,  unfolded protein binding  [isa: 0005515  0005488  0003674 ],surA,E1W7W5
+GO:0051082,  unfolded protein binding  [isa: 0005515  0005488  0003674 ],dnaK,E1W7N5
+GO:0051287,  NAD binding  [isa: 0000166  0036094  0005488  0003674 ],ahpF,E1W9B0
+GO:0051287,  NAD binding  [isa: 0000166  0036094  0005488  0003674 ],garR,E1W927
+GO:0051287,  NAD binding  [isa: 0000166  0036094  0005488  0003674 ],wrbA,E1W7F0
+GO:0051287,  NAD binding  [isa: 0000166  0036094  0005488  0003674 ],dapB,E1W7T8
+GO:0051301,  cell division  [isa: 0009987  0008150 ],mraY,E1W7Z7
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsQ,E1W803
+GO:0051301,  cell division  [isa: 0009987  0008150 ],mukF,E1W723
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsA,E1W804
+GO:0051301,  cell division  [isa: 0009987  0008150 ],murD,E1W7Z8
+GO:0051301,  cell division  [isa: 0009987  0008150 ],mukE,E1W724
+GO:0051301,  cell division  [isa: 0009987  0008150 ],murE,E1W7Z5
+GO:0051301,  cell division  [isa: 0009987  0008150 ],sulA,E1W7A3
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsB,E1WAH5
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsI,E1W7Z4
+GO:0051301,  cell division  [isa: 0009987  0008150 ],murC,E1W801
+GO:0051301,  cell division  [isa: 0009987  0008150 ],tig,E1W8V7
+GO:0051301,  cell division  [isa: 0009987  0008150 ],mukB,E1W725
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsL,E1W7Z3
+GO:0051301,  cell division  [isa: 0009987  0008150 ],ftsK,E1W6Z2
+GO:0051301,  cell division  [isa: 0009987  0008150 ],murF,E1W7Z6
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],cysI,E1WAJ1
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],miaB,E1W9H1
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],moaA,E1W9T9
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],nadA,E1W9P4
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],dmsA,E1W6Z6
+GO:0051536,  iron-sulfur cluster binding  [isa: 0048037  0005488  0003674 ],bioB,E1W9T2
+GO:0051595,  response to methylglyoxal  [isa: 1901654  0010033  0042221  0050896  0008150 ],kefC,E1W7V9
+GO:0051920,  peroxiredoxin activity  [isa: 0016491  0003824  0003674 ],ahpC,E1W9A9
+GO:0052689,  carboxylic ester hydrolase activity  [isa: 0016787  0003824  0003674 ],ulaG,E1WAR7
+GO:0052689,  carboxylic ester hydrolase activity  [isa: 0016787  0003824  0003674 ],aes,E1W8Z8
+GO:0052837,  thiazole biosynthetic process  [isa: 1901566  1901564  0006807  0008152  0008150 ],thiI,E1W8T5
+GO:0052865,  1-deoxy-D-xylulose 5-phosphate biosynthetic process  [isa: 0052863  0019637  0071704  0008152  0008150 ],dxs,E1W8T2
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],dps,E1W9W7
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],solA,E1W7I9
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],proC,E1W8P7
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],sdhA,E1W9M7
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],cyoA,E1W8V3
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],nrdE,E1WA57
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],dmsA,E1W6Z6
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],ahpF,E1W9B0
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],trxB,E1W6Z0
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],msrA,E1WAU3
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],ribD,E1W8S6
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],folA,E1W7W0
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],cydA,E1W9N3
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],cysI,E1WAJ1
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],cyoB,E1W8V2
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],ahpC,E1W9A9
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],caiA,E1W7U7
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],sucA,E1W9M9
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],garR,E1W927
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],thrA,E1W7M5
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],gabD,E1WA40
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],allD,E1W935
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],dapB,E1W7T8
+GO:0055114,  oxidation-reduction process  [isa: 0008152  0008150 ],wrbA,E1W7F0
+GO:0055129,  L-proline biosynthetic process  [isa: 0006561  0009084  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],proC,E1W8P7
+GO:0055129,  L-proline biosynthetic process  [isa: 0006561  0009084  1901607  0008652  0046394  0016053  0006082  0044237  0009987  0008150 ],proB,E1W8I5
+GO:0060274,  maintenance of stationary phase  [isa: 0044764  0009987  0008150 ],surA,E1W7W5
+GO:0061077,  chaperone-mediated protein folding  [isa: 0006457  0009987  0008150 ],bcfB,E1W7P5
+GO:0061731,  ribonucleoside-diphosphate reductase activity  [isa: 0016491  0003824  0003674 ],nrdE,E1WA57
+GO:0070063,  RNA polymerase binding  [isa: 0019899  0005515  0005488  0003674 ],rnk,E1W9B7
+GO:0070069,  cytochrome complex  [isa: 0032991  0005575 ],cydA,E1W9N3
+GO:0070469,  respirasome  [isa: 0110165  0005575 ],cyoB,E1W8V2
+GO:0070469,  respirasome  [isa: 0110165  0005575 ],cyoA,E1W8V3
+GO:0070814,  hydrogen sulfide biosynthetic process  [isa: 0044272  0006790  0044237  0009987  0008150 ],cysN,E1WAH8
+GO:0070814,  hydrogen sulfide biosynthetic process  [isa: 0044272  0006790  0044237  0009987  0008150 ],cysI,E1WAJ1
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],murF,E1W7Z6
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],ampD,E1W818
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],rlpA,E1W9D9
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],murE,E1W7Z5
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],murC,E1W801
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],murD,E1W7Z8
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],mraY,E1W7Z7
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],ftsI,E1W7Z4
+GO:0071555,  cell wall organization  [isa: 0045229  0016043  0009987  0008150 ],bcfB,E1W7P5
+GO:0071704,  organic substance metabolic process  [isa: 0008152  0008150 ],pgm,E1W9J2
+GO:0071805,  potassium ion transmembrane transport  [isa: 0006813  0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],kdpA,E1W9K0
+GO:0071805,  potassium ion transmembrane transport  [isa: 0006813  0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:0071897,  DNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],polB,E1W7X0
+GO:0071897,  DNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],holA,E1W9E7
+GO:0071897,  DNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],dnaE,E1W8A3
+GO:0071897,  DNA biosynthetic process  [isa: 0034654  0019438  0006725  0044237  0009987  0008150 ],dnaQ,E1W8D0
+GO:0072488,  ammonium transmembrane transport  [isa: 0015696  0006812  0006811  0006810  0051234  0051179  0008150 ],amtB,E1W8X3
+GO:0090529,  cell septum assembly  [isa: 0022607  0016043  0009987  0008150 ],ftsQ,E1W803
+GO:0097056,  selenocysteinyl-tRNA [isa: 0032774  0034654  0019438  0006725  0044237  0009987  0008150 ],serS,E1W6Z5
+GO:0097659,  nucleic acid-templated transcription  [isa: 0032774  0034654  0019438  0006725  0044237  0009987  0008150 ],caiF,E1W7U2
+GO:0098655,  cation transmembrane transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],kdpA,E1W9K0
+GO:0098655,  cation transmembrane transport  [isa: 0006812  0006811  0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:0098869,  cellular oxidant detoxification  [isa: 1990748  0009987  0008150 ],ahpC,E1W9A9
+GO:0102130,  malonyl-CoA methyltransferase activity  [isa: 0008168  0016740  0003824  0003674 ],bioC,E1W9T4
+GO:0102555,  octanoyl transferase activity  [isa: 0016415  0016740  0003824  0003674 ],lipB,E1W9D6
+GO:0103045,  methione N-acyltransferase activity  [isa: 0016740  0003824  0003674 ],argA,E1WAN5
+GO:0106029,  tRNA pseudouridine synthase activity  [isa: 0009982  0016866  0016853  0003824  0003674 ],truD,E1WAH2
+GO:0110165,  cellular anatomical entity  [isa: 0005575 ],flgB,E1W7K3
+GO:0110165,  cellular anatomical entity  [isa: 0005575 ],flgH,E1W7K9
+GO:1900749,   [isa: 0015879  0015838  0015697  0015695  0006812  0006811  0006810  0051234  0051179  0008150 ],caiT,E1W7U8
+GO:1900751,  4- [isa: 0015838  0015697  0015695  0006812  0006811  0006810  0051234  0051179  0008150 ],caiT,E1W7U8
+GO:1902270,   [isa: 1900749  0015879  0015838  0015697  0015695  0006812  0006811  0006810  0051234  0051179  0008150 ],caiT,E1W7U8
+GO:1902476,  chloride transmembrane transport  [isa: 0006821  0015698  0006820  0006811  0006810  0051234  0051179  0008150 ],clcA,E1W875
+GO:1902600,  proton transmembrane transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],kefC,E1W7V9
+GO:1902600,  proton transmembrane transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],cyoB,E1W8V2
+GO:1902600,  proton transmembrane transport  [isa: 0015672  0006812  0006811  0006810  0051234  0051179  0008150 ],cyoA,E1W8V3
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],hilD,E1WAC0
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],allR,E1W924
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],lrp,E1W6Z1
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],prpR,E1W8M8
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],araC,E1W7X6
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],nusB,E1W8S8
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],stpA,E1WA48
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],mraZ,E1W7Z1
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],sirC,E1WAB2
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],leuO,E1W7Y7
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],nagC,E1W9H6
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],rnk,E1W9B7
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],csgD,E1W7H1
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],kdpE,E1W9J6
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],fur,E1W9I7
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],seqA,E1W9J1
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],pdhR,E1W823
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],nhaR,E1W7R4
+GO:1903506,  regulation of nucleic acid-templated transcription  [isa: 2001141  0010556  0009889  0019222  0050789  0065007  0008150 ],cspE,E1W9D0
+GO:1903507,  negative regulation of nucleic acid-templated transcription  [isa: 1902679  0010558  0009890  0009889  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:1904047,  S-adenosyl-L-methionine binding  [isa: 0008144  0005488  0003674 ],moaA,E1W9T9
+GO:1990077,  primosome complex  [isa: 0032993  0032991  0005575 ],priB,E1WAS7
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],rnk,E1W9B7
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],leuO,E1W7Y7
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],fur,E1W9I7
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],araC,E1W7X6
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],sirC,E1WAB2
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],nagC,E1W9H6
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],mraZ,E1W7Z1
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],hilD,E1WAC0
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],stpA,E1WA48
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],nusB,E1W8S8
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],csgD,E1W7H1
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],cspE,E1W9D0
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],allR,E1W924
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],seqA,E1W9J1
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],lrp,E1W6Z1
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],kdpE,E1W9J6
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],pdhR,E1W823
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],nhaR,E1W7R4
+GO:2000112,  regulation of cellular macromolecule biosynthetic process  [isa: 0010556  0009889  0019222  0050789  0065007  0008150 ],prpR,E1W8M8
+GO:2000113,  negative regulation of cellular macromolecule biosynthetic process  [isa: 0010558  0009890  0009889  0019222  0050789  0065007  0008150 ],flgM,E1W7K1
+GO:2001295,  malonyl-CoA biosynthetic process  [isa: 0071616  0034033  0072522  1901566  1901564  0006807  0008152  0008150 ],accA,E1W8A4
