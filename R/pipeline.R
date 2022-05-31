@@ -1,13 +1,13 @@
 #' dRNASb pipeline
-#' @param data_file_path
-#' @param phenotype_file_path
-#' @param go_function_file_path
-#' @param ppi_file_path
-#' @param annotation_file_path
+#' @param data_file_path full file path of input data file containing read counts in (gene x samples) format
+#' @param phenotype_file_path full file path of phenotype file - contains mapping of sample to groups with groups column
+#' @param annotation_function_file_path full file path of annotation function file
+#' @param ppi_file_path full file path of ppi file
+#' @param result_file_prefix a prefix string to be added to all results file
 #' @export
 dRNASb <- function(data_file_path, phenotype_file_path,
                    annotation_function_file_path, ppi_file_path,
-                   result_file_prefix){
+                   result_file_prefix = ""){
 
   # Load data---------------------------------------------------------------
   data <- read.csv(data_file_path, row.names = 1)
