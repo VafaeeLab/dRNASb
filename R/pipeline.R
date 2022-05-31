@@ -6,57 +6,29 @@
 #' @param annotation_file_path
 #' @export
 dRNASb <- function(data_file_path, phenotype_file_path,
-                   go_function_file_path, ppi_file_path,
-                   annotation_file_path){
+                   annotation_function_file_path, ppi_file_path,
+                   result_file_prefix){
 
-  # Load data and statistics analysis---------------------------------------------------------------
+  # Load data---------------------------------------------------------------
+  data <- read.csv(data_file_path, row.names = 1)
+  pheno <- read.csv(phenotype_file_path, row.names = 1)
+  ann_fun <- read.csv(annotation_function_file_path)
+  ppi <- read.csv(ppi_file_path)
+  # Load data---------------------------------------------------------------
 
-  pheno <- read.csv("Data/Pheno.csv", row.names = 1)
-  dat.p<- read.csv("Data/Pathogen.data.csv",row.names = 1)
-  fun.p<-read.csv("Data/Pathogen.annotation.function.csv")
-  ppi.p<-read.csv("Data/Pathogen.ppi.csv")
+  data.norm <- normalize(data, pheno)
 
-
-
-
-
-  # Normalise ---------------------------------------------------------------
-  c.p <- pheno[colnames(dat.p), "groups"]
-  y.p <- edgeR::DGEList(counts=dat.p, group=c.p, genes=rownames(dat.p))
-  y.p <- edgeR::cpm(edgeR::calcNormFactors(y.p, method="TMM"), log = TRUE)
+  data.norm <- filter(data.norm, pheno)
 
 
-  # Filter ------------------------------------------------------------------
-  keep.p <- edgeR::filterByExpr(y.p, group = c.p, min.count = log2(10))
-  y.p <- y.p[keep.p,]
-  normlise.count.dat.p<-data.frame(y.p)
+  # Differential gene expression analysis ---------------------
 
-  # Differential gene expression analysis using "limma" ---------------------
+  DE <- de_analysis_hourwise(data = data.norm, pheno = pheno, method = "limma")
 
-  group.p = as.factor(c.p)
-  design.p <- model.matrix(~ 0 + group.p)
-  colnames(design.p) <- levels(group.p)
-  rownames(design.p) <- colnames(y.p)
-  fit.p <- limma::lmFit(y.p, design = design.p)
-  cont.matrix.p <- limma::makeContrasts(WT.02_h - WT.00_h,
-                                 WT.04_h - WT.00_h,
-                                 WT.08_h - WT.00_h,
-                                 WT.16_h - WT.00_h,
-                                 WT.24_h - WT.00_h,levels=design.p)
-  fit.cont.p <- limma::eBayes(limma::contrasts.fit(fit.p, cont.matrix.p))
-  summa.fit.p <- limma::decideTests(fit.cont.p)
+  write_de_results(DE, result_file_prefix)
 
 
-  de.ppi.p <- function(fit.cont, coef=1, lfc = 1, adjP =0.05){
-    wtdt <- limma::topTable(fit.cont, n = Inf, coef = coef)
-    updt = with(wtdt, logFC > lfc & adj.P.Val < adjP)
-    downdt = with(wtdt, logFC < lfc & adj.P.Val < adjP)
-    return(wtdt)}
-
-  DE.p <- list()
-  for (n in 1:5){
-    DE.p[[n]] <- de.ppi.p(fit.cont.p, coef = n)
-  }
+  return (DE)
 
 
   get_de_results_per_hour <- function(D, hour, result_file_path){
@@ -71,7 +43,6 @@ dRNASb <- function(data_file_path, phenotype_file_path,
     upQ2<-D%>% filter(logFC.2h>(1))
     upQ2<-upQ2[,c(1,2)]
     write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
-
   }
 
   ################### 2h
@@ -146,12 +117,12 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Average replicates across each time -------------------------------------
-  d.p <- cbind(rowMeans(dat.p[,c(1:3)], na.rm = T),
-               rowMeans(dat.p[,c(4:6)], na.rm = T),
-               rowMeans(dat.p[,c(7:9)], na.rm = T),
-               rowMeans(dat.p[,c(10:12)], na.rm = T),
-               rowMeans(dat.p[,c(13:15)], na.rm = T),
-               rowMeans(dat.p[,c(16:18)], na.rm = T))
+  d.p <- cbind(rowMeans(data[,c(1:3)], na.rm = T),
+               rowMeans(data[,c(4:6)], na.rm = T),
+               rowMeans(data[,c(7:9)], na.rm = T),
+               rowMeans(data[,c(10:12)], na.rm = T),
+               rowMeans(data[,c(13:15)], na.rm = T),
+               rowMeans(data[,c(16:18)], na.rm = T))
   colnames(d.p) <- c("Mean.0h","Mean.2h","Mean.4h","Mean.8h","Mean.16h","Mean.24h")
 
   Gene.name<-as.data.frame(row.names(d.p))
@@ -245,7 +216,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Make list ---------------------------------------------------------------
-  anno<-fun.p
+  anno<-ann_fun
   GO<-unique(anno$Gene.ontology.ID)
   Uniprot.ID <- sapply(1:length(GO), function(i) paste(gsub("[[:space:]]", "", anno[which(anno$Gene.ontology.ID==GO[i]),]$Uniprot.ID),collapse=" "))
   Uniprot.ID<-as.data.frame(Uniprot.ID)
@@ -281,7 +252,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Function using GO.term --------------------------------------------------
-  fu<-fun.p[,c(1,2)]
+  fu<-ann_fun[,c(1,2)]
   u<-merge(out, fu, by="Gene.ontology.ID")
   write.csv(u, file= paste0 ("./Results/","./Mfuzz_Clustering/","Pathogen.cluster.enrichment.function.csv"),quote = F, row.names = FALSE)
 
@@ -657,7 +628,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Network analysis using igraph --------------------------------
-  net<-igraph::graph.data.frame(unique(ppi.p[,c(1,4)]),directed = FALSE)
+  net<-igraph::graph.data.frame(unique(ppi[,c(1,4)]),directed = FALSE)
   igraph::V(net)$label<-igraph::V(net)$name
   deg<-igraph::degree(net,v=igraph::V(net), mode = c("total"),
                       loops = TRUE,normalized = FALSE)
