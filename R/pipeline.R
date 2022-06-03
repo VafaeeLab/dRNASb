@@ -14,7 +14,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   pheno <- read.csv(phenotype_file_path, row.names = 1)
   ann_fun <- read.csv(annotation_function_file_path)
   ppi <- read.csv(ppi_file_path)
-  # Read data end---------------------------------------------------------------
+  # ---------------------------------------------------------------
 
 
   data.norm <- normalize(data, pheno)
@@ -142,13 +142,13 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   output_dir_path <- "Results/Average_data/"
   output_file_name <- paste0("All.", result_file_prefix, "mean.data.csv")
   check_and_create_directory(output_dir_path)
-  replicate_mean_hourly <- cbind(Gene.name = rownames(replicate_mean_hourly),
-                                 replicate_mean_hourly)
-  write.csv(replicate_mean_hourly,
+  replicate_mean_hourly_with_genename <-
+    cbind(data.frame("Gene.name" = row.names(replicate_mean_hourly)),
+          replicate_mean_hourly)
+  write.csv(replicate_mean_hourly_with_genename,
             paste0(output_dir_path, output_file_name), row.names = FALSE)
 
   # -------------------------------------
-
 
   ### Select gene that shows DE atleast in one time point
   for(i in c(1: length(DE))){
@@ -170,9 +170,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
                        values_fill = 0)
 
 
-
   ### Obtain mean value of DE genes
-  DE_mean_expr_value <- merge(DE_selected_all, replicate_mean_hourly, by = "Gene.name")
+  DE_mean_expr_value <- merge(DE_selected_all, replicate_mean_hourly_with_genename, by = "Gene.name")
   DE_mean_expr_value <- DE_mean_expr_value %>%
     dplyr::select(-c(dplyr::starts_with("logFC"), "Mean.0h"))
 
@@ -182,56 +181,93 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   write.csv(DE_mean_expr_value, paste0(output_dir_path, output_file_name), row.names = FALSE)
 
 
-
   # Mfuzz Clustering   ------------------------------------------------
-  y.dat<- as.matrix(replicate_mean_hourly)
-  y.dat <- y.dat[which(apply(y.dat, 1, var)>2 & apply(y.dat,1,mean)>2), 1:6]
-  timepoint <- c(0,2,4,8,16,24)
+
+  timepoint <- c(0, 2, 4, 8, 16, 24)
+  clust <- 10
+
+  y.dat <- as.matrix(replicate_mean_hourly)
+  y.dat <- y.dat[which(apply(y.dat, 1, var) > 2 & apply(y.dat, 1, mean) > 2), 1:6]
   y.dat <- rbind(timepoint, y.dat)
   rownames(y.dat)[1]<- "time"
-  tmp<- tempfile()
-  write.table(y.dat,file=tmp, sep='\t',quote=FALSE, col.names=NA)
+  tmp <- tempfile()
+  write.table(y.dat, file = tmp, sep = '\t', quote = FALSE, col.names = NA)
 
 
   #problem : below line requires : library(Biobase)
   z.data <- Mfuzz::table2eset(tmp)
 
 
-  data.z <-Mfuzz::standardise(z.data)
-  class(data.z)
-  m1 <-Mfuzz::mestimate(data.z)
+  data.z <- Mfuzz::standardise(z.data)
+  # class(data.z)
+  m1 <- Mfuzz::mestimate(data.z)
 
   #below line requires library(e1071)
   # Mfuzz::Dmin(data.z, m=m1, crange=seq(2,22,1), repeats = 3, visu = TRUE)
 
-  clust=10
-  c<- Mfuzz::mfuzz(data.z, c=clust, m=m1)
+  c <- Mfuzz::mfuzz(data.z, c = clust, m = m1)
 
-  tiff(filename ="./Results/Mfuzz_Clustering/Pathogen.mfuzz.plot.tiff", compression = "lzw")
-  Mfuzz::mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
+  output_dir_path <- "Results/Mfuzz_Clustering/"
+  check_and_create_directory(output_dir_path)
+  output_file_name <- paste0(result_file_prefix, "mfuzz.plot.tiff")
+
+  tiff(filename = paste0(output_dir_path, output_file_name), compression = "lzw")
+  Mfuzz::mfuzz.plot(
+    data.z,
+    cl = c,
+    mfrow = c(4, 4),
+    min.mem = 0.5,
+    time.labels = timepoint,
+    new.window = FALSE
+  )
   dev.off()
 
-  pdf(file = "./Results/Mfuzz_Clustering/Pathogen.mfuzz.plot.pdf",width = 10, height = 10)
-  Mfuzz::mfuzz.plot(data.z,cl=c,mfrow=c(4,4),min.mem=0.5,time.labels=c(0,2,4,8,16,24),new.window=FALSE)
+  output_file_name <- paste0(result_file_prefix, "mfuzz.plot.pdf")
+  pdf(file = paste0(output_dir_path, output_file_name),
+      width = 10,
+      height = 10)
+  Mfuzz::mfuzz.plot(
+    data.z,
+    cl = c,
+    mfrow = c(4, 4),
+    min.mem = 0.5,
+    time.labels = timepoint,
+    new.window = FALSE
+  )
   dev.off()
 
-  membership<-c$membership
-  membership<-data.frame(membership)
-  fd<-data.frame(cor(t(c[[1]])))
-  acore<-Mfuzz::acore(data.z,c,min.acore = 0.5)
-  acore_list<-do.call(rbind,lapply(seq_along(acore), function(i){data.frame(CLUSTER=i, acore[[i]])}))
-  colnames(acore_list)[2]<-"Gene.name"
-  genelist<- Mfuzz::acore(data.z,cl=c,min.acore=0.7)
-  temp <- do.call("rbind", lapply(genelist, FUN = function(x){
-    return(paste0(as.character(x$NAME), collapse = ","))
-  }))
-  Cluster_list<-as.data.frame(temp)
-  colnames(Cluster_list) <-"Gene.name"
-  Cluster_list<-stringr::str_split_fixed(Cluster_list$Gene.name,",", n=Inf)
-  Cluster_list<-t(Cluster_list)
-  colnames(Cluster_list)<- c("Cluster1", "Cluster2","Cluster3","Cluster4","Cluster5","Cluster6","Cluster7","Cluster8","Cluster9","Cluster10")  ### ? how we can make it depanded to cluster number???
+  membership <- c$membership
+  membership <- data.frame(membership)
+  fd <- data.frame(cor(t(c[[1]])))
+  acore <- Mfuzz::acore(data.z, c, min.acore = 0.5)
+  acore_list <-
+    do.call(rbind, lapply(seq_along(acore), function(i) {
+      data.frame(CLUSTER = i, acore[[i]])
+    }))
+  colnames(acore_list)[2] <- "Gene.name"
+  genelist <- Mfuzz::acore(data.z, cl = c, min.acore = 0.7)
+  temp <- do.call("rbind", lapply(
+    genelist,
+    FUN = function(x) {
+      return(paste0(as.character(x$NAME), collapse = ","))
+    }
+  ))
+  Cluster_list <- as.data.frame(temp)
+  colnames(Cluster_list) <- "Gene.name"
+  Cluster_list <-
+    stringr::str_split_fixed(Cluster_list$Gene.name, ",", n = Inf)
+  Cluster_list <- t(Cluster_list)
 
-  write.csv(acore_list,file = paste0("./Results/","./Mfuzz_Clustering/","Pathogen.cluster.acore_list.csv"), quote = F, row.names = FALSE)
+  cluster_list_col_names <- paste0("Cluster", c(1:clust))
+  colnames(Cluster_list) <- cluster_list_col_names
+
+  output_file_name <- paste0(result_file_prefix, "cluster.acore_list.csv")
+  write.csv(
+    acore_list,
+    file = paste0(output_dir_path, output_file_name),
+    quote = F,
+    row.names = FALSE
+  )
 
 
 
