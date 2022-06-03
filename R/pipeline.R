@@ -792,40 +792,4 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   dev.off()
 
-
-
-  #old code for corr analysis below
-
-  # cor.analysis ------------------------------------------------------------
-  d <- read.csv("pathogen.mean.csv", row.names = 1)
-  dt <- t(d)
-
-  t<-read.csv("dt", header = T, row.names = 1, check.names = F)
-
-
-  # change 1:54 based on actual value for host / pathogen
-  # for host pathogen correlation, put both into single file and change the index accordingly to find intra species correlation
-
-  #function argument with values instead of 1:54
-
-  All.cor<-corr.test(t[1:54], t[1:54], method="pearson", adjust="holm", ci=FALSE) # kendall , # pearson, # spearman
-
-
-  r.df <- as.data.frame(All.cor$r)
-  R.corr <- r.df %>%
-    mutate(gene1 = row.names(r.df)) %>%
-    pivot_longer(-gene1,
-                 names_to = "gene2", names_ptypes = list(gene2=character()),
-                 values_to = "corr") %>%
-    mutate(gene1 = str_replace(gene1, "\\.\\.", " ("),
-           gene1 = str_replace(gene1, "\\.$", ")"),
-           gene2 = str_replace(gene2, "\\.\\.", " ("),
-           gene2 = str_replace(gene2, "\\.$", ")")) %>%
-    mutate(comb = paste(gene1, "-", gene2))
-  corrplot(as.matrix(r.df), is.corr = FALSE,method = "circle", order = "hclust", type = "upper")
-  write.csv(R.corr,file = "R.corr.all.intersect.genes.csv",row.names = FALSE)
-
-  posetive<-R.corr%>% filter(corr>0.7)
-  negative<-R.corr %>% filter(corr<(-0.7))
-
 }
