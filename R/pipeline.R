@@ -4,6 +4,9 @@
 #' @param annotation_function_file_path full file path of annotation function file
 #' @param ppi_file_path full file path of ppi file
 #' @param result_file_prefix a prefix string to be added to all results file
+#' @importFrom magrittr "%>%"
+#' @importFrom Biobase AnnotatedDataFrame
+#' @importFrom e1071 cmeans
 #' @export
 dRNASb <- function(data_file_path, phenotype_file_path,
                    annotation_function_file_path, ppi_file_path,
@@ -49,78 +52,6 @@ dRNASb <- function(data_file_path, phenotype_file_path,
     DE_selected_upreg[[i]] <- DE_per_hour[DE_per_hour[[logFC_col_name]] > logFC_cutoff, c(1, 2)]
     DE_selected_downreg[[i]] <- DE_per_hour[DE_per_hour[[logFC_col_name]] < -logFC_cutoff, c(1, 2)]
   }
-
-
-# ################### 2h
-# D<-DE[[1]]
-# Gene.name<-as.data.frame(row.names(D))
-# colnames(Gene.name)<-"Gene.name"
-# D<-cbind(Gene.name,D)
-# colnames(D)[2]<-"logFC.2h"
-# Qp2<-subset(D,D$logFC.2h<(-1)|D$logFC.2h>1)
-# Qp2<-Qp2[,c(1,2)]
-# dpQ2<-D%>% dplyr::filter(logFC.2h<(-1))
-# dpQ2<-dpQ2[,c(1,2)]
-# upQ2<-D%>% dplyr::filter(logFC.2h>(1))
-# upQ2<-upQ2[,c(1,2)]
-# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
-#
-# ################### 4h
-# D<-DE[[2]]
-# Gene.name<-as.data.frame(row.names(D))
-# colnames(Gene.name)<-"Gene.name"
-# D<-cbind(Gene.name,D)
-# colnames(D)[2]<-"logFC.4h"
-# Qp4<-subset(D,D$logFC.4h<(-1)|D$logFC.4h>1)
-# Qp4<-Qp4[,c(1,2)]
-# dpQ4<-D%>% dplyr::filter(logFC.4h<(-1))
-# dpQ4<-dpQ4[,c(1,2)]
-# upQ4<-D%>% dplyr::filter(logFC.4h>(1))
-# upQ4<-upQ4[,c(1,2)]
-# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-4h.csv"), row.names = FALSE)
-#
-# ################### 8h
-# D<-DE[[3]]
-# Gene.name<-as.data.frame(row.names(D))
-# colnames(Gene.name)<-"Gene.name"
-# D<-cbind(Gene.name,D)
-# colnames(D)[2]<-"logFC.8h"
-# Qp8<-subset(D,D$logFC.8h<(-1)|D$logFC.8h>1)
-# Qp8<-Qp8[,c(1,2)]
-# dpQ8<-D%>% dplyr::filter(logFC.8h<(-1))
-# dpQ8<-dpQ8[,c(1,2)]
-# upQ8<-D%>% dplyr::filter(logFC.8h>(1))
-# upQ8<-upQ8[,c(1,2)]
-# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-8h.csv"), row.names = FALSE)
-#
-# ################### 16h
-# D<-DE[[4]]
-# Gene.name<-as.data.frame(row.names(D))
-# colnames(Gene.name)<-"Gene.name"
-# D<-cbind(Gene.name,D)
-# colnames(D)[2]<-"logFC.16h"
-# Qp16<-subset(D,D$logFC.16h<(-1)|D$logFC.16h>1)
-# Qp16<-Qp16[,c(1,2)]
-# dpQ16<-D%>% dplyr::filter(logFC.16h<(-1))
-# dpQ16<-dpQ16[,c(1,2)]
-# upQ16<-D%>% dplyr::filter(logFC.16h>(1))
-# upQ16<-upQ16[,c(1,2)]
-# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-16h.csv"), row.names = FALSE)
-#
-# ################### 24h
-# D<-DE[[5]]
-# Gene.name<-as.data.frame(row.names(D))
-# colnames(Gene.name)<-"Gene.name"
-# D<-cbind(Gene.name,D)
-# colnames(D)[2]<-"logFC.24h"
-# Qp24<-subset(D,D$logFC.24h<(-1)|D$logFC.24h>1)
-# Qp24<-Qp24[,c(1,2)]
-# dpQ24<-D%>% dplyr::filter(logFC.24h<(-1))
-# dpQ24<-dpQ24[,c(1,2)]
-# upQ24<-D%>% dplyr::filter(logFC.24h>(1))
-# upQ24<-upQ24[,c(1,2)]
-# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-24h.csv"), row.names = FALSE)
-
 
   # Average replicates across each time -------------------------------------
   replicates <- 3
@@ -182,144 +113,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
 
   # Mfuzz Clustering   ------------------------------------------------
+  perform_clustering(replicate_mean_hourly, ann_fun)
 
-  timepoint <- c(0, 2, 4, 8, 16, 24)
-  clust <- 10
-
-  y.dat <- as.matrix(replicate_mean_hourly)
-  y.dat <- y.dat[which(apply(y.dat, 1, var) > 2 & apply(y.dat, 1, mean) > 2), 1:6]
-  y.dat <- rbind(timepoint, y.dat)
-  rownames(y.dat)[1]<- "time"
-  tmp <- tempfile()
-  write.table(y.dat, file = tmp, sep = '\t', quote = FALSE, col.names = NA)
-
-
-  #problem : below line requires : library(Biobase)
-  z.data <- Mfuzz::table2eset(tmp)
-
-
-  data.z <- Mfuzz::standardise(z.data)
-  # class(data.z)
-  m1 <- Mfuzz::mestimate(data.z)
-
-  #below line requires library(e1071)
-  # Mfuzz::Dmin(data.z, m=m1, crange=seq(2,22,1), repeats = 3, visu = TRUE)
-
-  c <- Mfuzz::mfuzz(data.z, c = clust, m = m1)
-
-  output_dir_path <- "Results/Mfuzz_Clustering/"
-  check_and_create_directory(output_dir_path)
-  output_file_name <- paste0(result_file_prefix, "mfuzz.plot.tiff")
-
-  tiff(filename = paste0(output_dir_path, output_file_name), compression = "lzw")
-  Mfuzz::mfuzz.plot(
-    data.z,
-    cl = c,
-    mfrow = c(4, 4),
-    min.mem = 0.5,
-    time.labels = timepoint,
-    new.window = FALSE
-  )
-  dev.off()
-
-  output_file_name <- paste0(result_file_prefix, "mfuzz.plot.pdf")
-  pdf(file = paste0(output_dir_path, output_file_name),
-      width = 10,
-      height = 10)
-  Mfuzz::mfuzz.plot(
-    data.z,
-    cl = c,
-    mfrow = c(4, 4),
-    min.mem = 0.5,
-    time.labels = timepoint,
-    new.window = FALSE
-  )
-  dev.off()
-
-  membership <- c$membership
-  membership <- data.frame(membership)
-  fd <- data.frame(cor(t(c[[1]])))
-  acore <- Mfuzz::acore(data.z, c, min.acore = 0.5)
-  acore_list <-
-    do.call(rbind, lapply(seq_along(acore), function(i) {
-      data.frame(CLUSTER = i, acore[[i]])
-    }))
-  colnames(acore_list)[2] <- "Gene.name"
-  genelist <- Mfuzz::acore(data.z, cl = c, min.acore = 0.7)
-  temp <- do.call("rbind", lapply(
-    genelist,
-    FUN = function(x) {
-      return(paste0(as.character(x$NAME), collapse = ","))
-    }
-  ))
-  Cluster_list <- as.data.frame(temp)
-  colnames(Cluster_list) <- "Gene.name"
-  Cluster_list <-
-    stringr::str_split_fixed(Cluster_list$Gene.name, ",", n = Inf)
-  Cluster_list <- t(Cluster_list)
-
-  cluster_list_col_names <- paste0("Cluster", c(1:clust))
-  colnames(Cluster_list) <- cluster_list_col_names
-
-  output_file_name <- paste0(result_file_prefix, "cluster.acore_list.csv")
-  write.csv(
-    acore_list,
-    file = paste0(output_dir_path, output_file_name),
-    quote = F,
-    row.names = FALSE
-  )
-
-
-
-  # Make list ---------------------------------------------------------------
-  anno<-ann_fun
-  GO<-unique(anno$Gene.ontology.ID)
-  Uniprot.ID <- sapply(1:length(GO), function(i) paste(gsub("[[:space:]]", "", anno[which(anno$Gene.ontology.ID==GO[i]),]$Uniprot.ID),collapse=" "))
-  Uniprot.ID<-as.data.frame(Uniprot.ID)
-  GO_Pro_ID<-data.frame(GO.ID=unique(anno$Gene.ontology.ID),
-                        Uniprot.ID=Uniprot.ID)
-
-
-  # Make list of list -------------------------------------------------------
-  Anno <- list()
-  GO_IDs <- as.vector(GO_Pro_ID[,1])
-
-  for (i in GO_IDs) {
-    myindex <- which(GO_Pro_ID == i)
-    Anno[i] <- strsplit(as.character(GO_Pro_ID[myindex, 2]), " ")
-  }
-
-
-  # Enrichment using "ClueR" ------------------------------------------------
-  ce <- ClueR::clustEnrichment(c, annotation=Anno, effectiveSize=c(2,100), pvalueCutoff=0.01)
-
-  out <- c()
-  i <- 1
-  for (clus in ce$enrich.list) {
-    clus<- cbind(rep(paste0("Cluster_",i), nrow(clus)), clus)
-    out <- rbind(out,clus)
-    i = i+1
-  }
-
-  colnames(out) [1] <-"Cluster.number"
-  colnames(out) [2] <-"Gene.ontology.ID"
-  colnames(out) [5] <-"Overlap.Gene.name"
-  write.csv(out, file= paste0 ("./Results/","./Mfuzz_Clustering/","Pathogen.cluster.enrichment.csv"),quote = F, row.names = FALSE)
-
-
-  # Function using GO.term --------------------------------------------------
-  fu<-ann_fun[,c(1,2)]
-  u<-merge(out, fu, by="Gene.ontology.ID")
-  write.csv(u, file= paste0 ("./Results/","./Mfuzz_Clustering/","Pathogen.cluster.enrichment.function.csv"),quote = F, row.names = FALSE)
-
-
-
-  #  Variable and  frequency of Function
-  cl<-as.data.frame(out[,c(5)])
-  colnames(cl)<-"Gene.name"
-  gene.list<-cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)
-  freq.list.pathogen.gene<-cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>% group_by(Gene.name)%>% dplyr::summarize(n = n()) %>% arrange(desc(n))
-  write.csv(freq.list.pathogen.gene, file= paste0 ("./Results/","./Mfuzz_Clustering/","Variable.enriched.genes.and.their.frequency.in.pathogen.csv"),quote = F, row.names = FALSE)
 
 
   # Venn diagram ------------------------------------------------------------------
