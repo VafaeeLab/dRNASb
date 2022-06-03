@@ -120,7 +120,7 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 # upQ24<-D%>% dplyr::filter(logFC.24h>(1))
 # upQ24<-upQ24[,c(1,2)]
 # write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-24h.csv"), row.names = FALSE)
-#
+
 
   # Average replicates across each time -------------------------------------
   replicates <- 3
@@ -139,8 +139,8 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   }
   colnames(replicate_mean_hourly) <- paste("Mean", hour_mapping, sep = ".")
 
-  output_dir_path <- "Results/Average_data"
-  output_file_name <- paste0(result_file_prefix, "mean_data.csv")
+  output_dir_path <- "Results/Average_data/"
+  output_file_name <- paste0("All.", result_file_prefix, "mean.data.csv")
   check_and_create_directory(output_dir_path)
   replicate_mean_hourly <- cbind(Gene.name = rownames(replicate_mean_hourly),
                                  replicate_mean_hourly)
@@ -150,74 +150,36 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   # -------------------------------------
 
 
-  # Gene.name<-as.data.frame(row.names(replicate_mean_hourly))
-  # da.p <- cbind(Gene.name,replicate_mean_hourly)
-  # colnames(da.p)[1]<-"Gene.name"
-  # Mean.pathogen<-da.p
-  # write.csv(Mean.pathogen,file = paste0("./Results/","./Average_data/","All.pathogen.mean.data.csv"), row.names = FALSE)
-  #
-
-  logFC_cutoff <- 1
-
-  D <- DE[[1]]
-
   ### Select gene that shows DE atleast in one time point
   for(i in c(1: length(DE))){
-    print(i)
-    de_genes_df <- DE[[i]] %>%
-      dplyr::filter(abs(logFC) > logFC_cutoff)
-
-    de_genes_df <- data.frame("Gene.name" = rownames(de_genes_df),
-                              "logFC" = de_genes_df$logFC)
-    de_genes_df$logFC[de_genes_df$logFC < 0] <- 1
-
+    DE_selected[[i]][DE_selected[[i]][, 2] < 0, 2] <- 1
     if(i == 1){
-      all_de_genes_df <- de_genes_df
+      DE_selected_all <- DE_selected[[i]]
     } else{
-      all_de_genes_df <- plyr::rbind.fill(all_de_genes_df, de_genes_df)
+      DE_selected_all <- plyr::rbind.fill(DE_selected_all, DE_selected[[i]])
     }
   }
-
-  all.equal(Qp, all_de_genes_df)
-
-
-
-  all_de
-  Qp[is.na(Qp[1:6])]<-0
-  Qp <- Qp %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
+  DE_selected_all[is.na(DE_selected_all)]<-0
+  DE_selected_all <-
+    DE_selected_all %>% tidyr::pivot_longer(dplyr::starts_with("logFC"),
+                                            names_to = "timepoint",
+                                            values_to = "sign") %>%
     dplyr::filter(sign == 1) %>%
-    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)
-
-  ### ------------------------
-
-
-  # DE Matrix -----------------------------------------------------
-
-  ### Select gene that shows DE atleast in one time point
-  Qp2$logFC.2h[Qp2$logFC.2h<0]<-1
-  Qp4$logFC.4h[Qp4$logFC.4h<0]<-1
-  Qp8$logFC.8h[Qp8$logFC.8h<0]<-1
-  Qp16$logFC.16h[Qp16$logFC.16h<0]<-1
-  Qp24$logFC.24h[Qp24$logFC.24h<0]<-1
-  Qp<-plyr::rbind.fill(Qp2,Qp4,Qp8,Qp16,Qp24)
-  Qp[is.na(Qp[1:6])]<-0
-  Qp <- Qp %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
-    dplyr::filter(sign == 1) %>%
-    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)
-
-  ### Get mean value for DE genes
-  m.p<-merge(Qp,da.p, by="Gene.name")
-  m.p<-m.p[,-c(2:7)]
-  ED.pathogen<-m.p
-  write.csv(m.p,file = paste0("./Results/","./Average_data/","All.pathogen.ED.gene.csv"), row.names = FALSE)
+    tidyr::pivot_wider(names_from = timepoint,
+                       values_from = sign,
+                       values_fill = 0)
 
 
-  ### Get transpose matrix
-  mt<-data.frame(t(m.p))
-  g<-as.data.frame(row.names(mt))
-  mt <- cbind(g,mt)
-  colnames(mt)[1]<-"Gene.name"
-  write.table(mt,file = paste0("./Results/","./Matrix_Transpose/","Transpose.pathogen.gene.csv"),  sep=",",col.names= FALSE,row.names = FALSE)
+
+  ### Obtain mean value of DE genes
+  DE_mean_expr_value <- merge(DE_selected_all, replicate_mean_hourly, by = "Gene.name")
+  DE_mean_expr_value <- DE_mean_expr_value %>%
+    dplyr::select(-c(dplyr::starts_with("logFC"), "Mean.0h"))
+
+  output_dir_path <- "Results/Average_data/"
+  check_and_create_directory(output_dir_path)
+  output_file_name <- paste0("All.", result_file_prefix, "DE.gene.csv")
+  write.csv(DE_mean_expr_value, paste0(output_dir_path, output_file_name), row.names = FALSE)
 
 
 
