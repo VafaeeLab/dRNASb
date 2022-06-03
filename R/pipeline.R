@@ -25,83 +25,102 @@ dRNASb <- function(data_file_path, phenotype_file_path,
 
   DE <- de_analysis_hourwise(data = data.norm, pheno = pheno, method = "limma")
 
-  write_de_results(DE, result_file_prefix)
+  #obtain hourwise results
+  hour_mapping <- c("2h", "4h", "8h", "16h", "24h")
+  de_results_dir_path <- "Results/Differential_gene_expression_analysis/"
+  logFC_cutoff <- 1
+
+  DE_selected <- list()
+  DE_selected_upreg <- list()
+  DE_selected_downreg <- list()
+
+  check_and_create_directory(de_results_dir_path)
+  for(i in c(1:length(DE))){
+    DE_per_hour <- DE[[i]]
+    DE_per_hour <- cbind("Gene.name" = row.names(DE_per_hour), DE_per_hour)
+
+    logFC_col_name <- paste("logFC", hour_mapping[i], sep = ".")
+    colnames(DE_per_hour)[2] <- logFC_col_name
+
+    de_file_name <- paste0(result_file_prefix, "DE-", hour_mapping[i], ".csv")
+    write.csv(DE_per_hour, file = paste0(de_results_dir_path, "/", de_file_name), row.names = FALSE)
+
+    DE_selected[[i]] <- DE_per_hour[abs(DE_per_hour[[logFC_col_name]]) > logFC_cutoff, c(1, 2)]
+    DE_selected_upreg[[i]] <- DE_per_hour[DE_per_hour[[logFC_col_name]] > logFC_cutoff, c(1, 2)]
+    DE_selected_downreg[[i]] <- DE_per_hour[DE_per_hour[[logFC_col_name]] < -logFC_cutoff, c(1, 2)]
+  }
 
 
-  return (DE)
-
-
-
-################### 2h
-D<-DE[[1]]
-Gene.name<-as.data.frame(row.names(D))
-colnames(Gene.name)<-"Gene.name"
-D<-cbind(Gene.name,D)
-colnames(D)[2]<-"logFC.2h"
-Qp2<-subset(D,D$logFC.2h<(-1)|D$logFC.2h>1)
-Qp2<-Qp2[,c(1,2)]
-dpQ2<-D%>% dplyr::filter(logFC.2h<(-1))
-dpQ2<-dpQ2[,c(1,2)]
-upQ2<-D%>% dplyr::filter(logFC.2h>(1))
-upQ2<-upQ2[,c(1,2)]
-write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
-
-################### 4h
-D<-DE[[2]]
-Gene.name<-as.data.frame(row.names(D))
-colnames(Gene.name)<-"Gene.name"
-D<-cbind(Gene.name,D)
-colnames(D)[2]<-"logFC.4h"
-Qp4<-subset(D,D$logFC.4h<(-1)|D$logFC.4h>1)
-Qp4<-Qp4[,c(1,2)]
-dpQ4<-D%>% dplyr::filter(logFC.4h<(-1))
-dpQ4<-dpQ4[,c(1,2)]
-upQ4<-D%>% dplyr::filter(logFC.4h>(1))
-upQ4<-upQ4[,c(1,2)]
-write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-4h.csv"), row.names = FALSE)
-
-################### 8h
-D<-DE[[3]]
-Gene.name<-as.data.frame(row.names(D))
-colnames(Gene.name)<-"Gene.name"
-D<-cbind(Gene.name,D)
-colnames(D)[2]<-"logFC.8h"
-Qp8<-subset(D,D$logFC.8h<(-1)|D$logFC.8h>1)
-Qp8<-Qp8[,c(1,2)]
-dpQ8<-D%>% dplyr::filter(logFC.8h<(-1))
-dpQ8<-dpQ8[,c(1,2)]
-upQ8<-D%>% dplyr::filter(logFC.8h>(1))
-upQ8<-upQ8[,c(1,2)]
-write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-8h.csv"), row.names = FALSE)
-
-################### 16h
-D<-DE[[4]]
-Gene.name<-as.data.frame(row.names(D))
-colnames(Gene.name)<-"Gene.name"
-D<-cbind(Gene.name,D)
-colnames(D)[2]<-"logFC.16h"
-Qp16<-subset(D,D$logFC.16h<(-1)|D$logFC.16h>1)
-Qp16<-Qp16[,c(1,2)]
-dpQ16<-D%>% dplyr::filter(logFC.16h<(-1))
-dpQ16<-dpQ16[,c(1,2)]
-upQ16<-D%>% dplyr::filter(logFC.16h>(1))
-upQ16<-upQ16[,c(1,2)]
-write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-16h.csv"), row.names = FALSE)
-
-################### 24h
-D<-DE[[5]]
-Gene.name<-as.data.frame(row.names(D))
-colnames(Gene.name)<-"Gene.name"
-D<-cbind(Gene.name,D)
-colnames(D)[2]<-"logFC.24h"
-Qp24<-subset(D,D$logFC.24h<(-1)|D$logFC.24h>1)
-Qp24<-Qp24[,c(1,2)]
-dpQ24<-D%>% dplyr::filter(logFC.24h<(-1))
-dpQ24<-dpQ24[,c(1,2)]
-upQ24<-D%>% dplyr::filter(logFC.24h>(1))
-upQ24<-upQ24[,c(1,2)]
-write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-24h.csv"), row.names = FALSE)
-
+# ################### 2h
+# D<-DE[[1]]
+# Gene.name<-as.data.frame(row.names(D))
+# colnames(Gene.name)<-"Gene.name"
+# D<-cbind(Gene.name,D)
+# colnames(D)[2]<-"logFC.2h"
+# Qp2<-subset(D,D$logFC.2h<(-1)|D$logFC.2h>1)
+# Qp2<-Qp2[,c(1,2)]
+# dpQ2<-D%>% dplyr::filter(logFC.2h<(-1))
+# dpQ2<-dpQ2[,c(1,2)]
+# upQ2<-D%>% dplyr::filter(logFC.2h>(1))
+# upQ2<-upQ2[,c(1,2)]
+# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-2h.csv"), row.names = FALSE)
+#
+# ################### 4h
+# D<-DE[[2]]
+# Gene.name<-as.data.frame(row.names(D))
+# colnames(Gene.name)<-"Gene.name"
+# D<-cbind(Gene.name,D)
+# colnames(D)[2]<-"logFC.4h"
+# Qp4<-subset(D,D$logFC.4h<(-1)|D$logFC.4h>1)
+# Qp4<-Qp4[,c(1,2)]
+# dpQ4<-D%>% dplyr::filter(logFC.4h<(-1))
+# dpQ4<-dpQ4[,c(1,2)]
+# upQ4<-D%>% dplyr::filter(logFC.4h>(1))
+# upQ4<-upQ4[,c(1,2)]
+# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-4h.csv"), row.names = FALSE)
+#
+# ################### 8h
+# D<-DE[[3]]
+# Gene.name<-as.data.frame(row.names(D))
+# colnames(Gene.name)<-"Gene.name"
+# D<-cbind(Gene.name,D)
+# colnames(D)[2]<-"logFC.8h"
+# Qp8<-subset(D,D$logFC.8h<(-1)|D$logFC.8h>1)
+# Qp8<-Qp8[,c(1,2)]
+# dpQ8<-D%>% dplyr::filter(logFC.8h<(-1))
+# dpQ8<-dpQ8[,c(1,2)]
+# upQ8<-D%>% dplyr::filter(logFC.8h>(1))
+# upQ8<-upQ8[,c(1,2)]
+# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-8h.csv"), row.names = FALSE)
+#
+# ################### 16h
+# D<-DE[[4]]
+# Gene.name<-as.data.frame(row.names(D))
+# colnames(Gene.name)<-"Gene.name"
+# D<-cbind(Gene.name,D)
+# colnames(D)[2]<-"logFC.16h"
+# Qp16<-subset(D,D$logFC.16h<(-1)|D$logFC.16h>1)
+# Qp16<-Qp16[,c(1,2)]
+# dpQ16<-D%>% dplyr::filter(logFC.16h<(-1))
+# dpQ16<-dpQ16[,c(1,2)]
+# upQ16<-D%>% dplyr::filter(logFC.16h>(1))
+# upQ16<-upQ16[,c(1,2)]
+# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-16h.csv"), row.names = FALSE)
+#
+# ################### 24h
+# D<-DE[[5]]
+# Gene.name<-as.data.frame(row.names(D))
+# colnames(Gene.name)<-"Gene.name"
+# D<-cbind(Gene.name,D)
+# colnames(D)[2]<-"logFC.24h"
+# Qp24<-subset(D,D$logFC.24h<(-1)|D$logFC.24h>1)
+# Qp24<-Qp24[,c(1,2)]
+# dpQ24<-D%>% dplyr::filter(logFC.24h<(-1))
+# dpQ24<-dpQ24[,c(1,2)]
+# upQ24<-D%>% dplyr::filter(logFC.24h>(1))
+# upQ24<-upQ24[,c(1,2)]
+# write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/","Pathogen.DE-24h.csv"), row.names = FALSE)
+#
 
   # Average replicates across each time -------------------------------------
   replicates <- 3
@@ -122,9 +141,7 @@ write.csv(D,file = paste0("./Results/","./Differential_gene_expression_analysis/
 
   output_dir_path <- "Results/Average_data"
   output_file_name <- paste0(result_file_prefix, "mean_data.csv")
-  if(!dir.exists(output_dir_path)){
-    dir.create(output_dir_path, recursive = TRUE)
-  }
+  check_and_create_directory(output_dir_path)
   replicate_mean_hourly <- cbind(Gene.name = rownames(replicate_mean_hourly),
                                  replicate_mean_hourly)
   write.csv(replicate_mean_hourly,

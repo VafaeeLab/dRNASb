@@ -36,18 +36,3 @@ de_analysis_hourwise <- function(data, pheno, method = "limma"){
   }
 
 }
-
-
-write_de_results <- function(DE, result_file_prefix,
-                             de_results_dir_path = "Results/Differential_gene_expression_analysis/",
-                             hour_mapping = c("2h", "4h", "8h", "16h", "24h")){
-  if(!dir.exists(de_results_dir_path)){
-    dir.create(de_results_dir_path, recursive = TRUE)
-  }
-
-  for(i in c(1:length(DE))){
-    DE_per_hour <- DE[[i]]
-    de_file_name <- paste0(result_file_prefix, "DE-", hour_mapping[i], ".csv")
-    write.csv(DE_per_hour, file = paste0(de_results_dir_path, "/", de_file_name))
-  }
-}
