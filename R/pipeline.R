@@ -8,9 +8,15 @@
 #' @importFrom Biobase AnnotatedDataFrame
 #' @importFrom e1071 cmeans
 #' @export
-dRNASb <- function(data_file_path, phenotype_file_path,
-                   annotation_function_file_path, ppi_file_path,
-                   result_file_prefix = ""){
+dRNASb_pipeline <- function(data_file_path,
+                            phenotype_file_path,
+                            annotation_function_file_path,
+                            ppi_file_path,
+                            result_file_prefix = "",
+                            de_method = "limma",
+                            norm_method = "log_TMM",
+                            perform_filter = TRUE) {
+
 
   # Read data---------------------------------------------------------------
   data <- read.csv(data_file_path, row.names = 1)
@@ -19,14 +25,15 @@ dRNASb <- function(data_file_path, phenotype_file_path,
   ppi <- read.csv(ppi_file_path)
   # ---------------------------------------------------------------
 
+  data.norm <- normalize(data, pheno, norm_method)
 
-  data.norm <- normalize(data, pheno)
-  data.norm <- filter(data.norm, pheno)
-
+  if(perform_filter){
+    data.norm <- filter(data.norm, pheno)
+  }
 
   # Differential gene expression analysis ---------------------
 
-  DE <- de_analysis_hourwise(data = data.norm, pheno = pheno, method = "limma")
+  DE <- de_analysis_hourwise(data = data.norm, pheno = pheno, method = de_method)
 
   #obtain hourwise results
   hour_mapping <- c("2h", "4h", "8h", "16h", "24h")
