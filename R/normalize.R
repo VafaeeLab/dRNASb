@@ -70,6 +70,7 @@ show_allowed_norm_methods <- function(){
 normalize <- function(data, pheno, norm_method = "log_TMM"){
   for(nm in norm_methods){
     if(nm[["norm_name"]] == norm_method){
+      print(paste("applying", nm[["norm_name"]], "normalization"))
       return (nm[["norm_func"]](data, pheno))
     }
   }
