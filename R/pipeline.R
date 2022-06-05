@@ -1,9 +1,16 @@
 #' dRNASb pipeline
 #' @param data_file_path full file path of input data file containing read counts in (gene x samples) format
+#'   should have samples corresponding to different hours and replicates for each hour
 #' @param phenotype_file_path full file path of phenotype file - contains mapping of sample to groups with groups column
 #' @param annotation_function_file_path full file path of annotation function file
 #' @param ppi_file_path full file path of ppi file
 #' @param result_file_prefix a prefix string to be added to all results file
+#' @param de_method differential expression method to be used
+#' @param norm_method normalization method to be used - use show_allowed_norm_methods() for available norm methods
+#' @param perform_filter Should filter preprocessing step be performed
+#' @param hours_in_data Vector of different hours information present in the data
+#' @param replicates_in_data Number of replicates for each hour in the data
+#' @param logFC_cutoff log fold change cutoff used to select differentially expressed genes
 #' @importFrom magrittr "%>%"
 #' @importFrom Biobase AnnotatedDataFrame
 #' @importFrom e1071 cmeans
@@ -132,7 +139,6 @@ dRNASb_pipeline <- function(data_file_path,
 
   # Upset Plot --------------------------------------------------------------
   create_upset_plot(DE_selected_upreg, DE_selected_downreg)
-
 
 
   # Network analysis using igraph --------------------------------
