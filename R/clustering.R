@@ -156,12 +156,12 @@ perform_clustering <- function(replicate_mean_hourly,
   colnames(cl) <- "Gene.name"
   gene.list <-
     cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>%
-    group_by(Gene.name)
+    dplyr::group_by(Gene.name)
   freq.list.gene <-
     cl %>% tidyr::separate_rows(Gene.name, sep = "\\|") %>%
-    group_by(Gene.name) %>%
-    dplyr::summarize(n = n()) %>%
-    arrange(desc(n))
+    dplyr::group_by(Gene.name) %>%
+    dplyr::summarize(n = dplyr::n()) %>%
+    dplyr::arrange(desc(n))
   output_file_name <- paste0(result_file_prefix, "Variable.enriched.genes.and.their.frequency.csv")
   write.csv(
     freq.list.gene,
