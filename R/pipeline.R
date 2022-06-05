@@ -13,6 +13,7 @@
 #' @param logFC_cutoff log fold change cutoff used to select differentially expressed genes
 #' @importFrom magrittr "%>%"
 #' @importFrom Biobase AnnotatedDataFrame
+#' @importFrom Biobase exprs
 #' @importFrom e1071 cmeans
 #' @export
 dRNASb_pipeline <- function(data_file_path,
