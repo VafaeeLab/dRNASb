@@ -15,7 +15,10 @@ dRNASb_pipeline <- function(data_file_path,
                             result_file_prefix = "",
                             de_method = "limma",
                             norm_method = "log_TMM",
-                            perform_filter = TRUE) {
+                            perform_filter = TRUE,
+                            hours_in_data = c("0h", "2h", "4h", "8h", "16h", "24h"),
+                            replicates_in_data = 3,
+                            logFC_cutoff = 1) {
 
 
   # Read data---------------------------------------------------------------
@@ -35,10 +38,9 @@ dRNASb_pipeline <- function(data_file_path,
 
   DE <- de_analysis_hourwise(data = data.norm, pheno = pheno, method = de_method)
 
-  #obtain hourwise results
-  hour_mapping <- c("2h", "4h", "8h", "16h", "24h")
+  #obtain hourwise results - excluding that for 0th hour - assumed to be the first element
+  hour_mapping <- hours_in_data[-1] #remove 0th hour
   de_results_dir_path <- "Results/Differential_gene_expression_analysis/"
-  logFC_cutoff <- 1
 
   DE_selected <- list()
   DE_selected_upreg <- list()
@@ -61,8 +63,8 @@ dRNASb_pipeline <- function(data_file_path,
   }
 
   # Average replicates across each time -------------------------------------
-  replicates <- 3
-  hour_mapping <- c("0h", "2h", "4h", "8h", "16h", "24h")
+  replicates <- replicates_in_data
+  hour_mapping <- hours_in_data
 
   replicate_mean_hourly <- data.frame()
   for(i in c(1: length(hour_mapping))){
