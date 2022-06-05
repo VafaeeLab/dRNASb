@@ -1,41 +1,14 @@
-create_upset_plot <- function(DE_selected_upreg, DE_selected_downreg){
+create_upset_plot <- function(DE_selected_upreg, DE_selected_downreg,
+                              hour_mapping = c("2h", "4h", "8h", "16h", "24h"),
+                              output_dir_path = "Results/Upset_plot/"){
 
-  ### Select downregulated gene
-  dpQ2$logFC.2h [dpQ2$logFC.2h<0]<-1
-  dpQ4$logFC.4h [dpQ4$logFC.4h<0]<-1
-  dpQ8$logFC.8h [dpQ8$logFC.8h<0]<-1
-  dpQ16$logFC.16h [dpQ16$logFC.16h<0]<-1
-  dpQ24$logFC.24h [dpQ24$logFC.24h<0]<-1
-  dpQ<-plyr::rbind.fill(dpQ2,dpQ4,dpQ8,dpQ16,dpQ24)
-  dpQ[is.na(dpQ[1:6])]<-0
-  dpQ <- dpQ %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
-    dplyr::filter(sign == 1) %>%
-    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
+  check_and_create_directory(output_dir_path)
 
-  write.table(dpQ,file = paste0("./Inputs/","Pathogen.all.downregulated.ED.csv"),  sep=",",col.names= FALSE,row.names = TRUE)
-
-
-  ### Select upregulated gene
-  upQ2$logFC.2h [upQ2$logFC.2h>0]<-1
-  upQ4$logFC.4h [upQ4$logFC.4h>0]<-1
-  upQ8$logFC.8h [upQ8$logFC.8h>0]<-1
-  upQ16$logFC.16h [upQ16$logFC.16h>0]<-1
-  upQ24$logFC.24h [upQ24$logFC.24h>0]<-1
-  upQ<-plyr::rbind.fill(upQ2,upQ4,upQ8,upQ16,upQ24)
-  upQ[is.na(upQ[1:6])]<-0
-  upQ <- upQ %>% tidyr::pivot_longer(logFC.2h:logFC.24h, names_to = "timepoint", values_to = "sign") %>%
-    dplyr::filter(sign == 1) %>%
-    tidyr::pivot_wider(names_from = timepoint, values_from = sign, values_fill = 0)%>% t()
-
-  write.table(upQ,file = paste0("./Inputs/","Pathogen.all.upregulated.ED.csv"),  sep=",",col.names= FALSE,row.names = TRUE)
-
-
-
-  ### Downregulated
-  y <-t(read.csv("Inputs/Pathogen.all.downregulated.ED.csv")) %>% as.data.frame()
-  colnames(y)<-y[1,]
-  y <- y[-1,] %>% dplyr::mutate_if(is.character, as.numeric)
-  UpSetR::upset(y)
+  ################ Downregulated ################
+  down_reg_list <- list()
+  for(i in c(1:length(DE_selected_downreg))){
+    down_reg_list[[hour_mapping[i]]] <- DE_selected_downreg[[i]]$Gene.name
+  }
 
   # Setting colors
   main_bar_col <- c("blue4")
@@ -43,50 +16,54 @@ create_upset_plot <- function(DE_selected_upreg, DE_selected_downreg){
   matrix_col <- c("forestgreen")
   shade_col <- c("wheat4")
 
+  # Set Variables
+  mb_ratio1 <- c(0.55, 0.45)
 
-  # Setting Set Variables
-  mb_ratio1 <- c(0.55,0.45)
+  output_file_name <- paste0(result_file_prefix, "downregulate.upset.plot.tiff")
+  tiff(filename = paste0(output_dir_path, output_file_name), compression = "lzw")
+  print({
+    UpSetR::upset(UpSetR::fromList(down_reg_list),
+                  mb.ratio = mb_ratio1,
+                  mainbar.y.label = "Interaction of downregulated genes",
+                  sets.x.label = "Number of Genes",
+                  order.by = "freq",
+                  # show.numbers = TRUE,
+                  point.size = 2,
+                  line.size = 1,
+                  main.bar.color = main_bar_col,
+                  sets.bar.color = sets_bar_col,
+                  matrix.color = matrix_col,
+                  shade.color = shade_col )
+  })
+  dev.off()
 
-  tiff(filename ="./Results//Upset_plot/Pathogen.downregulate.upset.plot.tiff", compression = "lzw")
-  UpSetR::upset(y,
-                mb.ratio = mb_ratio1,
-                mainbar.y.label = "Interaction of downregulated genes",
-                sets.x.label = "Number of Genes",
-                order.by = "freq",
-                # show.numbers = TRUE,
-                point.size = 2,
-                line.size = 1,
-                main.bar.color = main_bar_col,
-                sets.bar.color = sets_bar_col,
-                matrix.color = matrix_col,
-                shade.color = shade_col )
-
+  output_file_name <- paste0(result_file_prefix, "downregulate.upset.plot.pdf")
+  pdf(file = paste0(output_dir_path, output_file_name), width = 5, height = 5)
+  print({
+    UpSetR::upset(UpSetR::fromList(down_reg_list),
+                  mb.ratio = mb_ratio1,
+                  mainbar.y.label = "Interaction of downregulated genes",
+                  sets.x.label = "Number of Genes",
+                  order.by = "freq",
+                  # show.numbers = TRUE,
+                  point.size = 2,
+                  line.size = 1,
+                  main.bar.color = main_bar_col,
+                  sets.bar.color = sets_bar_col,
+                  matrix.color = matrix_col,
+                  shade.color = shade_col )
+  })
 
   dev.off()
 
-  pdf(file ="./Results//Upset_plot/Pathogen.downregulate.upset.plot.pdf",width = 5, height = 5)
-  UpSetR::upset(y,
-                mb.ratio = mb_ratio1,
-                mainbar.y.label = "Interaction of downregulated genes",
-                sets.x.label = "Number of Genes",
-                order.by = "freq",
-                # show.numbers = TRUE,
-                point.size = 2,
-                line.size = 1,
-                main.bar.color = main_bar_col,
-                sets.bar.color = sets_bar_col,
-                matrix.color = matrix_col,
-                shade.color = shade_col )
-  dev.off()
 
 
+  ################ Upregulated ################
+  up_reg_list <- list()
+  for(i in c(1:length(DE_selected_upreg))){
+    up_reg_list[[hour_mapping[i]]] <- DE_selected_upreg[[i]]$Gene.name
+  }
 
-  ### Upregulate
-
-  y <-t(read.csv("Inputs/Pathogen.all.upregulated.ED.csv")) %>% as.data.frame()
-  colnames(y)<-y[1,]
-  y <- y[-1,] %>% dplyr::mutate_if(is.character, as.numeric)
-  UpSetR::upset(y)
 
   # Setting colors
   main_bar_col <- c("violetred4")
@@ -95,38 +72,43 @@ create_upset_plot <- function(DE_selected_upreg, DE_selected_downreg){
   shade_col <- c("wheat4")
 
 
-  # Setting Set Variables
+  # Set Variables
   mb_ratio1 <- c(0.55,0.45)
 
-  tiff(filename ="./Results//Upset_plot/Pathogen.upregulate.upset.plot.tiff", compression = "lzw")
-  UpSetR::upset(y,
-                mb.ratio = mb_ratio1,
-                mainbar.y.label = "Interaction of upregulated genes",
-                sets.x.label = "Number of Genes",
-                order.by = "freq",
-                # show.numbers = TRUE,
-                point.size = 2,
-                line.size = 1,
-                main.bar.color = main_bar_col,
-                sets.bar.color = sets_bar_col,
-                matrix.color = matrix_col,
-                shade.color = shade_col )
-
-
+  output_file_name <- paste0(result_file_prefix, "upregulate.upset.plot.tiff")
+  tiff(filename = paste0(output_dir_path, output_file_name), compression = "lzw")
+  print({
+    UpSetR::upset(UpSetR::fromList(up_reg_list),
+                  mb.ratio = mb_ratio1,
+                  mainbar.y.label = "Interaction of upregulated genes",
+                  sets.x.label = "Number of Genes",
+                  order.by = "freq",
+                  # show.numbers = TRUE,
+                  point.size = 2,
+                  line.size = 1,
+                  main.bar.color = main_bar_col,
+                  sets.bar.color = sets_bar_col,
+                  matrix.color = matrix_col,
+                  shade.color = shade_col)
+  })
   dev.off()
 
-  pdf(file ="./Results//Upset_plot/Pathogen.upregulate.upset.plot.pdf",width = 5, height = 5)
-  UpSetR::upset(y,
-                mb.ratio = mb_ratio1,
-                mainbar.y.label = "Interaction of upregulated genes",
-                sets.x.label = "Number of Genes",
-                order.by = "freq",
-                # show.numbers = TRUE,
-                point.size = 2,
-                line.size = 1,
-                main.bar.color = main_bar_col,
-                sets.bar.color = sets_bar_col,
-                matrix.color = matrix_col,
-                shade.color = shade_col )
+
+  output_file_name <- paste0(result_file_prefix, "upregulate.upset.plot.pdf")
+  pdf(file = paste0(output_dir_path, output_file_name), width = 5, height = 5)
+  print({
+    UpSetR::upset(UpSetR::fromList(up_reg_list),
+                  mb.ratio = mb_ratio1,
+                  mainbar.y.label = "Interaction of upregulated genes",
+                  sets.x.label = "Number of Genes",
+                  order.by = "freq",
+                  # show.numbers = TRUE,
+                  point.size = 2,
+                  line.size = 1,
+                  main.bar.color = main_bar_col,
+                  sets.bar.color = sets_bar_col,
+                  matrix.color = matrix_col,
+                  shade.color = shade_col)
+  })
   dev.off()
 }
