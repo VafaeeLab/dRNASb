@@ -3,10 +3,13 @@ perform_clustering <- function(replicate_mean_hourly,
                                timepoint = c(0, 2, 4, 8, 16, 24),
                                num_of_clust = 10,
                                cluer_pval_cutoff = 0.01,
-                               output_dir_path = "Results/Mfuzz_Clustering/"){
+                               output_dir_path = "Results/Mfuzz_Clustering/",
+                               result_file_prefix = ""){
   # timepoint <- c(0, 2, 4, 8, 16, 24)
 
   # num_of_clust = 10
+
+  print("performing clustering ...")
 
   y.dat <- as.matrix(replicate_mean_hourly)
   y.dat <- y.dat[which(apply(y.dat, 1, var) > 2 & apply(y.dat, 1, mean) > 2), 1:6]

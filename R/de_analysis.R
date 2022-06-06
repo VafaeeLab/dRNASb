@@ -2,9 +2,6 @@
 #             hour4Vshour0, hour8Vshour0, hour16Vshour0, hour24Vshour0
 de_analysis_hourwise <- function(data, pheno, method = "limma"){
   if(method == "limma"){
-
-    data <- data.norm
-
     group <- as.factor(pheno[colnames(data), "groups"])
     design <- model.matrix(~ 0 + group)
     colnames(design) <- levels(group)

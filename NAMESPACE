@@ -3,7 +3,4 @@
 export(dRNASb_pipeline)
 export(get_package_info)
 export(show_allowed_norm_methods)
-importFrom(Biobase,AnnotatedDataFrame)
-importFrom(Biobase,exprs)
-importFrom(e1071,cmeans)
 importFrom(magrittr,"%>%")

@@ -1,7 +1,9 @@
 create_upset_plot <- function(DE_selected_upreg, DE_selected_downreg,
                               hour_mapping = c("2h", "4h", "8h", "16h", "24h"),
-                              output_dir_path = "Results/Upset_plot/"){
+                              output_dir_path = "Results/Upset_plot/",
+                              result_file_prefix = ""){
 
+  print("creating upset plots ...")
   check_and_create_directory(output_dir_path)
 
   ################ Downregulated ################

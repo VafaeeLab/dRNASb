@@ -1,6 +1,10 @@
 create_venn <- function(DE_selected_upreg, DE_selected_downreg,
                         hour_mapping = c("2h", "4h", "8h", "16h", "24h"),
-                        output_dir_path = "Results/Venn_diagram/"){
+                        output_dir_path = "Results/Venn_diagram/",
+                        result_file_prefix = ""){
+
+  print("creating venn diagrams ...")
+  check_and_create_directory(output_dir_path)
 
   #########creating venn diagram with hourwise downregulated genes
 
@@ -18,8 +22,6 @@ create_venn <- function(DE_selected_upreg, DE_selected_downreg,
     margin = 0.05,
     filename = NULL
   )
-
-  check_and_create_directory(output_dir_path)
 
   output_file_name <- paste0(result_file_prefix, "downregulate.Venn.diagram.tiff")
   tiff(filename = paste0(output_dir_path, output_file_name), compression = "lzw")

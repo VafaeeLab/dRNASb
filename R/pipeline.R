@@ -12,9 +12,6 @@
 #' @param replicates_in_data Number of replicates for each hour in the data
 #' @param logFC_cutoff log fold change cutoff used to select differentially expressed genes
 #' @importFrom magrittr "%>%"
-#' @importFrom Biobase AnnotatedDataFrame
-#' @importFrom Biobase exprs
-#' @importFrom e1071 cmeans
 #' @export
 dRNASb_pipeline <- function(data_file_path,
                             phenotype_file_path,
@@ -130,19 +127,19 @@ dRNASb_pipeline <- function(data_file_path,
 
 
   # Mfuzz Clustering   ------------------------------------------------
-  perform_clustering(replicate_mean_hourly, ann_fun)
+  perform_clustering(replicate_mean_hourly, ann_fun, result_file_prefix = result_file_prefix)
 
 
 
   # Venn diagram ------------------------------------------------------------------
-  create_venn(DE_selected_upreg, DE_selected_downreg)
+  create_venn(DE_selected_upreg, DE_selected_downreg, result_file_prefix = result_file_prefix)
 
 
   # Upset Plot --------------------------------------------------------------
-  create_upset_plot(DE_selected_upreg, DE_selected_downreg)
+  create_upset_plot(DE_selected_upreg, DE_selected_downreg, result_file_prefix = result_file_prefix)
 
 
   # Network analysis using igraph --------------------------------
-  perform_network_analysis(ppi)
+  perform_network_analysis(ppi, result_file_prefix = result_file_prefix)
 
 }

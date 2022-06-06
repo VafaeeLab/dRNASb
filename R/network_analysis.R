@@ -1,6 +1,9 @@
 perform_network_analysis <- function(ppi, output_dir_path = "Results/Network_analysis/",
                                      hub_gene_cutoff = 10,
-                                     betweenness_cutoff = 100){
+                                     betweenness_cutoff = 100,
+                                     result_file_prefix = ""){
+
+  print("performing network analysis ...")
   check_and_create_directory(output_dir_path)
 
   net <- igraph::graph.data.frame(unique(ppi[,c(1,4)]), directed = FALSE)
