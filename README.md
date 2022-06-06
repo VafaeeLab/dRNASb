@@ -33,7 +33,7 @@ The pipeline accepts as input the following text files all in .csv format:
 - **Functional annotations**
 - **PPIs**
 
-[data](data) contains the input files used and other sample input files
+[Data directory](Data) contains the input files used and other sample input files
 
 ## For More Information
 Please refer to our paper in bioRxiv for details : https://doi.org/10.1101/2022.02.28.482417
