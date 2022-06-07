@@ -99,7 +99,30 @@ perform_clustering <- function(replicate_mean_hourly,
   # Make list ---------------------------------------------------------------
   anno <- ann_fun
   GO <- unique(anno$Gene.ontology.ID)
-  Uniprot.ID <- sapply(1:length(GO), function(i) paste(gsub("[[:space:]]", "", anno[which(anno$Gene.ontology.ID==GO[i]),]$Uniprot.ID),collapse=" "))
+
+  print("colnames of Annotation Function file")
+  print(colnames(anno))
+
+  if("Uniprot.ID" %in% colnames(anno)){
+    print("using Uniprot.ID for annotation")
+    Uniprot.ID <- sapply(1:length(GO),
+                         function(i)
+                           paste(gsub("[[:space:]]",
+                                      "",
+                                      anno[which(anno$Gene.ontology.ID ==
+                                                   GO[i]), ]$Uniprot.ID),
+                                 collapse = " "))
+  } else if("Gene.name" %in% colnames(anno)){
+    print("using Gene.name for annotation")
+    Uniprot.ID <- sapply(1:length(GO),
+                         function(i)
+                           paste(gsub("[[:space:]]",
+                                      "",
+                                      anno[which(anno$Gene.ontology.ID ==
+                                                   GO[i]),]$Gene.name),
+                                 collapse = " "))
+  }
+
   Uniprot.ID <- as.data.frame(Uniprot.ID)
   GO_Pro_ID <- data.frame(GO.ID=unique(anno$Gene.ontology.ID),
                           Uniprot.ID=Uniprot.ID)

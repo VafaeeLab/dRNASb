@@ -4,7 +4,7 @@
 #' @param phenotype_file_path full file path of phenotype file - contains mapping of sample to groups with groups column
 #' @param annotation_function_file_path full file path of annotation function file
 #' @param ppi_file_path full file path of ppi file
-#' @param result_file_prefix a prefix string to be added to all results file
+#' @param result_file_prefix a prefix string to be added to all result files
 #' @param de_method differential expression method to be used
 #' @param norm_method normalization method to be used - use show_allowed_norm_methods() for available norm methods
 #' @param perform_filter Should filter preprocessing step be performed
@@ -34,7 +34,6 @@ dRNASb_pipeline <- function(data_file_path,
   # ---------------------------------------------------------------
 
   data.norm <- normalize(data, pheno, norm_method)
-
   if(perform_filter){
     data.norm <- filter(data.norm, pheno)
   }

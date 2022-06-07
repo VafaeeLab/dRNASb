@@ -1,6 +1,6 @@
 Package: dRNASb
 Title: Systems biology based approach to analyse host-pathogen interaction using dual RNA-seq data
-Version: 1.3.0.0000
+Version: 1.4.0.0000
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",

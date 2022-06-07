@@ -28,7 +28,7 @@ should have samples corresponding to different hours and replicates for each hou
 
 \item{ppi_file_path}{full file path of ppi file}
 
-\item{result_file_prefix}{a prefix string to be added to all results file}
+\item{result_file_prefix}{a prefix string to be added to all result files}
 
 \item{de_method}{differential expression method to be used}
 

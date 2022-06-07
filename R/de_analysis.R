@@ -1,6 +1,7 @@
 #returns a list of de top table for hour 2 against hour 0,
 #             hour4Vshour0, hour8Vshour0, hour16Vshour0, hour24Vshour0
 de_analysis_hourwise <- function(data, pheno, method = "limma"){
+  print(paste("Differential Expression Analysis using", method, "..."))
   if(method == "limma"){
     group <- as.factor(pheno[colnames(data), "groups"])
     design <- model.matrix(~ 0 + group)
