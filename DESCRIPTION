@@ -1,6 +1,6 @@
 Package: dRNASb
 Title: Systems biology based approach to analyse host-pathogen interaction using dual RNA-seq data
-Version: 1.4.0.0000
+Version: 1.5.0.0000
 Authors@R: 
     person(given = "Abhishek",
            family = "Vijayan",
@@ -34,15 +34,4 @@ Imports:
   e1071,
   magrittr,
   Mfuzz
-Collate:
-  'utils.R'
-  'package_info.R'
-  'filter.R'
-  'normalize.R'
-  'de_analysis.R'
-  'create_venn.R'
-  'create_upset.R'
-  'clustering.R'
-  'network_analysis.R'
-  'pipeline.R'
 
