@@ -11,6 +11,9 @@
 #' @param hours_in_data Vector of different hours information present in the data
 #' @param replicates_in_data Number of replicates for each hour in the data
 #' @param logFC_cutoff log fold change cutoff used to select differentially expressed genes
+#' @param num_of_clust number of clusters in mfuzz clustering
+#' @param hub_gene_cutoff cutoff value in network analysis to determine hub genes
+#' @param betweenness_cutoff cutoff value in network analysis to determine network betweenness
 #' @importFrom magrittr "%>%"
 #' @export
 dRNASb_pipeline <- function(data_file_path,
@@ -23,7 +26,10 @@ dRNASb_pipeline <- function(data_file_path,
                             perform_filter = TRUE,
                             hours_in_data = c("0h", "2h", "4h", "8h", "16h", "24h"),
                             replicates_in_data = 3,
-                            logFC_cutoff = 1) {
+                            logFC_cutoff = 1,
+                            num_of_clust = 10,
+                            hub_gene_cutoff = 10,
+                            betweenness_cutoff = 100) {
 
 
   # Read data---------------------------------------------------------------
@@ -126,7 +132,9 @@ dRNASb_pipeline <- function(data_file_path,
 
 
   # Mfuzz Clustering   ------------------------------------------------
-  perform_clustering(replicate_mean_hourly, ann_fun, result_file_prefix = result_file_prefix)
+  perform_clustering(replicate_mean_hourly, ann_fun,
+                     num_of_clust = num_of_clust,
+                     result_file_prefix = result_file_prefix)
 
 
 
@@ -139,6 +147,7 @@ dRNASb_pipeline <- function(data_file_path,
 
 
   # Network analysis using igraph --------------------------------
-  perform_network_analysis(ppi, result_file_prefix = result_file_prefix)
+  perform_network_analysis(ppi, result_file_prefix = result_file_prefix,
+                           hub_gene_cutoff = hub_gene_cutoff, betweenness_cutoff = betweenness_cutoff)
 
 }

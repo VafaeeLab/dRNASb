@@ -15,7 +15,10 @@ dRNASb_pipeline(
   perform_filter = TRUE,
   hours_in_data = c("0h", "2h", "4h", "8h", "16h", "24h"),
   replicates_in_data = 3,
-  logFC_cutoff = 1
+  logFC_cutoff = 1,
+  num_of_clust = 10,
+  hub_gene_cutoff = 10,
+  betweenness_cutoff = 100
 )
 }
 \arguments{
@@ -41,6 +44,12 @@ should have samples corresponding to different hours and replicates for each hou
 \item{replicates_in_data}{Number of replicates for each hour in the data}
 
 \item{logFC_cutoff}{log fold change cutoff used to select differentially expressed genes}
+
+\item{num_of_clust}{number of clusters in mfuzz clustering}
+
+\item{hub_gene_cutoff}{cutoff value in network analysis to determine hub genes}
+
+\item{betweenness_cutoff}{cutoff value in network analysis to determine network betweenness}
 }
 \description{
 dRNASb pipeline
