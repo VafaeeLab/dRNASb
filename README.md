@@ -19,19 +19,21 @@ And within R :
 library(dRNASb)
 ```
 
-Two functions are made available, details can be obtained with :
+Four functions are made available, details can be obtained with :
 ```
 ?dRNASb_pipeline
 ?show_allowed_norm_methods
+?correlation_analysis
+?create_connected_genes_plot
 ```
               
 ### Input Files
 The pipeline accepts as input the following text files all in .csv format: 
 
-- **Phenotype:** This file comprises two columns: 1) *Sample Name* corresponding to the column headers in the expression (read count) file, and 2) *Group* specifiying the time (or condition) of each sample. 
+- **Phenotype** : This file comprises two columns: 1) *Sample Name* corresponding to the column headers in the expression (read count) file, and 2) *Group* specifiying the time (or condition) of each sample. 
 - **Read Counts**
 - **Functional annotations**
-- **PPIs**
+- **PPIs** : Obtained from salmonet.org for pathogen and from stringDB for host. Users can obtain ppi of their choice from the [downloads section](https://string-db.org/cgi/download) in String db
 
 [Data directory](Data) contains the input files used and other sample input files
 
