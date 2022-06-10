@@ -133,17 +133,24 @@ dRNASb_pipeline <- function(data_file_path,
 
   # Mfuzz Clustering   ------------------------------------------------
   perform_clustering(replicate_mean_hourly, ann_fun,
+                     timepoint = as.integer(gsub("h", "", hours_in_data, fixed = TRUE)),
                      num_of_clust = num_of_clust,
                      result_file_prefix = result_file_prefix)
 
 
+  #obtain hourwise results - excluding that for 0th hour - assumed to be the first element
+  hour_mapping <- hours_in_data[-1] #remove 0th hour
 
   # Venn diagram ------------------------------------------------------------------
-  create_venn(DE_selected_upreg, DE_selected_downreg, result_file_prefix = result_file_prefix)
+  create_venn(DE_selected_upreg, DE_selected_downreg,
+              hour_mapping = hour_mapping,
+              result_file_prefix = result_file_prefix)
 
 
   # Upset Plot --------------------------------------------------------------
-  create_upset_plot(DE_selected_upreg, DE_selected_downreg, result_file_prefix = result_file_prefix)
+  create_upset_plot(DE_selected_upreg, DE_selected_downreg,
+                    hour_mapping = hour_mapping,
+                    result_file_prefix = result_file_prefix)
 
 
   # Network analysis using igraph --------------------------------
