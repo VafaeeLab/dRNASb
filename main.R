@@ -17,7 +17,7 @@ dRNASb_pipeline(data_file_path = "Data/Pathogen.data.csv",
                 betweenness_cutoff = 100)
 
 
-#host
+#host (execution of below line takes approx 4 hours)
 dRNASb_pipeline(data_file_path = "Data/Host.data.csv",
                 phenotype_file_path = "Data/Pheno.csv",
                 annotation_function_file_path = "Data/Host.annotation.function.csv",
