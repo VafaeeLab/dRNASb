@@ -2,7 +2,7 @@
 % Please edit documentation in R/correlation_analysis.R
 \name{create_connected_genes_plot}
 \alias{create_connected_genes_plot}
-\title{create connected genes plot}
+\title{create connected genes plot - creates tiff and pdf plots}
 \usage{
 create_connected_genes_plot(
   corr_data,
@@ -18,5 +18,5 @@ create_connected_genes_plot(
 \item{output_dir_path}{file path for all outputs - results and plots}
 }
 \description{
-create connected genes plot
+create connected genes plot - creates tiff and pdf plots
 }

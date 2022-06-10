@@ -64,7 +64,7 @@ correlation_analysis <- function(geneset_file_path,
 
 
 
-#' create connected genes plot
+#' create connected genes plot - creates tiff and pdf plots
 #' @param corr_data correlation data based on which to create network
 #' @param plot_file_name plot file name
 #' @param output_dir_path file path for all outputs - results and plots
